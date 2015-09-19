@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 //Enumerator for our two-tier PowerUp System
-enum powerLevel{first, second};
+enum powerLevel{none, first, second};
 
 public class PlayerController : MonoBehaviour {
 
@@ -23,8 +23,10 @@ public class PlayerController : MonoBehaviour {
 	float currReload;
 
 	//PowerUps
-	powerLevel pow = powerLevel.first;
-	Image img;
+	powerLevel pow = powerLevel.none;
+	int[] powers = {0,0};
+	Image[] pow_Img = new Image[2];
+	Text[] pow_Lbl = new Text[2];
 	
 	void Start () {
 		//Initiazlize variables
@@ -37,7 +39,12 @@ public class PlayerController : MonoBehaviour {
 		healthText = GameObject.Find ("Health").GetComponent<Text> ();
 		healthText.text = health.ToString();
 
-		img = GameObject.Find ("Power").GetComponent<Image> ();
+		//Add the power images/labels to the array
+		pow_Img[0] = GameObject.Find("Power_Speed").GetComponent<Image> ();
+		pow_Img[1] = GameObject.Find("Power_Missile").GetComponent<Image> ();
+		pow_Lbl[0] = GameObject.Find("Power_Speed_Label").GetComponent<Text>();
+		pow_Lbl[1] = GameObject.Find("Power_Missile_Label").GetComponent<Text>();
+
 	}
 	
 	// Update is called once per frame
@@ -78,15 +85,27 @@ public class PlayerController : MonoBehaviour {
 		//Shooting
 		if (Input.GetKey (KeyCode.Space) && currReload <= 0) {
 			//Check for reload and Power Level
-			if(pow == powerLevel.first){
+			if(powers[0] == 0){
 				currReload = reload;
 			}
-			if(pow == powerLevel.second){
+			if(powers[0] == 1){
 				currReload = reload/4;
 			}
+
 			//Create bullet and move it to the player position
 			GameObject shot = Instantiate(shotPrefab) as GameObject;
 			shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+		}
+
+		//Using PowerUp
+		if(Input.GetKey(KeyCode.RightAlt) && pow != powerLevel.none)
+		{
+			if(powers[(int)pow-1] == 0){
+				powers[(int)pow-1]++;
+				pow_Img[(int)pow-1].color = Color.blue;
+				pow_Lbl[(int)pow-1].enabled = false;
+				pow = powerLevel.none;
+			}
 		}
 	}
 
@@ -97,14 +116,28 @@ public class PlayerController : MonoBehaviour {
 			health--;
 			healthText.text = health.ToString();
 
-			pow = powerLevel.first;
-			img.color = Color.white;
+			//Reset powerups
+			resetPowers();
+			pow = powerLevel.none;
 		}
 		//PowerUp Collision
 		if (coll.gameObject.tag == "PowerUp") {
-			pow = powerLevel.second;
-			img.color = Color.red;
+			//Set the color back to blue
+			if(pow != powerLevel.none){
+				pow_Img[(int)pow-1].color = Color.blue;
+			}
+			//Increase Pow, and set to red
+			pow++;
+			pow_Img[(int)pow-1].color = Color.red;
 			Destroy (coll.gameObject);
+		}
+	}
+
+	void resetPowers(){
+		for(int i = 0; i < 2; i++){
+			powers[i] = 0;
+			pow_Img[i].color = Color.blue;
+			pow_Lbl[i].enabled = true;
 		}
 	}
 }
