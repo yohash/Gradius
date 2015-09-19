@@ -5,8 +5,7 @@ public class ShotBehaviour : MonoBehaviour {
 
 	//Movement
 	public float speed = 0.5f;
-
-	// Use this for initialization
+	
 	void Start () {
 		this.GetComponent<Rigidbody>().velocity = new Vector3 (speed, 0f, 0f);
 	}
@@ -16,9 +15,10 @@ public class ShotBehaviour : MonoBehaviour {
 	
 	}
 
+	//Collision Detection
 	void OnTriggerEnter(Collider coll){
 		if (coll.gameObject.tag == "Enemy") {
-			coll.gameObject.GetComponent<BasicEnemyBehaviour>().Scored();
+			coll.gameObject.GetComponent<BasicEnemyBehaviour>().Scored(); //Add Score
 			Destroy(this.gameObject);
 			Destroy(coll.gameObject);
 		}

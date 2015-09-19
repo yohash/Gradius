@@ -6,15 +6,16 @@ public class BackgroundBuilder : MonoBehaviour {
 	public GameObject background;
 	float camH, camW;
 	public int count;
-
-	// Use this for initialization
+	
 	void Start () {
+		//Variable Initialization
 		Camera cam = GameObject.Find ("Main Camera").GetComponent<Camera> ();
 		camH = cam.orthographicSize * 2f;
 		camW = camH * cam.aspect;
 		camH /= 2f;
 		camW /= 1.5f;
 
+		//Instatiate the Stars
 		GameObject back;
 		for (int i =0; i <count; ++i) {
 			back = Instantiate(background) as GameObject;
