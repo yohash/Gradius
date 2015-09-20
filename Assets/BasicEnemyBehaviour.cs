@@ -17,6 +17,9 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 	public Vector2 pos1;
 	float camH, camW;
 
+	//Health
+	public int health = 1;
+
 	//Scoring
 	public int value = 100;
 	Text score;
@@ -34,20 +37,29 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 
 		//Initially Moving to the Left
 		enemyRigid = this.GetComponent<Rigidbody> ();
+
+		//INITIALIZING SPEED (we dont want this)
 		enemyRigid.velocity = new Vector3 (-speed, 0f, 0f);
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
-		//check if the enemy has made it to the pos1 position
+	public virtual void Move(){
 		if (this.transform.position.x <= pos1.x && curr == movementState.forward) {
 			//Change state, and then reverse direction
 			curr = movementState.backward;
 			enemyRigid.velocity = new Vector3 (speed, 0f, 0f);
-		} else if (curr == movementState.backward && this.transform.position.x >= camW / 2) {
-			//Destroy the object once off screen
-			Destroy(this.gameObject);
 		}
+		else if (curr == movementState.forward){
+			//Nothing, is set in Start
+		}
+		if (this.transform.position.x >= camW / 2 || this.transform.position.x <= -camW/2){
+			Destroy (this.gameObject);
+		}
+	}
+
+	void Update () {
+		//check if the enemy has made it to the pos1 position
+		Move ();
 	}
 
 	//Scoring

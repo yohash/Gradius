@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 //Enumerator for our two-tier PowerUp System
-enum powerLevel{none, first, second};
+enum powerLevel{none, first, second, third, fourth, fithh, sixth};
 
 public class PlayerController : MonoBehaviour {
 
@@ -24,9 +24,9 @@ public class PlayerController : MonoBehaviour {
 
 	//PowerUps
 	powerLevel pow = powerLevel.none;
-	int[] powers = {0,0,0,0,0};
-	Image[] pow_Img = new Image[5];
-	Text[] pow_Lbl = new Text[5];
+	int[] powers = {0,0,0,0,0,0};
+	public Image[] pow_Img = new Image[6];
+	public Text[] pow_Lbl = new Text[6];
 	
 	void Start () {
 		//Initiazlize variables
@@ -40,16 +40,19 @@ public class PlayerController : MonoBehaviour {
 		healthText.text = health.ToString();
 
 		//Add the power images/labels to the array
-		pow_Img[0] = GameObject.Find("Power_Speed").GetComponent<Image> ();
-        pow_Img[1] = GameObject.Find("Power_Missile").GetComponent<Image>();
-        pow_Img[2] = GameObject.Find("Power_Double").GetComponent<Image>();
-        pow_Img[3] = GameObject.Find("Power_Laser").GetComponent<Image>();
-        pow_Img[4] = GameObject.Find("Power_Option").GetComponent<Image>();
-        pow_Lbl[0] = GameObject.Find("Power_Speed_Label").GetComponent<Text>();
-        pow_Lbl[1] = GameObject.Find("Power_Missile_Label").GetComponent<Text>();
-        pow_Lbl[2] = GameObject.Find("Power_Double_Label").GetComponent<Text>();
-        pow_Lbl[3] = GameObject.Find("Power_Laser_Label").GetComponent<Text>();
-        pow_Lbl[4] = GameObject.Find("Power_Option_Label").GetComponent<Text>();
+//		pow_Img[0] = GameObject.Find("Power_Speed").GetComponent<Image> ();
+//        pow_Img[1] = GameObject.Find("Power_Missile").GetComponent<Image>();
+//        pow_Img[2] = GameObject.Find("Power_Double").GetComponent<Image>();
+//        pow_Img[3] = GameObject.Find("Power_Laser").GetComponent<Image>();
+//        pow_Img[4] = GameObject.Find("Power_Option").GetComponent<Image>();
+//		pow_Img[5] = GameObject.Find("Power_Shield").GetComponent<Image>();
+//		pow_Lbl[0] = GameObject.Find("Power_Speed_Label").GetComponent<Text>();
+//        pow_Lbl[1] = GameObject.Find("Power_Missile_Label").GetComponent<Text>();
+//        pow_Lbl[2] = GameObject.Find("Power_Double_Label").GetComponent<Text>();
+//        pow_Lbl[3] = GameObject.Find("Power_Laser_Label").GetComponent<Text>();
+//        pow_Lbl[4] = GameObject.Find("Power_Option_Label").GetComponent<Text>();
+//		pow_Lbl[5] = GameObject.Find("Power_Shield_Label").GetComponent<Text>();
+
 
     }
 	
@@ -137,14 +140,16 @@ public class PlayerController : MonoBehaviour {
 		}
 		//PowerUp Collision
 		if (coll.gameObject.tag == "PowerUp") {
-			//Set the color back to blue
-			if(pow != powerLevel.none){
-				pow_Img[(int)pow-1].color = Color.blue;
+			if(pow != powerLevel.sixth){
+				//Set the color back to blue
+				if(pow != powerLevel.none){
+					pow_Img[(int)pow-1].color = Color.blue;
+				}
+				//Increase Pow, and set to red
+				pow++;
+				pow_Img[(int)pow-1].color = Color.red;
+				Destroy (coll.gameObject);
 			}
-			//Increase Pow, and set to red
-			pow++;
-			pow_Img[(int)pow-1].color = Color.red;
-			Destroy (coll.gameObject);
 		}
 	}
 
