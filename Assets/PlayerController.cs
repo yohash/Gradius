@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Using PowerUp
-		if(Input.GetKey(KeyCode.RightAlt) && pow != powerLevel.none)
+		if(Input.GetKey(KeyCode.RightControl) && pow != powerLevel.none)
 		{
 			if(powers[(int)pow-1] == 0){
 				powers[(int)pow-1]++;

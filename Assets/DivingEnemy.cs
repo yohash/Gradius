@@ -28,7 +28,7 @@ public class DivingEnemy : BasicEnemyBehaviour {
 	
 	public override void Move(){
 			if (this.transform.position.y <= GameObject.Find("Player").GetComponent<Rigidbody>().position.y + 0.5f && this.transform.position.y >= GameObject.Find("Player").GetComponent<Rigidbody>().position.y - 0.5f){
-				this.enemyRigid.velocity = new Vector3(-speed*3f, 0f, 0f);
+				this.enemyRigid.velocity = new Vector3(-speed*2.5f, 0f, 0f);
 			} else if (this.transform.position.y <= GameObject.Find("Player").GetComponent<Rigidbody>().position.y){
 				this.enemyRigid.velocity = new Vector3(-speed, speed, 0f);
 			} else if (this.transform.position.y >= GameObject.Find("Player").GetComponent<Rigidbody>().position.y){

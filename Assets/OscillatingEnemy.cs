@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class OscillatingEnemy : BasicEnemyBehaviour {
 
 	//Setting up oscillations
-	public float wav_Freq = 1.5f;
-	public float wav_Len  = 4f;
+	public float wav_Freq = 3f;
+	public float wav_Len  = 3f;
 	private float wav_Time;
 	private float y0;
 
