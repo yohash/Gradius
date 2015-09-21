@@ -669,6 +669,10 @@ Prefab:
       propertyPath: pow_Lbl.Array.data[5]
       value: 
       objectReference: {fileID: 425160588}
+    - target: {fileID: 137640, guid: 5b1d8000840c3fb4c9ba5228563dae60, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b1d8000840c3fb4c9ba5228563dae60, type: 2}
   m_IsPrefabParent: 0
@@ -1063,7 +1067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Catalog:
-  - {fileID: 117236, guid: 98980ef988bf1f04dba52609ca0d3226, type: 2}
+  - {fileID: 172856, guid: 4e728b5227b471a47bdcd23a45947876, type: 2}
   spawnPerSecond: .5
   spawnVariance: 2
 --- !u!1 &1705324689
