@@ -27,6 +27,9 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 	//Powerup Drops
 	public GameObject powerUp;
 	public float chance = 1f; //<-------- Currently set to 100% drop chance
+
+	//enemy bullets
+	public GameObject shot;
 	
 	void Start () {
 		//Variable Initialization
@@ -63,7 +66,11 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 	void Update () {
 		//check if the enemy has made it to the pos1 position
 		Move ();
+		
+		//Rigidbody playerTarget = GameObject.Find ("Player").GetComponent<Rigidbody> ();
+		//GameObject enemyShot = Instantiate (shot) as GameObject;
 
+		//enemyShot.transform.position = this.transform.position;		
 		//OffCamera();
 	}
 
@@ -77,5 +84,10 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 			GameObject pow = Instantiate(powerUp) as GameObject;
 			pow.transform.position = this.transform.position;
 		}
+	}
+
+	public void Fire() {
+		// this function will get the player position, 
+		// then fire directly at the player
 	}
 }
