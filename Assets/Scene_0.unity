@@ -1068,8 +1068,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Catalog:
   - {fileID: 172856, guid: 4e728b5227b471a47bdcd23a45947876, type: 2}
-  spawnPerSecond: .5
-  spawnVariance: 2
+  relTime: []
+  enemyLoc: []
 --- !u!1 &1705324689
 GameObject:
   m_ObjectHideFlags: 0

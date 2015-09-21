@@ -14,10 +14,10 @@ public class Scheduler : MonoBehaviour {
 	int index;			// schedule index
 
 	void Start () {
-		relTime = new float[10];
-		enemyLoc = new Vector3[10];
+		relTime = new float[12];
+		enemyLoc = new Vector3[12];
 
-		relTime[0] = 4f;		enemyLoc [0] = new Vector3 (camW/2-1.0f, -camH/3f, 0f);
+		relTime[0] = 1f;		enemyLoc [0] = new Vector3 (camW/2-1.0f, -camH/3f, 0f);
 		relTime[1] = 0.5f;		enemyLoc [1] = new Vector3 (camW/2-1.0f, -camH/3f, 0f);
 		relTime[2] = 0.5f;		enemyLoc [2] = new Vector3 (camW/2-1.0f, -camH/3f, 0f);
 		relTime[3] = 0.5f;		enemyLoc [3] = new Vector3 (camW/2-1.0f, -camH/3f, 0f);
@@ -25,12 +25,14 @@ public class Scheduler : MonoBehaviour {
 		relTime[5] = 0.5f;		enemyLoc [5] = new Vector3 (camW/2-1.0f, camH/3f, 0f);
 		relTime[6] = 0.5f;		enemyLoc [6] = new Vector3 (camW/2-1.0f, camH/3f, 0f);
 		relTime[7] = 0.5f;		enemyLoc [7] = new Vector3 (camW/2-1.0f, camH/3f, 0f);
-		print (relTime[0]);
+		relTime[8] = 2f;		enemyLoc [8] = new Vector3 (camW/2-1.0f, -camH/3f+1f, 0f);
+		relTime[9] = 0f;		enemyLoc [9] = new Vector3 (camW/2-1.0f, -camH/3f-1f, 0f);
+		relTime[10] = 2f;		enemyLoc [10] = new Vector3 (camW/2-1.0f, camH/3f+1f, 0f);
+		relTime[11] = 0f;		enemyLoc [11] = new Vector3 (camW/2-1.0f, camH/3f-1f, 0f);
 
 		index = 0; 		// initiate the index
 		startTime = Time.time;
-		
-		print (relTime[0]);
+
 		Invoke ("Spawn", relTime[index]);
 	}
 
@@ -38,8 +40,6 @@ public class Scheduler : MonoBehaviour {
 		Camera cam = GameObject.Find ("Main Camera").GetComponent<Camera> ();
 		camH = cam.orthographicSize * 2f;
 		camW = camH * cam.aspect;
-		print (camW);
-		print (camH);
 	}
 
 	public void Spawn() {
@@ -54,8 +54,10 @@ public class Scheduler : MonoBehaviour {
 
 		enemy.transform.position = new_Pos;
 
-		index++;
-		Invoke ("Spawn", relTime[index]);
+		if (index <= relTime.Length) {
+			index++;
+			Invoke ("Spawn", relTime [index]);
+		}
 	}
 	
 	// Update is called once per frame
