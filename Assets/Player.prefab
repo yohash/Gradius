@@ -105,7 +105,21 @@ MonoBehaviour:
   maxSpeed: {x: 8, y: 8}
   shotPrefab: {fileID: 148222, guid: 8978cdf4d15fabc4cba4a972b10784dc, type: 2}
   shotspawn: {x: 1.5, y: 0, z: 0}
-  reload: .5
+  reload: .150000006
+  pow_Img:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  pow_Lbl:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -116,6 +130,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_IsKinematic
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reload
+      value: .150000006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -94,8 +94,9 @@ MonoBehaviour:
   value: 100
   score: {fileID: 0}
   powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
-  chance: 1
-  speed: 4
+  chance: .25
+  shot: {fileID: 0}
+  speed: 10
 --- !u!135 &13537802
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -121,7 +122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speed
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
@@ -143,6 +144,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 0}
+      propertyPath: chance
+      value: .25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 117236}

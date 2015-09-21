@@ -5,12 +5,12 @@ using UnityEngine.UI;
 public class OscillatingEnemy : BasicEnemyBehaviour {
 
 	//Setting up oscillations
-	public float wav_Freq = 2;
-	public float wav_Len  = 3;
+	public float wav_Freq = 1.5f;
+	public float wav_Len  = 4f;
 	private float wav_Time;
 	private float y0;
 
-	float speed = 4f;
+	float speed = 8f;
 	Rigidbody enemyRigid;
 
 	// Use this for initialization

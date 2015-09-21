@@ -106,7 +106,7 @@ MonoBehaviour:
   value: 100
   score: {fileID: 0}
   powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
-  chance: 1
+  chance: .0500000007
   shot: {fileID: 185006, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   wav_Freq: 2
   wav_Len: 3
@@ -145,6 +145,10 @@ Prefab:
       propertyPath: shot
       value: 
       objectReference: {fileID: 185006, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
+    - target: {fileID: 0}
+      propertyPath: chance
+      value: .0500000007
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 172856}
