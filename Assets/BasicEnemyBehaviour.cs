@@ -11,8 +11,8 @@ enum movementState{forward, backward};
 
 public class BasicEnemyBehaviour : MonoBehaviour {
 	//Movement
-	public float speed = 0.5f;
-	Rigidbody enemyRigid;
+	//public float speed = 0.5f;
+	//Rigidbody enemyRigid;
 	movementState curr = movementState.forward;
 	public Vector2 pos1;
 	float camH, camW;
@@ -22,7 +22,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 
 	//Scoring
 	public int value = 100;
-	Text score;
+	public Text score;
 
 	//Powerup Drops
 	public GameObject powerUp;
@@ -36,22 +36,25 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 		score = GameObject.Find ("Score").GetComponent<Text> ();
 
 		//Initially Moving to the Left
-		enemyRigid = this.GetComponent<Rigidbody> ();
+		//enemyRigid = this.GetComponent<Rigidbody> ();
 
 		//INITIALIZING SPEED (we dont want this)
-		enemyRigid.velocity = new Vector3 (-speed, 0f, 0f);
+		//enemyRigid.velocity = new Vector3 (-speed, 0f, 0f);
 	}
 
 	// Update is called once per frame
 	public virtual void Move(){
-		if (this.transform.position.x <= pos1.x && curr == movementState.forward) {
-			//Change state, and then reverse direction
-			curr = movementState.backward;
-			enemyRigid.velocity = new Vector3 (speed, 0f, 0f);
-		}
-		else if (curr == movementState.forward){
-			//Nothing, is set in Start
-		}
+//		if (this.transform.position.x <= pos1.x && curr == movementState.forward) {
+//			//Change state, and then reverse direction
+//			curr = movementState.backward;
+//			enemyRigid.velocity = new Vector3 (speed, 0f, 0f);
+//		}
+//		else if (curr == movementState.forward){
+//			//Nothing, is set in Start
+//		}
+	}
+
+	public void OffCamera() {
 		if (this.transform.position.x >= camW / 2 || this.transform.position.x <= -camW/2){
 			Destroy (this.gameObject);
 		}
@@ -60,6 +63,8 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 	void Update () {
 		//check if the enemy has made it to the pos1 position
 		Move ();
+
+		//OffCamera();
 	}
 
 	//Scoring
