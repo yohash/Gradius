@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Catalog:
-  - {fileID: 172856, guid: 4e728b5227b471a47bdcd23a45947876, type: 2}
+  - {fileID: 117236, guid: 98980ef988bf1f04dba52609ca0d3226, type: 2}
   relTime: []
   enemyLoc: []
 --- !u!1 &1705324689
