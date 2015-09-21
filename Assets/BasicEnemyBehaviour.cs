@@ -66,11 +66,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 	void Update () {
 		//check if the enemy has made it to the pos1 position
 		Move ();
-		
-		//Rigidbody playerTarget = GameObject.Find ("Player").GetComponent<Rigidbody> ();
-		//GameObject enemyShot = Instantiate (shot) as GameObject;
 
-		//enemyShot.transform.position = this.transform.position;		
 		//OffCamera();
 	}
 
@@ -88,6 +84,8 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 
 	public void Fire() {
 		// this function will get the player position, 
-		// then fire directly at the player
+		// - enemyShotBehavior script fires directly at the player
+		GameObject enemyShot = Instantiate (shot) as GameObject;		
+		enemyShot.transform.position = this.transform.position;	
 	}
 }

@@ -67,7 +67,7 @@ public class Scheduler : MonoBehaviour {
 
 		enemy.transform.position = new_Pos;
 
-		if (index <= relTime.Length) {
+		if (index < relTime.Length) {
 			index++;
 			Invoke ("Spawn", relTime [index]);
 		}

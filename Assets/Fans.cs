@@ -26,6 +26,8 @@ public class Fans : BasicEnemyBehaviour {
 		this.enemyRigid.velocity = new Vector3(-speed, 0f, 0f);
 		
 		base.score = GameObject.Find ("Score").GetComponent<Text> ();
+
+		//InvokeRepeating ("Fire", 1f, 2f); //<---- test fire function
 	}
 	
 	public override void Move(){

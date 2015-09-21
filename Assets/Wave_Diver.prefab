@@ -281,7 +281,7 @@ MonoBehaviour:
   score: {fileID: 0}
   powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
   chance: 0
-  shot: {fileID: 0}
+  shot: {fileID: 185006, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   speed: 2
 --- !u!114 &11461420
 MonoBehaviour:
@@ -300,7 +300,7 @@ MonoBehaviour:
   score: {fileID: 0}
   powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
   chance: 0
-  shot: {fileID: 0}
+  shot: {fileID: 185006, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   speed: 2
 --- !u!114 &11494250
 MonoBehaviour:
@@ -319,7 +319,7 @@ MonoBehaviour:
   score: {fileID: 0}
   powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
   chance: 0
-  shot: {fileID: 0}
+  shot: {fileID: 185006, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   speed: 2
 --- !u!136 &13691608
 CapsuleCollider:
@@ -379,6 +379,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shot
+      value: 
+      objectReference: {fileID: 185006, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 161014}
