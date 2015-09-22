@@ -9,15 +9,15 @@ public class DivingEnemy : BasicEnemyBehaviour {
 	//private float wav_Time;
 	//private float y0;
 	private motionState state = motionState.first;
-	float camH, camW;
-	
-	Rigidbody enemyRigid;
+    //float camH, camW; //<---- silenced due to BasicEnemyBehavior computing same values
+
+    Rigidbody enemyRigid;
 	
 	// Use this for initialization
 	void Start () {
-		Camera cam = GameObject.Find ("Main Camera").GetComponent<Camera> ();
-		camH = cam.orthographicSize * 2f;
-		camW = camH * cam.aspect;
+		//Camera cam = GameObject.Find ("Main Camera").GetComponent<Camera> ();
+		//camH = cam.orthographicSize * 2f;
+		//camW = camH * cam.aspect;
 		//wav_Time = Time.time;
 		enemyRigid = this.GetComponent<Rigidbody> ();
 		//y0 = this.enemyRigid.position.y;
@@ -36,6 +36,7 @@ public class DivingEnemy : BasicEnemyBehaviour {
 			}
 	}
 	
-	// Update is called once per fra
+	// Update is called once per frame
+
 }
 

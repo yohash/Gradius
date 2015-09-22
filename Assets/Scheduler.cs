@@ -18,18 +18,22 @@ public class Scheduler : MonoBehaviour {
 	int index;			// schedule index
     
 	void Start ()
-    {
+    {   // ***************************************************************
         // ******** REPLACE THIS CODE IF BETTER SOLUTION *****************
+        // ***************************************************************
         // this section is because I cannot find a simple way to 
         // compute how many lines are in our scheduler text file, so
         // we read it through once to increment a counter
+
         System.IO.StreamReader fileCount = new System.IO.StreamReader("Assets/level_1.txt");
         int lineCount = 0;  // track number of lines in the file
         while(fileCount.ReadLine()!=null) {
             lineCount++;
         }
         // end the counter
+        // ***************************************************************
         // ******** REPLACE THIS CODE IF BETTER SOLUTION *****************
+        // ***************************************************************
 
         //now I know how long the doc is, and how many enemies there are
         relTime = new float[lineCount];
@@ -45,7 +49,7 @@ public class Scheduler : MonoBehaviour {
         // for reference:
         //     camH = 20
         //     camW = 35.5
-        lineCount = 0;
+        lineCount = 0;      // reset this counter
         while ((line = file.ReadLine()) != null)
         {
             float temp1, temp2, temp3;  // temp variables to put in Vector3
@@ -109,7 +113,7 @@ public class Scheduler : MonoBehaviour {
 
 		enemy.transform.position = new_Pos;
 
-		if (index < relTime.Length) {
+		if (index < relTime.Length-1) {
 			index++;
 			Invoke ("Spawn", relTime [index]);
 		}

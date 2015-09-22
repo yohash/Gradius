@@ -15,7 +15,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 	//Rigidbody enemyRigid;
 	movementState curr = movementState.forward;
 	public Vector2 pos1;
-	float camH, camW;
+	public float camH, camW;
 
 	//Health
 	public int health = 1;
@@ -37,7 +37,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 		camH = cam.orthographicSize * 2f;
 		camW = camH * cam.aspect;
 		score = GameObject.Find ("Score").GetComponent<Text> ();
-
+        
 		//Initially Moving to the Left
 		//enemyRigid = this.GetComponent<Rigidbody> ();
 
@@ -58,7 +58,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 	}
 
 	public void OffCamera() {
-		if (this.transform.position.x >= camW / 2 || this.transform.position.x <= -camW/2){
+		if (this.transform.position.x >= (camW / 2 + 50) || this.transform.position.x <= (-camW/2 - 50)){
 			Destroy (this.gameObject);
 		}
 	}
@@ -67,7 +67,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 		//check if the enemy has made it to the pos1 position
 		Move ();
 
-		//OffCamera();
+		OffCamera(); // delete enemies
 	}
 
 	//Scoring
@@ -85,6 +85,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 	public void Fire() {
 		// this function will get the player position, 
 		// - enemyShotBehavior script fires directly at the player
+
 		GameObject enemyShot = Instantiate (shot) as GameObject;		
 		enemyShot.transform.position = this.transform.position;	
 	}

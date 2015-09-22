@@ -102,12 +102,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos1: {x: 0, y: 0}
+  camH: 0
+  camW: 0
   health: 1
   value: 100
   score: {fileID: 0}
   powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
   chance: .0500000007
-  shot: {fileID: 185006, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
+  shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   wav_Freq: 2
   wav_Len: 3
 --- !u!1001 &100100000
@@ -144,7 +146,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: shot
       value: 
-      objectReference: {fileID: 185006, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
+      objectReference: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
     - target: {fileID: 0}
       propertyPath: chance
       value: .0500000007

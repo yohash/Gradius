@@ -2,15 +2,24 @@
 using System.Collections;
 
 public class enemyShotBehavior : MonoBehaviour {
+    // camera info
+    float camH, camW;
 
+    // enemy bullet speed
 	float speed = 5f;
 
 	Rigidbody bulletRigid;
 
 	// Use this for initialization
-	void Start () {
-		// get player's locaton
-		Rigidbody playerTarget = GameObject.Find ("Player").GetComponent<Rigidbody> ();
+	void Start ()
+    {
+        //Camera Initialization
+        Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        camH = cam.orthographicSize * 2f;
+        camW = camH * cam.aspect;
+
+        // get player's locaton
+        Rigidbody playerTarget = GameObject.Find ("Player").GetComponent<Rigidbody> ();
 
 		// vector subtraction to get vector (enemy -> player)
 		Vector3 playerPos = playerTarget.transform.position;
@@ -22,6 +31,14 @@ public class enemyShotBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        OffCamera();
 	}
+
+    public void OffCamera()
+    {
+        if (this.transform.position.x >= (camW / 2 + 5) || this.transform.position.x <= (-camW / 2 - 5) || this.transform.position.y >= (camH/2 + 5) || this.transform.position.y <= (-camH/2 -5))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
