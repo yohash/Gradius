@@ -591,7 +591,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469702, guid: 5b1d8000840c3fb4c9ba5228563dae60, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -11.7399998
       objectReference: {fileID: 0}
     - target: {fileID: 469702, guid: 5b1d8000840c3fb4c9ba5228563dae60, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1076,6 +1076,8 @@ MonoBehaviour:
   - {fileID: 129206, guid: 613857101a3959e489b022b6ffcc33e0, type: 2}
   - {fileID: 146346, guid: 24f007db388aa89448b315ae7ee112f7, type: 2}
   - {fileID: 171326, guid: 5c86d974af9b7c648b362cc47b23eb3a, type: 2}
+  - {fileID: 104260, guid: 5e93e739177806e40aa43f77ed4ad2be, type: 2}
+  - {fileID: 134828, guid: 436661a87cb0eff428384af0f7fceb42, type: 2}
 --- !u!1 &1705324689
 GameObject:
   m_ObjectHideFlags: 0

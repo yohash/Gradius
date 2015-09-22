@@ -34,6 +34,8 @@ public class enemyShotBehavior : MonoBehaviour {
         OffCamera();
 	}
 
+    // function to test if to the left or right, OR ABOVE AND BELOW 
+    // the camera bounds (enemy and playerShot tests dont check above/below)
     public void OffCamera()
     {
         if (this.transform.position.x >= (camW / 2 + 5) || this.transform.position.x <= (-camW / 2 - 5) || this.transform.position.y >= (camH/2 + 5) || this.transform.position.y <= (-camH/2 -5))
