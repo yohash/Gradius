@@ -12,9 +12,9 @@ public class BackgroundBuilder : MonoBehaviour {
 		Camera cam = GameObject.Find ("Main Camera").GetComponent<Camera> ();
 		camH = cam.orthographicSize * 2f;
 		camW = camH * cam.aspect;
-		camH /= 2f;
+        camH /= 2f;
 		camW /= 1.5f;
-
+        
 		//Instatiate the Stars
 		GameObject back;
 		for (int i =0; i <count; ++i) {

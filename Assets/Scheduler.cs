@@ -2,15 +2,15 @@
 using System.Collections;
 using System.IO;
 
-enum enemyID{fan, div, osc, oscP};
+enum enemyID{fan, div, osc, oscP, gnd};
 
 public class Scheduler : MonoBehaviour {
 
 	// Catalog of spawnable game objects
 	public GameObject[] 		Catalog;	// enemy types to spawn
-	public float[] 				relTime;	// relative time from last enemy
-	public Vector3[]			enemyLoc;	// enemy location
-	public int[]			    ID;
+    float[] 				    relTime;	// relative time from last enemy
+	Vector3[]			        enemyLoc;	// enemy location
+	int[]			            ID;
 
 	float camH, camW;		// camera data
 
@@ -46,9 +46,9 @@ public class Scheduler : MonoBehaviour {
         string[] splitLines;
 
         // the files must have hard-coded locations installed
-        // for reference:
-        //     camH = 20
-        //     camW = 35.5
+        // for reference, orthographic cam with size = 10:
+        //     camH = +- 10
+        //     camW = +- 13.4
         lineCount = 0;      // reset this counter
         while ((line = file.ReadLine()) != null)
         {
