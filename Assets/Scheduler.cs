@@ -24,10 +24,13 @@ public class Scheduler : MonoBehaviour {
         // this section is because I cannot find a simple way to 
         // compute how many lines are in our scheduler text file, so
         // we read it through once to increment a counter
+		StringReader reader = null;
 
-        System.IO.StreamReader fileCount = new System.IO.StreamReader("Assets/level_1.txt");
+		TextAsset fileCount = Resources.Load<TextAsset>("Level_1");
+		reader = new StringReader(fileCount.text);
+        //System.IO.StreamReader fileCount = new System.IO.StreamReader("Assets/level_1.txt");
         int lineCount = 0;  // track number of lines in the file
-        while(fileCount.ReadLine()!=null) {
+        while(reader.ReadLine()!=null) {
             lineCount++;
         }
         // end the counter
@@ -41,7 +44,9 @@ public class Scheduler : MonoBehaviour {
         ID = new int[lineCount];
 
         // pull data for level
-        System.IO.StreamReader file = new System.IO.StreamReader("Assets/level_1.txt");
+       // System.IO.StreamReader file = new System.IO.StreamReader("Assets/level_1.txt");
+		TextAsset file = Resources.Load<TextAsset>("Level_1");
+		reader = new StringReader(file.text);
         string line;
         string[] splitLines;
 
@@ -50,7 +55,7 @@ public class Scheduler : MonoBehaviour {
         //     camH = +- 10
         //     camW = +- 13.4
         lineCount = 0;      // reset this counter
-        while ((line = file.ReadLine()) != null)
+        while ((line = reader.ReadLine()) != null)
         {
             float temp1, temp2, temp3;  // temp variables to put in Vector3
             splitLines = line.Split(' ');
