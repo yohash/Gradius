@@ -1,0 +1,2630 @@
+fileFormatVersion: 2
+guid: d24be3403b8319148b9235b9cacb49c5
+timeCreated: 1442985208
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: GradiusSheet1_0
+    21300002: GradiusSheet1_1
+    21300004: GradiusSheet1_2
+    21300006: GradiusSheet1_3
+    21300008: GradiusSheet1_4
+    21300010: GradiusSheet1_5
+    21300012: GradiusSheet1_6
+    21300014: GradiusSheet1_7
+    21300016: GradiusSheet1_8
+    21300018: GradiusSheet1_9
+    21300020: GradiusSheet1_10
+    21300022: GradiusSheet1_11
+    21300024: GradiusSheet1_12
+    21300026: GradiusSheet1_13
+    21300028: GradiusSheet1_14
+    21300030: GradiusSheet1_15
+    21300032: GradiusSheet1_16
+    21300034: GradiusSheet1_17
+    21300036: GradiusSheet1_18
+    21300038: GradiusSheet1_19
+    21300040: GradiusSheet1_20
+    21300042: GradiusSheet1_21
+    21300044: GradiusSheet1_22
+    21300046: GradiusSheet1_23
+    21300048: GradiusSheet1_24
+    21300050: GradiusSheet1_25
+    21300052: GradiusSheet1_26
+    21300054: GradiusSheet1_27
+    21300056: GradiusSheet1_28
+    21300058: GradiusSheet1_29
+    21300060: GradiusSheet1_30
+    21300062: GradiusSheet1_31
+    21300064: GradiusSheet1_32
+    21300066: GradiusSheet1_33
+    21300068: GradiusSheet1_34
+    21300070: GradiusSheet1_35
+    21300072: GradiusSheet1_36
+    21300074: GradiusSheet1_37
+    21300076: GradiusSheet1_38
+    21300078: GradiusSheet1_39
+    21300080: GradiusSheet1_40
+    21300082: GradiusSheet1_41
+    21300084: GradiusSheet1_42
+    21300086: GradiusSheet1_43
+    21300088: GradiusSheet1_44
+    21300090: GradiusSheet1_45
+    21300092: GradiusSheet1_46
+    21300094: GradiusSheet1_47
+    21300096: GradiusSheet1_48
+    21300098: GradiusSheet1_49
+    21300100: GradiusSheet1_50
+    21300102: GradiusSheet1_51
+    21300104: GradiusSheet1_52
+    21300106: GradiusSheet1_53
+    21300108: GradiusSheet1_54
+    21300110: GradiusSheet1_55
+    21300112: GradiusSheet1_56
+    21300114: GradiusSheet1_57
+    21300116: GradiusSheet1_58
+    21300118: GradiusSheet1_59
+    21300120: GradiusSheet1_60
+    21300122: GradiusSheet1_61
+    21300124: GradiusSheet1_62
+    21300126: GradiusSheet1_63
+    21300128: GradiusSheet1_64
+    21300130: GradiusSheet1_65
+    21300132: GradiusSheet1_66
+    21300134: GradiusSheet1_67
+    21300136: GradiusSheet1_68
+    21300138: GradiusSheet1_69
+    21300140: GradiusSheet1_70
+    21300142: GradiusSheet1_71
+    21300144: GradiusSheet1_72
+    21300146: GradiusSheet1_73
+    21300148: GradiusSheet1_74
+    21300150: GradiusSheet1_75
+    21300152: GradiusSheet1_76
+    21300154: GradiusSheet1_77
+    21300156: GradiusSheet1_78
+    21300158: GradiusSheet1_79
+    21300160: GradiusSheet1_80
+    21300162: GradiusSheet1_81
+    21300164: GradiusSheet1_82
+    21300166: GradiusSheet1_83
+    21300168: GradiusSheet1_84
+    21300170: GradiusSheet1_85
+    21300172: GradiusSheet1_86
+    21300174: GradiusSheet1_87
+    21300176: GradiusSheet1_88
+    21300178: GradiusSheet1_89
+    21300180: GradiusSheet1_90
+    21300182: GradiusSheet1_91
+    21300184: GradiusSheet1_92
+    21300186: GradiusSheet1_93
+    21300188: GradiusSheet1_94
+    21300190: GradiusSheet1_95
+    21300192: GradiusSheet1_96
+    21300194: GradiusSheet1_97
+    21300196: GradiusSheet1_98
+    21300198: GradiusSheet1_99
+    21300200: GradiusSheet1_100
+    21300202: GradiusSheet1_101
+    21300204: GradiusSheet1_102
+    21300206: GradiusSheet1_103
+    21300208: GradiusSheet1_104
+    21300210: GradiusSheet1_105
+    21300212: GradiusSheet1_106
+    21300214: GradiusSheet1_107
+    21300216: GradiusSheet1_108
+    21300218: GradiusSheet1_109
+    21300220: GradiusSheet1_110
+    21300222: GradiusSheet1_111
+    21300224: GradiusSheet1_112
+    21300226: GradiusSheet1_113
+    21300228: GradiusSheet1_114
+    21300230: GradiusSheet1_115
+    21300232: GradiusSheet1_116
+    21300234: GradiusSheet1_117
+    21300236: GradiusSheet1_118
+    21300238: GradiusSheet1_119
+    21300240: GradiusSheet1_120
+    21300242: GradiusSheet1_121
+    21300244: GradiusSheet1_122
+    21300246: GradiusSheet1_123
+    21300248: GradiusSheet1_124
+    21300250: GradiusSheet1_125
+    21300252: GradiusSheet1_126
+    21300254: GradiusSheet1_127
+    21300256: GradiusSheet1_128
+    21300258: GradiusSheet1_129
+    21300260: GradiusSheet1_130
+    21300262: GradiusSheet1_131
+    21300264: GradiusSheet1_132
+    21300266: GradiusSheet1_133
+    21300268: GradiusSheet1_134
+    21300270: GradiusSheet1_135
+    21300272: GradiusSheet1_136
+    21300274: GradiusSheet1_137
+    21300276: GradiusSheet1_138
+    21300278: GradiusSheet1_139
+    21300280: GradiusSheet1_140
+    21300282: GradiusSheet1_141
+    21300284: GradiusSheet1_142
+    21300286: GradiusSheet1_143
+    21300288: GradiusSheet1_144
+    21300290: GradiusSheet1_145
+    21300292: GradiusSheet1_146
+    21300294: GradiusSheet1_147
+    21300296: GradiusSheet1_148
+    21300298: GradiusSheet1_149
+    21300300: GradiusSheet1_150
+    21300302: GradiusSheet1_151
+    21300304: GradiusSheet1_152
+    21300306: GradiusSheet1_153
+    21300308: GradiusSheet1_154
+    21300310: GradiusSheet1_155
+    21300312: GradiusSheet1_156
+    21300314: GradiusSheet1_157
+    21300316: GradiusSheet1_158
+    21300318: GradiusSheet1_159
+    21300320: GradiusSheet1_160
+    21300322: GradiusSheet1_161
+    21300324: GradiusSheet1_162
+    21300326: GradiusSheet1_163
+    21300328: GradiusSheet1_164
+    21300330: GradiusSheet1_165
+    21300332: GradiusSheet1_166
+    21300334: GradiusSheet1_167
+    21300336: GradiusSheet1_168
+    21300338: GradiusSheet1_169
+    21300340: GradiusSheet1_170
+    21300342: GradiusSheet1_171
+    21300344: GradiusSheet1_172
+    21300346: GradiusSheet1_173
+    21300348: GradiusSheet1_174
+    21300350: GradiusSheet1_175
+    21300352: GradiusSheet1_176
+    21300354: GradiusSheet1_177
+    21300356: GradiusSheet1_178
+    21300358: GradiusSheet1_179
+    21300360: GradiusSheet1_180
+    21300362: GradiusSheet1_181
+    21300364: GradiusSheet1_182
+    21300366: GradiusSheet1_183
+    21300368: GradiusSheet1_184
+    21300370: GradiusSheet1_185
+    21300372: GradiusSheet1_186
+    21300374: GradiusSheet1_187
+    21300376: GradiusSheet1_188
+    21300378: GradiusSheet1_189
+    21300380: GradiusSheet1_190
+    21300382: GradiusSheet1_191
+    21300384: GradiusSheet1_192
+    21300386: GradiusSheet1_193
+    21300388: GradiusSheet1_194
+    21300390: GradiusSheet1_195
+    21300392: GradiusSheet1_196
+    21300394: GradiusSheet1_197
+    21300396: GradiusSheet1_198
+    21300398: GradiusSheet1_199
+    21300400: GradiusSheet1_200
+    21300402: GradiusSheet1_201
+    21300404: GradiusSheet1_202
+    21300406: GradiusSheet1_203
+    21300408: GradiusSheet1_204
+    21300410: GradiusSheet1_205
+    21300412: GradiusSheet1_206
+    21300414: GradiusSheet1_207
+    21300416: GradiusSheet1_208
+    21300418: GradiusSheet1_209
+    21300420: GradiusSheet1_210
+    21300422: GradiusSheet1_211
+    21300424: GradiusSheet1_212
+    21300426: GradiusSheet1_213
+    21300428: GradiusSheet1_214
+    21300430: GradiusSheet1_215
+    21300432: GradiusSheet1_216
+    21300434: GradiusSheet1_217
+    21300436: GradiusSheet1_218
+    21300438: GradiusSheet1_219
+    21300440: GradiusSheet1_220
+    21300442: GradiusSheet1_221
+    21300444: GradiusSheet1_222
+    21300446: GradiusSheet1_223
+    21300448: GradiusSheet1_224
+    21300450: GradiusSheet1_225
+    21300452: GradiusSheet1_226
+    21300454: GradiusSheet1_227
+    21300456: GradiusSheet1_228
+    21300458: GradiusSheet1_229
+    21300460: GradiusSheet1_230
+    21300462: GradiusSheet1_231
+    21300464: GradiusSheet1_232
+    21300466: GradiusSheet1_233
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: GradiusSheet1_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 934
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 934
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_2
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 934
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_3
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 934
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_4
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 934
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 934
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_6
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 916
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_7
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 916
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_8
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 916
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_9
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 916
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_10
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 916
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_11
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 916
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_12
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 916
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_13
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 899
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_14
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 899
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_15
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 899
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_16
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 899
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_17
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 899
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_18
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 899
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_19
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 899
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_20
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 899
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 879
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_22
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 879
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_23
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 879
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_24
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 879
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_25
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 879
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_26
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 879
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_27
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 858
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_28
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 858
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_29
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 858
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_30
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 858
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_31
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 858
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_32
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 858
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_33
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 840
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_34
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 840
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_35
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 840
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_36
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 840
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_37
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 840
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_38
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 840
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_39
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 840
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 840
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_41
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 822
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_42
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 822
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_43
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 822
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_44
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 822
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_45
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 822
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_46
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 822
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_47
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 822
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_48
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 822
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_49
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 802
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_50
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 802
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_51
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 802
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_52
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 802
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_53
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 802
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_54
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 802
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_55
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 802
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_56
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 802
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_57
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 802
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_58
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 802
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_59
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 802
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_60
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 802
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_61
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 782
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_62
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 782
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_63
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 782
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_64
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 782
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_65
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 782
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_66
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 782
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_67
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 782
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_68
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 782
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_69
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 782
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_70
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 782
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_71
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 782
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_72
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 782
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_73
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 761
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_74
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 761
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_75
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 761
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_76
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 761
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_77
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 761
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_78
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 761
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_79
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 761
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_80
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 761
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_81
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 740
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_82
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 740
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_83
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 740
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_84
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 740
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_85
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 740
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_86
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 740
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_87
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 740
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_88
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 740
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_89
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 709
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_90
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 709
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_91
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 678
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_92
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 678
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_93
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 659
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_94
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 659
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_95
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 659
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_96
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 659
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_97
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 659
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_98
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 659
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_99
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 659
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_100
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 659
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_101
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 659
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_102
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 659
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_103
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 659
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_104
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 659
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_105
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 637
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_106
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 637
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_107
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 637
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_108
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 637
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_109
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 637
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_110
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 637
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_111
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 637
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_112
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 637
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_113
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 637
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_114
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 637
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_115
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 637
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_116
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 637
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_117
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 584
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_118
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 584
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_119
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 566
+        width: 56
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_120
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 584
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_121
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 584
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_122
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 584
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_123
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 584
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_124
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 584
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_125
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 566
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_126
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 566
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_127
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 566
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_128
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 566
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_129
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 566
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_130
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 566
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_131
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 566
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_132
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 515
+        width: 81
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_133
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 515
+        width: 81
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_134
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 515
+        width: 81
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_135
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 515
+        width: 81
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_136
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 515
+        width: 81
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_137
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 515
+        width: 81
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_138
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 464
+        width: 81
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_139
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 464
+        width: 81
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_140
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 487
+        width: 81
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_141
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 487
+        width: 81
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_142
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 464
+        width: 81
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_143
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 464
+        width: 81
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_144
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 433
+        width: 65
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_145
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 433
+        width: 65
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_146
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 434
+        width: 65
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_147
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 434
+        width: 65
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_148
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 403
+        width: 65
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_149
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 403
+        width: 65
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_150
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 403
+        width: 65
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_151
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 403
+        width: 65
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_152
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 386
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_153
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 386
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_154
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 386
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_155
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 386
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_156
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 386
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_157
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 386
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_158
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 386
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_159
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 386
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_160
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 386
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_161
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 386
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_162
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 365
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_163
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 365
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_164
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 365
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_165
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 365
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_166
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 365
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_167
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 365
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_168
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 365
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_169
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 365
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_170
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 365
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_171
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 365
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_172
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 345
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_173
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 345
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_174
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 345
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_175
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 345
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_176
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 345
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_177
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 345
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_178
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 345
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_179
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 345
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_180
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 345
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_181
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 345
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_182
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 279
+        width: 84
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_183
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 279
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_184
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 279
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_185
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 279
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_186
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 279
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_187
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 279
+        width: 84
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_188
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 260
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_189
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 260
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_190
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 260
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_191
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 260
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_192
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 260
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_193
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 260
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_194
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 260
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_195
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 260
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_196
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 223
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_197
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 223
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_198
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 223
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_199
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 223
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_200
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 223
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_201
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 223
+        width: 50
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_202
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 223
+        width: 50
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_203
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 223
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_204
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 223
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_205
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 223
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_206
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 223
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_207
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 223
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_208
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 205
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_209
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 205
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_210
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 205
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_211
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 205
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_212
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 205
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_213
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 205
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_214
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 195
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_215
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 167
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_216
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 195
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_217
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 167
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_218
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 167
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_219
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 148
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_220
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 148
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_221
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 148
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_222
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 148
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_223
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 148
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_224
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 148
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_225
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 148
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_226
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 148
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_227
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 148
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_228
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 148
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_229
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 148
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_230
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 148
+        width: 17
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_231
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 148
+        width: 28
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_232
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 148
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_233
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 5
+        width: 104
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
