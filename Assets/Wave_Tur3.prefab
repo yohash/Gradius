@@ -285,7 +285,7 @@ MonoBehaviour:
   chance: 0
   shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   speed: 3
-  isShooter: 0
+  isShooter: 1
 --- !u!114 &11436538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,7 +329,7 @@ MonoBehaviour:
   chance: 0
   shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   speed: 3
-  isShooter: 0
+  isShooter: 1
 --- !u!135 &13582766
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -376,6 +376,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: isShooter
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
