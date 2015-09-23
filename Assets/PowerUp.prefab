@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3386118}
   - 136: {fileID: 13617494}
   - 23: {fileID: 2391146}
+  - 114: {fileID: 11401146}
   m_Layer: 10
   m_Name: PowerUp
   m_TagString: PowerUp
@@ -61,6 +62,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128354}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11401146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359b54d9452dc29408ce29f24e93ff30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pUp: {fileID: 128354}
 --- !u!136 &13617494
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -93,6 +106,10 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: pUp
+      value: 
+      objectReference: {fileID: 128354}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 128354}
