@@ -11,23 +11,26 @@ public class Darters : BasicEnemyBehaviour
 
     // speed of background
     float speed = 3f;
-    float vSpeed = 12f;     // vertical speed 
-    float dartSpeed = 15f;  // darting speed
+    float vSpeed = 12f;         // vertical speed 
+    float dartSpeed = 15f;      // darting speed
 
 	// Use this for initialization
 	void Start ()
     {
         base.score = GameObject.Find("Score").GetComponent<Text>();
+        if (this.transform.position.x > 0) { this.vSpeed = -vSpeed; }
+        print(this.vSpeed);
     }
 
 
     public override void Move()
     {
         Rigidbody playerRigid = GameObject.Find("Player").GetComponent<Rigidbody>();
-        if (state == darterMotion.first && this.transform.position.y < playerRigid.transform.position.y)
+
+        if (state == darterMotion.first && this.transform.position.y * vSpeed / Mathf.Abs(vSpeed) < playerRigid.transform.position.y)
         {
             this.transform.position += Time.deltaTime * new Vector3(-speed, vSpeed, 0f);
-        } else if (state == darterMotion.first && this.transform.position.y >= playerRigid.transform.position.y) {
+        } else if (state == darterMotion.first && this.transform.position.y * vSpeed / Mathf.Abs(vSpeed) >= playerRigid.transform.position.y ) {
             Vector3 dartLoc = Vector3.zero;
             dartLoc.y = playerRigid.transform.position.y;
             dartLoc.x = this.transform.position.x;

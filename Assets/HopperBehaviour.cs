@@ -7,7 +7,7 @@ public class HopperBehaviour : BasicEnemyBehaviour
     Rigidbody enemyHopper;
 
     float hSpeed = 5f;      // horizontal speed with which hoppers jump
-    int jumpMax = 8;        // after a certain number of jumps, the NES Gradius
+    int jumpMax = 6;        // after a certain number of jumps, the NES Gradius
     int jumpCnt = 0;        // hoppers seem to go away
 
 	// Use this for initialization
