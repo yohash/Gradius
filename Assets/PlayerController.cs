@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour {
 	public float missile_reload;
 	float missile_currReload; 
 
+	//Double Shot Mechanics
+	public GameObject doubleshotPrefab;
+
 	//PowerUps
 	powerLevel pow = powerLevel.none;
 	int[] powers = {0,0,0,0,0,0};
@@ -127,6 +130,10 @@ public class PlayerController : MonoBehaviour {
 				currReload = reload/4;
 			}
 
+			if(powers[2] == 1){
+				GameObject doubleshot = Instantiate(doubleshotPrefab) as GameObject;
+				doubleshot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+			}
 			//Create bullet and move it to the player position
 			GameObject shot = Instantiate(shotPrefab) as GameObject;
 			shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
