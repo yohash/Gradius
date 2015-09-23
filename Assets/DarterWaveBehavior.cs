@@ -16,8 +16,8 @@ public class DarterWaveBehavior : BasicEnemyBehaviour
     void Start()
     {
         base.score = GameObject.Find("Score").GetComponent<Text>();
-        Invoke("SpawnWave", 2f);
-        Invoke("SpawnWave", 4f);
+        Invoke("SpawnWave", 1f);
+        Invoke("SpawnWave", 3f);
     }
 
     void SpawnWave()
