@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour {
 	//Double Shot Mechanics
 	public GameObject doubleshotPrefab;
 
+	//Laser Mechanics
+	public GameObject laserPrefab;
+
+
 	//PowerUps
 	powerLevel pow = powerLevel.none;
 	int[] powers = {0,0,0,0,0,0};
@@ -130,13 +134,19 @@ public class PlayerController : MonoBehaviour {
 				currReload = reload/4;
 			}
 
-			if(powers[2] == 1){
-				GameObject doubleshot = Instantiate(doubleshotPrefab) as GameObject;
-				doubleshot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+			if(powers[3] == 0){
+				if(powers[2] == 1){
+					GameObject doubleshot = Instantiate(doubleshotPrefab) as GameObject;
+					doubleshot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+				}
+				//Create bullet and move it to the player position
+				GameObject shot = Instantiate(shotPrefab) as GameObject;
+				shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
 			}
-			//Create bullet and move it to the player position
-			GameObject shot = Instantiate(shotPrefab) as GameObject;
-			shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+			if(powers[3] == 1){
+				GameObject shot = Instantiate(laserPrefab) as GameObject;
+				shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+			}
 		}
 
 		//Using PowerUp
