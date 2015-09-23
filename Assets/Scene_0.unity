@@ -677,6 +677,10 @@ Prefab:
       propertyPath: reload
       value: .300000012
       objectReference: {fileID: 0}
+    - target: {fileID: 3320364, guid: 5b1d8000840c3fb4c9ba5228563dae60, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b1d8000840c3fb4c9ba5228563dae60, type: 2}
   m_IsPrefabParent: 0
