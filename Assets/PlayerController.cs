@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour {
 	//Collision detection
 	void  OnTriggerEnter(Collider coll){
 		//Enemy Collision
-		if (coll.gameObject.tag == "Enemy") {
+		if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "EnemyShot" || coll.gameObject.tag == "Ground") {
 			health--;
 			healthText.text = health.ToString();
 
