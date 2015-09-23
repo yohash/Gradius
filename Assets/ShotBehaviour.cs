@@ -28,9 +28,8 @@ public class ShotBehaviour : MonoBehaviour {
 	//Collision Detection
 	void OnTriggerEnter(Collider coll){
 		if (coll.gameObject.tag == "Enemy") {
-			coll.gameObject.GetComponent<BasicEnemyBehaviour>().Scored(); //Add Score
+			coll.gameObject.GetComponent<BasicEnemyBehaviour>().Hit(); //Add Score
 			Destroy(this.gameObject);
-			Destroy(coll.gameObject);
 		}
 	}
     

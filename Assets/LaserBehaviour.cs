@@ -28,8 +28,7 @@ public class LaserBehaviour: MonoBehaviour {
 	//Collision Detection
 	void OnTriggerEnter(Collider coll){
 		if (coll.gameObject.tag == "Enemy") {
-			coll.gameObject.GetComponent<BasicEnemyBehaviour>().Scored(); //Add Score
-			Destroy(coll.gameObject);
+			coll.gameObject.GetComponent<BasicEnemyBehaviour>().Hit(); //Add Score
 		}
 	}
 	

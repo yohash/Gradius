@@ -8,6 +8,7 @@ TagManager:
   - PowerUp
   - EnemyShot
   - Ground
+  - Silo
   layers:
   - Default
   - TransparentFX

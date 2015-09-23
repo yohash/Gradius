@@ -70,8 +70,17 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 		OffCamera(); // delete enemies
 	}
 
+	public void Hit(){
+		if(health > 1){
+			health--;
+		} else{
+			Scored ();
+			Destroy(this.gameObject);
+		}
+	}
+
 	//Scoring
-	public void Scored(){
+	void Scored(){
 		//Add enemy value to scoreboard
 		score.text = (int.Parse (score.text) + value).ToString ();
 

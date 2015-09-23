@@ -29,9 +29,8 @@ public class MissileBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter(Collider coll){
 		if (coll.gameObject.tag == "Enemy") {
-			coll.gameObject.GetComponent<BasicEnemyBehaviour>().Scored(); //Add Score
+			coll.gameObject.GetComponent<BasicEnemyBehaviour>().Hit(); //Add Score
 			Destroy(this.gameObject);
-			Destroy(coll.gameObject);
 		}
 		if(coll.gameObject.tag == "Ground"){
 			Destroy(this.gameObject);
