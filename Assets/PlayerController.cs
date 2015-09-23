@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
 
 	//PowerUps
 	powerLevel pow = powerLevel.none;
-	int[] powers = {0,0,0,0,0,0};
+	int[] powers = {1,0,0,0,0,0};
 	public Image[] pow_Img = new Image[6];
 	public Text[] pow_Lbl = new Text[6];
 	
@@ -99,16 +99,16 @@ public class PlayerController : MonoBehaviour {
 
 		//Player movement, includes screen edge bounding
 		if(Input.GetKey(KeyCode.W) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/2 < (camH/2 + camY))){
-			speed.y += maxSpeed.y;
+			speed.y += maxSpeed.y*powers[0];
 		}
 		if(Input.GetKey(KeyCode.S) && (this.gameObject.transform.position.y - this.gameObject.transform.lossyScale.y/2 > (-camH/2 + camY))){
-			speed.y -= maxSpeed.y;
+			speed.y -= maxSpeed.y*powers[0];
 		}		
 		if(Input.GetKey(KeyCode.A) && (this.gameObject.transform.position.x - this.gameObject.transform.lossyScale.x/2 > (-camW/2 + camX))){
-			speed.x -= maxSpeed.x;
+			speed.x -= maxSpeed.x*powers[0];
 		}		
 		if(Input.GetKey(KeyCode.D) && (this.gameObject.transform.position.x + this.gameObject.transform.lossyScale.x/2 < (camW/2 + camX))){
-			speed.x += maxSpeed.x;
+			speed.x += maxSpeed.x*powers[0];
 		}
 
         // if ship is off screen (-x) add an offset to keep us on screen
@@ -127,12 +127,7 @@ public class PlayerController : MonoBehaviour {
 				GameObject missile = Instantiate(missilePrefab) as GameObject;
 				missile.GetComponent<Rigidbody>().MovePosition(this.transform.position + missilespawn);
 			}
-			if(powers[0] == 0){
-				currReload = reload;
-			}
-			if(powers[0] == 1){
-				currReload = reload/4;
-			}
+			currReload = reload;
 
 			if(powers[3] == 0){
 				if(powers[2] == 1){
@@ -152,7 +147,12 @@ public class PlayerController : MonoBehaviour {
 		//Using PowerUp
 		if(Input.GetKey(KeyCode.RightControl) && pow != powerLevel.none)
 		{
-			if(powers[(int)pow-1] == 0){
+			if (pow == powerLevel.first){
+				powers[(int)pow-1]++;
+				pow_Img[(int)pow-1].color = Color.blue;
+				//pow_Lbl[(int)pow-1].enabled = false;
+				pow = powerLevel.none;
+			}	else if(powers[(int)pow-1] == 0){
 				powers[(int)pow-1]++;
 				pow_Img[(int)pow-1].color = Color.blue;
 				pow_Lbl[(int)pow-1].enabled = false;
@@ -195,5 +195,6 @@ public class PlayerController : MonoBehaviour {
 			pow_Img[i].color = Color.blue;
 			pow_Lbl[i].enabled = true;
 		}
+		powers[0] = 1;
 	}
 }
