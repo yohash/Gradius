@@ -22,6 +22,19 @@ public class PlayerController : MonoBehaviour {
 	public float reload;
 	float currReload;
 
+	//Missile Mechanics
+	public GameObject missilePrefab;
+	public Vector3 missilespawn = new Vector3(0.5f, 0.5f, 0f);
+	public float missile_reload;
+	float missile_currReload; 
+
+	//Double Shot Mechanics
+	public GameObject doubleshotPrefab;
+
+	//Laser Mechanics
+	public GameObject laserPrefab;
+
+
 	//PowerUps
 	powerLevel pow = powerLevel.none;
 	int[] powers = {0,0,0,0,0,0};
@@ -73,6 +86,12 @@ public class PlayerController : MonoBehaviour {
 			currReload -= Time.deltaTime;
 		}
 
+		if (missile_currReload < Time.deltaTime) {
+			missile_currReload = 0f;
+		} else {
+			missile_currReload -= Time.deltaTime;
+		}
+		
 		//Reset the game if player health drops to 0
 		if (health <= 0) {
 			Application.LoadLevel("Scene_0");
@@ -103,6 +122,11 @@ public class PlayerController : MonoBehaviour {
 		//Shooting
 		if (Input.GetKey (KeyCode.Space) && currReload <= 0) {
 			//Check for reload and Power Level
+			if(powers[1] == 1 && missile_currReload <= 0){
+				missile_currReload = missile_reload;
+				GameObject missile = Instantiate(missilePrefab) as GameObject;
+				missile.GetComponent<Rigidbody>().MovePosition(this.transform.position + missilespawn);
+			}
 			if(powers[0] == 0){
 				currReload = reload;
 			}
@@ -110,9 +134,19 @@ public class PlayerController : MonoBehaviour {
 				currReload = reload/4;
 			}
 
-			//Create bullet and move it to the player position
-			GameObject shot = Instantiate(shotPrefab) as GameObject;
-			shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+			if(powers[3] == 0){
+				if(powers[2] == 1){
+					GameObject doubleshot = Instantiate(doubleshotPrefab) as GameObject;
+					doubleshot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+				}
+				//Create bullet and move it to the player position
+				GameObject shot = Instantiate(shotPrefab) as GameObject;
+				shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+			}
+			if(powers[3] == 1){
+				GameObject shot = Instantiate(laserPrefab) as GameObject;
+				shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+			}
 		}
 
 		//Using PowerUp
