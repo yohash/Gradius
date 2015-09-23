@@ -13,9 +13,9 @@ GameObject:
   - 23: {fileID: 2362264}
   - 54: {fileID: 5449998}
   - 114: {fileID: 11416932}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Hopper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,6 +137,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Mass
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
