@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BackgroundMovement : MonoBehaviour {
 
-	public float speed = 10f;
+	public float speed = 1f;
 	float camH, camW;
 
     bool __________________;

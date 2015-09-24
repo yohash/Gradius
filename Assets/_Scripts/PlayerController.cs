@@ -31,6 +31,9 @@ public class PlayerController : MonoBehaviour {
 	public float missile_reload;
 	float missile_currReload; 
 
+	//Shield Mechanics
+
+
 	//Double Shot Mechanics
 	public GameObject doubleshotPrefab;
 
@@ -170,12 +173,18 @@ public class PlayerController : MonoBehaviour {
 	void  OnTriggerEnter(Collider coll){
 		//Enemy Collision
 		if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "EnemyShot" || coll.gameObject.tag == "Ground") {
-			health--;
-			healthText.text = health.ToString();
+			if(powers[5] == 0){
+				health--;
+				healthText.text = health.ToString();
 
-			//Reset powerups
-			resetPowers();
-			pow = powerLevel.none;
+				//Reset powerups
+				resetPowers();
+				pow = powerLevel.none;
+			} else {
+				powers[5] = 0;
+				pow_Img[5].color = Color.blue;
+				pow_Lbl[5].enabled = true;
+			}
 		}
 		//PowerUp Collision
 		if (coll.gameObject.tag == "PowerUp") {
