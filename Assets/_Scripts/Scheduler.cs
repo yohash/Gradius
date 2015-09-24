@@ -2,7 +2,7 @@
 using System.Collections;
 using System.IO;
 
-enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop};
+enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, ATST};
 
 public class Scheduler : MonoBehaviour {
 

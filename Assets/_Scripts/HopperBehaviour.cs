@@ -21,10 +21,10 @@ public class HopperBehaviour : BasicEnemyBehaviour
 
     public override void Move()
     {
-        if (enemyHopper.transform.position.y <= -9.5f) {
+        if (enemyHopper.transform.position.y <= -6.5f) {
             Vector3 tempLoc = Vector3.zero;
             tempLoc.x = enemyHopper.transform.position.x;
-            tempLoc.y = -9.5f;
+            tempLoc.y = -6.5f;
             enemyHopper.transform.position = tempLoc;
 
             // get player's locaton
