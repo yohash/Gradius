@@ -99,7 +99,7 @@ MonoBehaviour:
   chance: 0
   shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   isShooter: 0
-  speed: 2
+  speed: 5
 --- !u!136 &13612068
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -122,7 +122,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: speed
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: powerUp
