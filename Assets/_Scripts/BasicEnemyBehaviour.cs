@@ -37,13 +37,14 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 		camH = cam.orthographicSize * 2f;
 		camW = camH * cam.aspect;
 		score = GameObject.Find ("Score").GetComponent<Text> ();
-        
-		//Initially Moving to the Left
-		//enemyRigid = this.GetComponent<Rigidbody> ();
 
-		//INITIALIZING SPEED (we dont want this)
-		//enemyRigid.velocity = new Vector3 (-speed, 0f, 0f);
-	}
+        
+        //Initially Moving to the Left
+        //enemyRigid = this.GetComponent<Rigidbody> ();
+
+        //INITIALIZING SPEED (we dont want this)
+        //enemyRigid.velocity = new Vector3 (-speed, 0f, 0f);
+    }
 
 	// Update is called once per frame
 	public virtual void Move(){

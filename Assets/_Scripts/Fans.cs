@@ -14,39 +14,42 @@ public class Fans : BasicEnemyBehaviour {
 	//float camH, camW; //<---- silenced due to BasicEnemyBehavior computing same values
 
 	Rigidbody enemyRigid;
+    Vector3 playerPos;
 	
 	// Use this for initialization
 	void Start () {
-		//Camera cam = GameObject.Find ("Main Camera").GetComponent<Camera> ();
-		//camH = cam.orthographicSize * 2f;
-		//camW = camH * cam.aspect;
+		Camera cam = GameObject.Find ("Main Camera").GetComponent<Camera> ();
+		camH = cam.orthographicSize * 2f;
+		camW = camH * cam.aspect;
+
 		wav_Time = Time.time;
 		enemyRigid = this.GetComponent<Rigidbody> ();
 		y0 = this.enemyRigid.position.y;
 		this.enemyRigid.velocity = new Vector3(-speed, 0f, 0f);
-		
+
 		base.score = GameObject.Find ("Score").GetComponent<Text> ();
 
 		// InvokeRepeating ("Fire", 1f, 2f); //<---- test fire function
 	}
 	
 	public override void Move(){
-		if (this.transform.position.x <= -camW/7f && state == motionState.first){
+
+        playerPos = GameObject.Find("Player").GetComponent<Rigidbody>().position;
+
+        if (this.transform.position.x <= -camW/6f && state == motionState.first){
 			state = motionState.second;
 			this.enemyRigid.velocity = new Vector3(speed, 0f, 0f);
 		}
 		if (state == motionState.second){
-			if (this.transform.position.y <= GameObject.Find("Player").GetComponent<Rigidbody>().position.y + 0.5f && this.transform.position.y >= GameObject.Find("Player").GetComponent<Rigidbody>().position.y - 0.5f){
+			if (this.transform.position.y <= playerPos.y + 0.5f && this.transform.position.y >= playerPos.y - 0.5f){
 				state = motionState.third;
 				this.enemyRigid.velocity = new Vector3(speed*1.5f, 0f, 0f);
-			} else if (this.transform.position.y <= GameObject.Find("Player").GetComponent<Rigidbody>().position.y){
-				this.enemyRigid.velocity = new Vector3(1.5f*speed, 1.5f*speed*0.5f, 0f);
-			} else if (this.transform.position.y >= GameObject.Find("Player").GetComponent<Rigidbody>().position.y){
-				this.enemyRigid.velocity = new Vector3(speed, -1.5f*speed*0.5f, 0f);
+			} else if (this.transform.position.y <= playerPos.y){
+				this.enemyRigid.velocity = new Vector3(1f, 2f, 0f).normalized * speed;
+			} else if (this.transform.position.y >= playerPos.y){
+				this.enemyRigid.velocity = new Vector3(1f, -2f, 0f).normalized * speed;
 			}
 		}
 	}
-	
-	// Update is called once per fra
 }
 

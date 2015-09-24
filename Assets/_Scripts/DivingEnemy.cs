@@ -3,36 +3,43 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class DivingEnemy : BasicEnemyBehaviour {
-	
-	//Setting up oscillations
-	public float speed = 4f;
-	//private float wav_Time;
-	//private float y0;
-	private motionState state = motionState.first;
+
+    //Setting up oscillations
+    public bool isShooter;
+	public float speed = 5f;
     //float camH, camW; //<---- silenced due to BasicEnemyBehavior computing same values
 
+    private motionState state = motionState.first;
+
     Rigidbody enemyRigid;
-	
-	// Use this for initialization
-	void Start () {
+    Vector3 playerPos;
+
+    // Use this for initialization
+    void Start () {
 		//Camera cam = GameObject.Find ("Main Camera").GetComponent<Camera> ();
 		//camH = cam.orthographicSize * 2f;
 		//camW = camH * cam.aspect;
 		//wav_Time = Time.time;
+
 		enemyRigid = this.GetComponent<Rigidbody> ();
-		//y0 = this.enemyRigid.position.y;
+
 		this.enemyRigid.velocity = new Vector3(-speed, 0f, 0f);
 		
 		base.score = GameObject.Find ("Score").GetComponent<Text> ();
+        
+        if (isShooter) { Invoke("Fire", 4f); }
 	}
 	
-	public override void Move(){
-			if (this.transform.position.y <= GameObject.Find("Player").GetComponent<Rigidbody>().position.y + 0.5f && this.transform.position.y >= GameObject.Find("Player").GetComponent<Rigidbody>().position.y - 0.5f){
-				this.enemyRigid.velocity = new Vector3(-speed*2.5f, 0f, 0f);
-			} else if (this.transform.position.y <= GameObject.Find("Player").GetComponent<Rigidbody>().position.y){
-				this.enemyRigid.velocity = new Vector3(-speed, speed, 0f);
-			} else if (this.transform.position.y >= GameObject.Find("Player").GetComponent<Rigidbody>().position.y){
-				this.enemyRigid.velocity = new Vector3(-speed, -speed, 0f);
+	public override void Move()
+    {
+        playerPos = GameObject.Find("Player").GetComponent<Rigidbody>().position;
+
+        if (this.transform.position.y <= playerPos.y + 0.5f && this.transform.position.y >= playerPos.y - 0.5f){
+				this.enemyRigid.velocity = new Vector3(-speed*2.25f, 0f, 0f);
+			} else if (this.transform.position.y <= playerPos.y){
+				this.enemyRigid.velocity = new Vector3(-2f, 1f, 0f).normalized * speed;
+			} else if (this.transform.position.y >= playerPos.y){
+				this.enemyRigid.velocity = new Vector3(-2f, -1f, 0f).normalized * speed;
 			}
 	}
 	
