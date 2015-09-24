@@ -14,7 +14,7 @@ public class ShotBehaviour : MonoBehaviour {
         camH = cam.orthographicSize * 2f;
         camW = camH * cam.aspect;
 
-        InvokeRepeating("OffCamera", 5f, 2f); // check off-screen after 5 sec
+        InvokeRepeating("OffCamera", 1f, 0.5f); // check off-screen after 1 sec
 
         // obtain rigid body for physics
         this.GetComponent<Rigidbody>().velocity = new Vector3 (speed, 0f, 0f);
@@ -35,7 +35,7 @@ public class ShotBehaviour : MonoBehaviour {
     
     public void OffCamera()
     {
-        if (this.transform.position.x >= (camW / 2 + 50) || this.transform.position.x <= (-camW / 2 - 50))
+        if (this.transform.position.x >= (camW / 2 + 5) || this.transform.position.x <= (-camW / 2 - 5))
         {
             Destroy(this.gameObject);
         }

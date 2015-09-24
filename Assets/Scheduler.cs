@@ -2,7 +2,7 @@
 using System.Collections;
 using System.IO;
 
-enum enemyID{fan, div, osc, oscP, gnd, tur3, tur2, silo, hop};
+enum enemyID{fan, div, osc, oscP, gnd, tur, turP, silo, hop};
 
 public class Scheduler : MonoBehaviour {
 
@@ -44,7 +44,7 @@ public class Scheduler : MonoBehaviour {
         ID = new int[lineCount];
 
         // pull data for level
-       // System.IO.StreamReader file = new System.IO.StreamReader("Assets/level_1.txt");
+        // System.IO.StreamReader file = new System.IO.StreamReader("Assets/level_1.txt");
 		TextAsset file = Resources.Load<TextAsset>("Level_1");
 		reader = new StringReader(file.text);
         string line;

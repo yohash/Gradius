@@ -6,13 +6,12 @@ public class Turrets : BasicEnemyBehaviour {
 
     // turret speed MUST match the speed of the floor
     public float speed = 3f;
-    public bool isShooter = false;
 
     // Use this for initialization
     void Start ()
     {
         base.score = GameObject.Find("Score").GetComponent<Text>();
-        if (isShooter) { InvokeRepeating("Fire", 3f, 3f); }
+        InvokeRepeating("Fire", 3f, 3f);
     }
 
     public override void Move()
