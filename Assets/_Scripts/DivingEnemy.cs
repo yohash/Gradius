@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class DivingEnemy : BasicEnemyBehaviour {
 
+	//Animation
+	Animator anim;
+
     //Setting up oscillations
     public bool isShooter;
 	public float speed = 5f;
@@ -21,6 +24,7 @@ public class DivingEnemy : BasicEnemyBehaviour {
 		//camW = camH * cam.aspect;
 		//wav_Time = Time.time;
 
+		anim = this.GetComponent<Animator>();
 		enemyRigid = this.GetComponent<Rigidbody> ();
 
 		this.enemyRigid.velocity = new Vector3(-speed, 0f, 0f);
@@ -36,11 +40,15 @@ public class DivingEnemy : BasicEnemyBehaviour {
 
         if (this.transform.position.y <= playerPos.y + 0.5f && this.transform.position.y >= playerPos.y - 0.5f){
 				this.enemyRigid.velocity = new Vector3(-speed*2.25f, 0f, 0f);
+				anim.SetFloat("speed", this.enemyRigid.velocity.y);
 			} else if (this.transform.position.y <= playerPos.y){
 				this.enemyRigid.velocity = new Vector3(-2f, 1f, 0f).normalized * speed;
+				anim.SetFloat("speed", this.enemyRigid.velocity.y);
 			} else if (this.transform.position.y >= playerPos.y){
 				this.enemyRigid.velocity = new Vector3(-2f, -1f, 0f).normalized * speed;
+				anim.SetFloat("speed", this.enemyRigid.velocity.y);
 			}
+
 	}
 	
 	// Update is called once per frame

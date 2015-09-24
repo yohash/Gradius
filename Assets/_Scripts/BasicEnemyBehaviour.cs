@@ -64,7 +64,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 		}
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		//check if the enemy has made it to the pos1 position
 		Move ();
 
