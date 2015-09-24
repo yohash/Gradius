@@ -7,6 +7,9 @@ enum powerLevel{none, first, second, third, fourth, fithh, sixth};
 
 public class PlayerController : MonoBehaviour {
 
+	//Animation
+	Animator anim;
+
 	//UI elements
 	public int health = 3;
 	Text healthText;
@@ -47,6 +50,7 @@ public class PlayerController : MonoBehaviour {
 		Camera cam = GameObject.Find ("Main Camera").GetComponent<Camera> ();
 		camH = cam.orthographicSize * 2f;
 		camW = camH * cam.aspect;
+		anim = this.GetComponent<Animator>();
 
 		//Set the text for player health
 		healthText = GameObject.Find ("Health").GetComponent<Text> ();
@@ -117,6 +121,7 @@ public class PlayerController : MonoBehaviour {
             shipRigid.position -= new Vector3(offset, 0, 0);
         } else {
             shipRigid.velocity = speed;
+			anim.SetFloat("speed", shipRigid.velocity.y);
         }
 
 		//Shooting
