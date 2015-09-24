@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DarterWaveBehavior : BasicEnemyBehaviour
 {
+
+	Animator anim;
     public GameObject enemyDarter;
 
     // silo speed MUST match the speed of the floor
@@ -15,6 +17,7 @@ public class DarterWaveBehavior : BasicEnemyBehaviour
     // Use this for initialization
     void Start()
     {
+		anim = this.GetComponent<Animator>();
         base.score = GameObject.Find("Score").GetComponent<Text>();
         Invoke("SpawnWave", 2f);
         Invoke("SpawnWave", 4f);
@@ -42,5 +45,6 @@ public class DarterWaveBehavior : BasicEnemyBehaviour
     public override void Move()
     {
         this.transform.position += Time.deltaTime * new Vector3(-speed, 0f, 0f);
+		anim.SetInteger("Life", base.health);
     }
 }
