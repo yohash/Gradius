@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2391074}
   - 54: {fileID: 5422260}
   - 114: {fileID: 11402818}
+  - 114: {fileID: 11432264}
   m_Layer: 13
   m_Name: Turret
   m_TagString: Enemy
@@ -95,10 +96,22 @@ MonoBehaviour:
   health: 1
   value: 100
   score: {fileID: 0}
-  powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
+  powerUp: {fileID: 143132, guid: 817b81cbf55b3854695ee1dac36e394f, type: 2}
   chance: 0
   shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   speed: 3
+--- !u!114 &11432264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359b54d9452dc29408ce29f24e93ff30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pUp: {fileID: 0}
 --- !u!135 &13587298
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -121,7 +134,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: powerUp
       value: 
-      objectReference: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
+      objectReference: {fileID: 143132, guid: 817b81cbf55b3854695ee1dac36e394f, type: 2}
     - target: {fileID: 0}
       propertyPath: shot
       value: 

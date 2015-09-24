@@ -281,7 +281,7 @@ MonoBehaviour:
   health: 1
   value: 100
   score: {fileID: 0}
-  powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
+  powerUp: {fileID: 143132, guid: 817b81cbf55b3854695ee1dac36e394f, type: 2}
   chance: 0
   shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   isShooter: 1
@@ -303,7 +303,7 @@ MonoBehaviour:
   health: 1
   value: 100
   score: {fileID: 0}
-  powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
+  powerUp: {fileID: 143132, guid: 817b81cbf55b3854695ee1dac36e394f, type: 2}
   chance: 0
   shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   isShooter: 1
@@ -325,7 +325,7 @@ MonoBehaviour:
   health: 1
   value: 100
   score: {fileID: 0}
-  powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
+  powerUp: {fileID: 143132, guid: 817b81cbf55b3854695ee1dac36e394f, type: 2}
   chance: 0
   shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   isShooter: 1
@@ -380,6 +380,10 @@ Prefab:
       propertyPath: isShooter
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 143132, guid: 817b81cbf55b3854695ee1dac36e394f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 134896}
