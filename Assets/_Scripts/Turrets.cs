@@ -16,7 +16,7 @@ public class Turrets : BasicEnemyBehaviour {
         InvokeRepeating("Fire", 3f, 3f);
 
 		if(this.transform.position.y < 0){
-			this.transform.localScale = new Vector3(-1,-1,1);
+			this.transform.localScale = new Vector3(7,-7,1);
 		}
 
 		anim = this.GetComponent<Animator>();
@@ -26,16 +26,27 @@ public class Turrets : BasicEnemyBehaviour {
     public override void Move()
     {
         this.transform.position += Time.deltaTime * new Vector3(-speed, 0f, 0f);
-
-		if(this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y < 1.5){
-			anim.SetFloat("Diff_Y", -2);
-		} 
-		if(this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y > 1.5 && this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y < 5){
-			anim.SetFloat("Diff_Y", 0);
-		} 
-		if(this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y > 5){
-			anim.SetFloat("Diff_Y", 2);
-		} 
+		if(this.transform.position.y > 0){
+			if(this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y < 1.5){
+				anim.SetFloat("Diff_Y", -2);
+			} 
+			if(this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y > 1.5 && this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y < 5){
+				anim.SetFloat("Diff_Y", 0);
+			} 
+			if(this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y > 5){
+				anim.SetFloat("Diff_Y", 2);
+			} 
+		} else {
+			if(this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y < -5){
+				anim.SetFloat("Diff_Y", 2);
+			} 
+			if(this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y > -5 && this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y < -1.5){
+				anim.SetFloat("Diff_Y", 0);
+			} 
+			if(this.transform.position.y - GameObject.Find("Player").GetComponent<Rigidbody>().position.y > -1.5){
+				anim.SetFloat("Diff_Y", -2);
+			} 
+		}
 
 		anim.SetFloat("Diff_X", this.transform.position.x - GameObject.Find("Player").GetComponent<Rigidbody>().position.x);
 
