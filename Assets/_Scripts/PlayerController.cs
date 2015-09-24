@@ -98,16 +98,16 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Player movement, includes screen edge bounding
-		if(Input.GetKey(KeyCode.UpArrow) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/2 < (camH/2 + camY))){
+		if(Input.GetKey(KeyCode.UpArrow) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/8 < (camH/2 + camY))){
 			speed.y += maxSpeed.y*powers[0];
 		}
-		if(Input.GetKey(KeyCode.DownArrow) && (this.gameObject.transform.position.y - this.gameObject.transform.lossyScale.y/2 > (-camH/2 + camY))){
+		if(Input.GetKey(KeyCode.DownArrow) && (this.gameObject.transform.position.y - this.gameObject.transform.lossyScale.y/8 > (-camH/2 + camY))){
 			speed.y -= maxSpeed.y*powers[0];
 		}		
-		if(Input.GetKey(KeyCode.LeftArrow) && (this.gameObject.transform.position.x - this.gameObject.transform.lossyScale.x/2 > (-camW/2 + camX))){
+		if(Input.GetKey(KeyCode.LeftArrow) && (this.gameObject.transform.position.x - this.gameObject.transform.lossyScale.x/7 > (-camW/2 + camX))){
 			speed.x -= maxSpeed.x*powers[0];
 		}		
-		if(Input.GetKey(KeyCode.RightArrow) && (this.gameObject.transform.position.x + this.gameObject.transform.lossyScale.x/2 < (camW/2 + camX))){
+		if(Input.GetKey(KeyCode.RightArrow) && (this.gameObject.transform.position.x + this.gameObject.transform.lossyScale.x/7 < (camW/2 + camX))){
 			speed.x += maxSpeed.x*powers[0];
 		}
 
