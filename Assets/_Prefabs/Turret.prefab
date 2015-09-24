@@ -13,7 +13,6 @@ GameObject:
   - 23: {fileID: 2391074}
   - 54: {fileID: 5422260}
   - 114: {fileID: 11402818}
-  - 114: {fileID: 11432264}
   m_Layer: 13
   m_Name: Turret
   m_TagString: Enemy
@@ -100,18 +99,6 @@ MonoBehaviour:
   chance: 0
   shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
   speed: 3
---- !u!114 &11432264
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 359b54d9452dc29408ce29f24e93ff30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pUp: {fileID: 0}
 --- !u!135 &13587298
 SphereCollider:
   m_ObjectHideFlags: 1

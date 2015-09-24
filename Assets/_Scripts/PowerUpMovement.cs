@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PowerUpMovement : MonoBehaviour
 {
-    public GameObject pUp;
+    GameObject pUp;
 
     // camera info
     float camH, camW;
@@ -15,6 +15,8 @@ public class PowerUpMovement : MonoBehaviour
         Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         camH = cam.orthographicSize * 2f;
         camW = camH * cam.aspect;
+
+        pUp = this.gameObject;
     }
 	
 	// Update is called once per frame
