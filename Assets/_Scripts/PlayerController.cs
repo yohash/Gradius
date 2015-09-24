@@ -98,16 +98,16 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Player movement, includes screen edge bounding
-		if(Input.GetKey(KeyCode.W) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/2 < (camH/2 + camY))){
+		if(Input.GetKey(KeyCode.UpArrow) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/2 < (camH/2 + camY))){
 			speed.y += maxSpeed.y*powers[0];
 		}
-		if(Input.GetKey(KeyCode.S) && (this.gameObject.transform.position.y - this.gameObject.transform.lossyScale.y/2 > (-camH/2 + camY))){
+		if(Input.GetKey(KeyCode.DownArrow) && (this.gameObject.transform.position.y - this.gameObject.transform.lossyScale.y/2 > (-camH/2 + camY))){
 			speed.y -= maxSpeed.y*powers[0];
 		}		
-		if(Input.GetKey(KeyCode.A) && (this.gameObject.transform.position.x - this.gameObject.transform.lossyScale.x/2 > (-camW/2 + camX))){
+		if(Input.GetKey(KeyCode.LeftArrow) && (this.gameObject.transform.position.x - this.gameObject.transform.lossyScale.x/2 > (-camW/2 + camX))){
 			speed.x -= maxSpeed.x*powers[0];
 		}		
-		if(Input.GetKey(KeyCode.D) && (this.gameObject.transform.position.x + this.gameObject.transform.lossyScale.x/2 < (camW/2 + camX))){
+		if(Input.GetKey(KeyCode.RightArrow) && (this.gameObject.transform.position.x + this.gameObject.transform.lossyScale.x/2 < (camW/2 + camX))){
 			speed.x += maxSpeed.x*powers[0];
 		}
 
@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour {
         }
 
 		//Shooting
-		if (Input.GetKey (KeyCode.Space) && currReload <= 0) {
+		if (Input.GetKey (KeyCode.A) && currReload <= 0) {
 			//Check for reload and Power Level
 			if(powers[1] == 1 && missile_currReload <= 0){
 				missile_currReload = missile_reload;
@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Using PowerUp
-		if(Input.GetKey(KeyCode.RightControl) && pow != powerLevel.none)
+		if(Input.GetKey(KeyCode.S) && pow != powerLevel.none)
 		{
 			if (pow == powerLevel.first){
 				powers[(int)pow-1]++;
