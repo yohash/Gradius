@@ -6,6 +6,8 @@ enum ATSTstatus{ seeking, firing, chill, leaving};
 
 public class ATSTBehaviour : BasicEnemyBehaviour
 {
+	Animator anim;
+
     public float speed = 3f;                // speed MUST match the speed of the floor
     public float seekSpeed = 10f;
     public float shotDelay = 2f, startDelay;
@@ -23,6 +25,7 @@ public class ATSTBehaviour : BasicEnemyBehaviour
     // Use this for initialization
     void Start ()
     {
+		anim = this.GetComponent<Animator>();
         base.score = GameObject.Find("Score").GetComponent<Text>();
         enemyRigid = this.GetComponent<Rigidbody>();
 
@@ -30,7 +33,11 @@ public class ATSTBehaviour : BasicEnemyBehaviour
 
         getPlayerPos();     // initialize enemy speed and 1st go-to position
         print("SEEKING");
-    }
+
+		if(this.transform.position.y < 0){
+			this.transform.localScale = new Vector3(7,-7,1);
+		}
+	}
 
     public override void Move()
     {        
@@ -69,6 +76,13 @@ public class ATSTBehaviour : BasicEnemyBehaviour
         } else if (thisStatus == ATSTstatus.leaving) {
 
         }
+
+		if(thisStatus != ATSTstatus.seeking && thisStatus != ATSTstatus.leaving){
+			anim.SetFloat("speed", 0);
+		} else {
+			anim.SetFloat("speed", this.enemyRigid.velocity.x);
+		}
+
     }
 
     private void getPlayerPos()
