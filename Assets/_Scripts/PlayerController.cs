@@ -7,12 +7,16 @@ enum powerLevel{none, first, second, third, fourth, fithh, sixth};
 
 public class PlayerController : MonoBehaviour {
 
+    // invincibility toggle
+    public bool invincible = false;
+
 	//Animation
 	Animator anim;
 
 	//UI elements
 	public int health = 3;
 	Text healthText;
+    Text invincibleToggle;
 
 	//Player Control
 	public Vector2 maxSpeed;
@@ -55,23 +59,25 @@ public class PlayerController : MonoBehaviour {
 		camW = camH * cam.aspect;
 		anim = this.GetComponent<Animator>();
 
-		//Set the text for player health
-		healthText = GameObject.Find ("Health").GetComponent<Text> ();
-		healthText.text = health.ToString();
+        //Set the text for player health
+        healthText = GameObject.Find("Health").GetComponent<Text>();
+        healthText.text = health.ToString();
+        invincibleToggle = GameObject.Find("Invincible").GetComponent<Text>();
+        invincibleToggle.text = "";
 
-		//Add the power images/labels to the array
-//		pow_Img[0] = GameObject.Find("Power_Speed").GetComponent<Image> ();
-//        pow_Img[1] = GameObject.Find("Power_Missile").GetComponent<Image>();
-//        pow_Img[2] = GameObject.Find("Power_Double").GetComponent<Image>();
-//        pow_Img[3] = GameObject.Find("Power_Laser").GetComponent<Image>();
-//        pow_Img[4] = GameObject.Find("Power_Option").GetComponent<Image>();
-//		pow_Img[5] = GameObject.Find("Power_Shield").GetComponent<Image>();
-//		pow_Lbl[0] = GameObject.Find("Power_Speed_Label").GetComponent<Text>();
-//        pow_Lbl[1] = GameObject.Find("Power_Missile_Label").GetComponent<Text>();
-//        pow_Lbl[2] = GameObject.Find("Power_Double_Label").GetComponent<Text>();
-//        pow_Lbl[3] = GameObject.Find("Power_Laser_Label").GetComponent<Text>();
-//        pow_Lbl[4] = GameObject.Find("Power_Option_Label").GetComponent<Text>();
-//		pow_Lbl[5] = GameObject.Find("Power_Shield_Label").GetComponent<Text>();
+        //Add the power images/labels to the array
+        //		pow_Img[0] = GameObject.Find("Power_Speed").GetComponent<Image> ();
+        //        pow_Img[1] = GameObject.Find("Power_Missile").GetComponent<Image>();
+        //        pow_Img[2] = GameObject.Find("Power_Double").GetComponent<Image>();
+        //        pow_Img[3] = GameObject.Find("Power_Laser").GetComponent<Image>();
+        //        pow_Img[4] = GameObject.Find("Power_Option").GetComponent<Image>();
+        //		pow_Img[5] = GameObject.Find("Power_Shield").GetComponent<Image>();
+        //		pow_Lbl[0] = GameObject.Find("Power_Speed_Label").GetComponent<Text>();
+        //        pow_Lbl[1] = GameObject.Find("Power_Missile_Label").GetComponent<Text>();
+        //        pow_Lbl[2] = GameObject.Find("Power_Double_Label").GetComponent<Text>();
+        //        pow_Lbl[3] = GameObject.Find("Power_Laser_Label").GetComponent<Text>();
+        //        pow_Lbl[4] = GameObject.Find("Power_Option_Label").GetComponent<Text>();
+        //		pow_Lbl[5] = GameObject.Find("Power_Shield_Label").GetComponent<Text>();
 
 
     }
@@ -116,7 +122,19 @@ public class PlayerController : MonoBehaviour {
 		}		
 		if(Input.GetKey(KeyCode.RightArrow) && (this.gameObject.transform.position.x + this.gameObject.transform.lossyScale.x/7 < (camW/2 + camX))){
 			speed.x += maxSpeed.x*powers[0];
-		}
+        }
+        // toggle invincibility
+        if (Input.GetKeyUp(KeyCode.I))
+        {
+            if (invincible)
+            {
+                invincible = false;
+                invincibleToggle.text = "";
+            } else {
+                invincible = true;
+                invincibleToggle.text = "INVINCIBLE";
+            }
+        }
 
         // if ship is off screen (-x) add an offset to keep us on screen
         float offset = this.transform.position.x - (camX - camW / 2);
@@ -171,21 +189,28 @@ public class PlayerController : MonoBehaviour {
 
 	//Collision detection
 	void  OnTriggerEnter(Collider coll){
-		//Enemy Collision
-		if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "EnemyShot" || coll.gameObject.tag == "Ground") {
-			if(powers[5] == 0){
-				health--;
-				healthText.text = health.ToString();
+        //Enemy Collision
+        if (!invincible)
+        {
+            if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "EnemyShot" || coll.gameObject.tag == "Ground")
+            {
+                if (powers[5] == 0)
+                {
+                    health--;
+                    healthText.text = health.ToString();
 
-				//Reset powerups
-				resetPowers();
-				pow = powerLevel.none;
-			} else {
-				powers[5] = 0;
-				pow_Img[5].color = Color.blue;
-				pow_Lbl[5].enabled = true;
-			}
-		}
+                    //Reset powerups
+                    resetPowers();
+                    pow = powerLevel.none;
+                }
+                else
+                {
+                    powers[5] = 0;
+                    pow_Img[5].color = Color.blue;
+                    pow_Lbl[5].enabled = true;
+                }
+            }
+        }
 		//PowerUp Collision
 		if (coll.gameObject.tag == "PowerUp") {
 			if(pow != powerLevel.sixth){

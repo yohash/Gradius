@@ -32,7 +32,6 @@ public class ATSTBehaviour : BasicEnemyBehaviour
         shotCnt = 0;
 
         getPlayerPos();     // initialize enemy speed and 1st go-to position
-        print("SEEKING");
 
 		if(this.transform.position.y < 0){
 			this.transform.localScale = new Vector3(7,-7,1);
@@ -49,7 +48,6 @@ public class ATSTBehaviour : BasicEnemyBehaviour
                 enemyRigid.velocity = new Vector3(-speed, 0, 0);
                 startDelay = Time.time;
                 thisStatus = ATSTstatus.firing;
-                print("FIRING");
             }
         }
         else if (thisStatus == ATSTstatus.firing && Time.time - startDelay > shotDelay)
@@ -63,7 +61,6 @@ public class ATSTBehaviour : BasicEnemyBehaviour
                 Fire();
                 startDelay = Time.time;
                 thisStatus = ATSTstatus.chill;
-                print("Chillin...");
             } else {
                 getPlayerPos();
                 thisStatus = ATSTstatus.seeking;
@@ -72,7 +69,6 @@ public class ATSTBehaviour : BasicEnemyBehaviour
         else if (thisStatus == ATSTstatus.chill && Time.time - startDelay > chillDelay) {
             thisStatus = ATSTstatus.seeking;
             getPlayerPos();   // restart the cycle
-            print("SEEKING");
         } else if (thisStatus == ATSTstatus.leaving) {
 
         }
