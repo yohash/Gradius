@@ -9,6 +9,7 @@ TagManager:
   - EnemyShot
   - Ground
   - Silo
+  - Volcano
   layers:
   - Default
   - TransparentFX

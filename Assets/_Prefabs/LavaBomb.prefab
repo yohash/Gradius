@@ -13,9 +13,9 @@ GameObject:
   - 23: {fileID: 2348480}
   - 54: {fileID: 5478038}
   - 114: {fileID: 11452290}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LavaBomb
-  m_TagString: Untagged
+  m_TagString: EnemyShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: EnemyShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 146210}

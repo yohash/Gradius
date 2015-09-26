@@ -192,7 +192,7 @@ public class PlayerController : MonoBehaviour {
         //Enemy Collision
         if (!invincible)
         {
-            if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "EnemyShot" || coll.gameObject.tag == "Ground")
+            if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "EnemyShot" || coll.gameObject.tag == "Ground" || coll.gameObject.tag == "Volcano")
             {
                 if (powers[5] == 0)
                 {

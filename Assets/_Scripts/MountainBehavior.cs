@@ -17,14 +17,17 @@ public class MountainBehavior : BasicEnemyBehaviour
 
     public override void Move()
     {
-        if(!isVolcano)
+        if(!this.isVolcano)
         {
             this.transform.position += Time.deltaTime * new Vector3(-speed, 0f, 0f);
         }
     }
 
-    void callFire()
+    public void callFire()
     {
-        Fire();
+        if (this.isVolcano)
+        {
+            Fire();
+        }
     }
 }
