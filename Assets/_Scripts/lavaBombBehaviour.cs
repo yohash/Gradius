@@ -9,7 +9,7 @@ public class lavaBombBehaviour : MonoBehaviour
     float camH, camW;
 
     // enemy bullet speed
-    float speed = 26f;
+    float speed = 30f;
 
     Rigidbody lavaRigid;
 
@@ -22,7 +22,7 @@ public class lavaBombBehaviour : MonoBehaviour
         camW = camH * cam.aspect;
 
         shotDir.y = 1f;
-        shotDir.x = Random.Range(-0.3f, 0.3f);
+        shotDir.x = Random.Range(-0.2f, 0.2f);
 
         lavaRigid = this.GetComponent<Rigidbody>();
         this.lavaRigid.velocity = shotDir.normalized * speed;
