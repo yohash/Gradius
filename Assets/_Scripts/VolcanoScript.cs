@@ -29,7 +29,7 @@ public class VolcanoScript : BasicEnemyBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-        if (volcStatus == volc.moving && selfGO.transform.position.y > 0)
+        if (volcStatus == volc.moving && selfGO.transform.position.x > -6)
         {
             this.transform.position += Time.deltaTime * new Vector3(-speed, 0f, 0f);
         }
