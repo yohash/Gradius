@@ -119,10 +119,11 @@ MonoBehaviour:
   health: 1
   value: 100
   score: {fileID: 0}
-  powerUp: {fileID: 0}
+  powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
   chance: 1
   shot: {fileID: 0}
   speed: 3
+  isVolcano: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -134,6 +135,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: powerUp
+      value: 
+      objectReference: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 195236}

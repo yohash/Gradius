@@ -72,12 +72,18 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 	}
 
 	public void Hit(){
-		if(health > 1){
-			health--;
-		} else{
-			Scored ();
-			Destroy(this.gameObject);
-		}
+        if (this.tag != "Mountain")
+        {
+            if (health > 1)
+            {
+                health--;
+            }
+            else
+            {
+                Scored();
+                Destroy(this.gameObject);
+            }
+        }
 	}
 
 	//Scoring

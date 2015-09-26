@@ -12,9 +12,9 @@ GameObject:
   - 50: {fileID: 5087050}
   - 60: {fileID: 6071088}
   - 114: {fileID: 11453320}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Sp_Mountain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   value: 100
   score: {fileID: 0}
   powerUp: {fileID: 0}
-  chance: 1
+  chance: 0
   shot: {fileID: 0}
   speed: 3
   isVolcano: 0
@@ -125,7 +125,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: chance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132952}
