@@ -19,8 +19,7 @@ public class Turrets : BasicEnemyBehaviour {
 			this.transform.localScale = new Vector3(7,-7,1);
 		}
 
-		anim = this.GetComponent<Animator>();
-		
+		anim = this.GetComponent<Animator>();		
     }
 
     public override void Move()

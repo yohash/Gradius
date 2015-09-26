@@ -1,36 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class lavaBombBehaviour : MonoBehaviour
-{
-    Vector3 shotDir = Vector3.zero;
+public class bossMissileBehaviour : MonoBehaviour {
 
     // camera info
     float camH, camW;
 
     // enemy bullet speed
-    float speed = 33f;
+    float speed = 20f;
 
-    Rigidbody lavaRigid;
+    Rigidbody bulletRigid;
 
     // Use this for initialization
-    void Start ()
-    {
+    void Start () {
         //Camera Initialization
         Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         camH = cam.orthographicSize * 2f;
         camW = camH * cam.aspect;
-
-        shotDir.y = 1f;
-        shotDir.x = Random.Range(-0.2f, 0.2f);
-
-        lavaRigid = this.GetComponent<Rigidbody>();
-        this.lavaRigid.velocity = shotDir.normalized * speed;
+        
+        bulletRigid = this.GetComponent<Rigidbody>();
+        this.bulletRigid.velocity = new Vector3(-speed,0,0);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
+	
+	// Update is called once per frame
+	void Update () {
         OffCamera();
     }
 
@@ -38,7 +31,7 @@ public class lavaBombBehaviour : MonoBehaviour
     // the camera bounds (enemy and playerShot tests dont check above/below)
     public void OffCamera()
     {
-        if (this.transform.position.x >= (camW / 2 + 5) || this.transform.position.x <= (-camW / 2 - 5) || this.transform.position.y >= (camH / 2 + 5) || this.transform.position.y <= (-camH / 2 - 5))
+        if (this.transform.position.x >= (camW / 2 + 5) || this.transform.position.x <= (-camW / 2 - 5))
         {
             Destroy(this.gameObject);
         }
