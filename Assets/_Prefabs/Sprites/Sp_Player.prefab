@@ -158,7 +158,7 @@ MonoBehaviour:
   missilespawn: {x: .5, y: .5, z: 0}
   missile_reload: 1
   optionPrefab: {fileID: 143390, guid: 83222f7a7b5d35d449fee9f3438bff05, type: 2}
-  doubleshotPrefab: {fileID: 148222, guid: 650a935fbed693940b67c120711a5c2e, type: 2}
+  doubleshotPrefab: {fileID: 156132, guid: a92e726118c830e4fabcf80bcf9c0782, type: 2}
   laserPrefab: {fileID: 194854, guid: a2f4e987e5f5f3b49a923535b2610e3f, type: 2}
   pow_Img:
   - {fileID: 0}
@@ -230,6 +230,10 @@ Prefab:
       propertyPath: missilePrefab
       value: 
       objectReference: {fileID: 109670, guid: cf53696dc38d2254dae81e7d0656c0bc, type: 2}
+    - target: {fileID: 0}
+      propertyPath: doubleshotPrefab
+      value: 
+      objectReference: {fileID: 156132, guid: a92e726118c830e4fabcf80bcf9c0782, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 142294}
