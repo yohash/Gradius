@@ -83,7 +83,7 @@ public class BossBehaviour : BasicEnemyBehaviour
             this.transform.position = new Vector3(this.transform.position.x, bossBotLim, 0f);
 
             // trigger a pause if the player is hiding in bottom corner
-            if (this.transform.position.y - 0.5f <= botLim && playerPos.y <= -4.5f)
+            if (this.transform.position.y - 0.5f <= botLim && playerPos.y <= -4f)
             {
                 pauseTimer = Time.time;
                 bs = bossState.pausing;
@@ -94,17 +94,19 @@ public class BossBehaviour : BasicEnemyBehaviour
             }
         }
         else if (bs == bossState.pausing && (Time.time - pauseTimer) > 0.7f)
-        {   // player is hiding in a corner - pause then shoot at them
+        {
+            // boss has paused 1 sec
+            // player is hiding in a corner - pause then shoot at them
 
             Fire();
-            fireTimer = Time.time;
-            // boss has paused 1 sec
+            fireTimer = Time.time;      // reset timer to prevent boss ship from "double fire"
+
             if (this.transform.position.y > 0)
-            {
+            {   // if at the top, fight on down
                 bs = bossState.fightingDOWN;
             }
             else
-            {
+            {   // if at the bottom, fight on up
                 bs = bossState.fightingUP;
             }
         }
