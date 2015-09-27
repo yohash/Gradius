@@ -12,6 +12,7 @@ TagManager:
   - Volcano
   - Option
   - FlrCeil
+  - Laser
   layers:
   - Default
   - TransparentFX
