@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     public bool custom_shield = false;
     GameObject customShield;            // links to the halo that color-codes the ship
 
+
     //Animation
     Animator anim;
 
@@ -310,6 +311,18 @@ public class PlayerController : MonoBehaviour {
                 Destroy(coll.gameObject);
             }
 		}
+        // collision with shield
+        if (coll.gameObject.tag == "Laser")
+        {
+            bool shipBlue = (customShield.GetComponent<ShieldToggling>().isBlue);
+            bool laserBlue = (coll.gameObject.GetComponent<LaserWallBehaviour>().isBlue);
+
+            if (shipBlue != laserBlue) {
+                Crash();
+            } else if (shipBlue == laserBlue) {
+                
+            }
+        }
 	}
 
 	void resetPowers(){

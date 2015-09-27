@@ -7,17 +7,17 @@ public class ShieldToggling : MonoBehaviour {
     float toggleTime = 1f;      // 1sec hold-down to toggle
     float startTime;
 
+    public float camH, camW;
+
     Text helperText;
     Color hcolor;
 
     GameObject customShieldBlue, customShieldRed;     // links to the halo that color-codes the ship
-    bool isBlue;                                     // Use this for initialization
+    public bool isBlue;                                     // Use this for initialization
     bool spaceDown;
 
     void Awake ()
     {
-        print("AWAKE");
-
         Transform customShieldTrans = transform.FindChild("Custom_Shield_Blue");
         customShieldBlue = customShieldTrans.gameObject;
         customShieldBlue.SetActive(false);
@@ -35,7 +35,8 @@ public class ShieldToggling : MonoBehaviour {
         customShieldBlue.SetActive(true);
         isBlue = true;
         helperText.color = Color.white;
-        Invoke("clearHelperText", 6f);
+        helperText.text = "HOLD (SPACE)\nTO CHANGE SHIELD\nCOLORS";
+        Invoke("clearHelperText", 4f);
     }
 
 
@@ -76,7 +77,9 @@ public class ShieldToggling : MonoBehaviour {
 
     }
 
-    void clearHelperText() {
+    void clearHelperText()
+    {
+        helperText.text = "";
         helperText.color = Color.clear;
     }
 }
