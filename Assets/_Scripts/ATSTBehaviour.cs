@@ -101,5 +101,7 @@ public class ATSTBehaviour : BasicEnemyBehaviour
         } else {
             enemyRigid.velocity = new Vector3(seekSpeed, 0, 0);
         }
-    }
+		thisStatus = ATSTstatus.seeking;
+
+	}
 }

@@ -21,6 +21,10 @@ public class DarterWaveBehavior : BasicEnemyBehaviour
         base.score = GameObject.Find("Score").GetComponent<Text>();
         Invoke("SpawnWave", 2f);
         Invoke("SpawnWave", 4f);
+
+		if(this.transform.position.y > 0){
+			this.transform.localScale = new Vector3(7f,-7f,0f);
+		}
     }
 
     void SpawnWave()
