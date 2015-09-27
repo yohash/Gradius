@@ -10,8 +10,12 @@ public class PlayerController : MonoBehaviour {
     // invincibility toggle
     public bool invincible = false;
 
-	//Animation
-	Animator anim;
+    // custom level shield toggle
+    public bool custom_shield = false;
+    GameObject customShield;            // links to the halo that color-codes the ship
+
+    //Animation
+    Animator anim;
 
 	//UI elements
 	public int health = 3;
@@ -62,6 +66,10 @@ public class PlayerController : MonoBehaviour {
 		camW = camH * cam.aspect;
 		anim = this.GetComponent<Animator>();
 
+        // the custom shield is present but dismissed to remove halo
+        Transform customShieldTrans = transform.FindChild("Shields");
+        customShield = customShieldTrans.gameObject;
+
         //Set the text for player health
         healthText = GameObject.Find("Health").GetComponent<Text>();
         healthText.text = health.ToString();
@@ -81,13 +89,12 @@ public class PlayerController : MonoBehaviour {
         //        pow_Lbl[3] = GameObject.Find("Power_Laser_Label").GetComponent<Text>();
         //        pow_Lbl[4] = GameObject.Find("Power_Option_Label").GetComponent<Text>();
         //		pow_Lbl[5] = GameObject.Find("Power_Shield_Label").GetComponent<Text>();
-
-
     }
 	
 	// Update is called once per frame
 	void Update () {
 		Vector3 speed = Vector3.zero, camPos = Vector3.zero;
+        
         
         // get current camera data to keep ship on screen
         Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();     // get camera position to keep player on camera
@@ -147,6 +154,7 @@ public class PlayerController : MonoBehaviour {
             shipRigid.velocity = speed;
 			anim.SetFloat("speed", shipRigid.velocity.y);
         }
+
         //
         //  TWO TYPES of shooting protocol follow
         // 
@@ -237,6 +245,8 @@ public class PlayerController : MonoBehaviour {
 				pow = powerLevel.none;
 			} 
 		}
+
+
 	}
 
 	//Collision detection
@@ -263,18 +273,34 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
-		//PowerUp Collision
-		if (coll.gameObject.tag == "PowerUp") {
-			if(pow != powerLevel.sixth){
-				//Set the color back to blue
-				if(pow != powerLevel.none){
-					pow_Img[(int)pow-1].color = Color.blue;
-				}
-				//Increase Pow, and set to red
-				pow++;
-				pow_Img[(int)pow-1].color = Color.red;
-				Destroy (coll.gameObject);
-			}
+
+        //PowerUp Collision
+        // note: this checks for the "big power up" in lvl 2 first
+        if (coll.gameObject.tag == "PowerUp")
+        {
+            bool isBigPowerUp = coll.GetComponent<PowerUpMovement>().bigPowerUp;
+            if (!isBigPowerUp)
+            {
+                if (pow != powerLevel.sixth)
+                {
+                    //Set the color back to blue
+                    if (pow != powerLevel.none)
+                    {
+                        pow_Img[(int)pow - 1].color = Color.blue;
+                    }
+                    //Increase Pow, and set to red
+                    pow++;
+                    pow_Img[(int)pow - 1].color = Color.red;
+                    Destroy(coll.gameObject);
+                }
+            } else {
+                custom_shield = isBigPowerUp;
+
+                ShieldToggling togg = customShield.GetComponent<ShieldToggling>();
+                togg.StartToggle();
+
+                Destroy(coll.gameObject);
+            }
 		}
 	}
 

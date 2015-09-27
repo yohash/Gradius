@@ -2,7 +2,7 @@
 using System.Collections;
 using System.IO;
 
-enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss};
+enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP};
 
 public class Scheduler : MonoBehaviour {
 
@@ -11,6 +11,8 @@ public class Scheduler : MonoBehaviour {
     float[] 				    relTime;	// relative time from last enemy
 	Vector3[]			        enemyLoc;	// enemy location
 	int[]			            ID;
+
+    public bool customLevel = false;           // if this is true, load level_2.txt
 
 	float camH, camW;		// camera data
 
@@ -25,8 +27,10 @@ public class Scheduler : MonoBehaviour {
         // compute how many lines are in our scheduler text file, so
         // we read it through once to increment a counter
 		StringReader reader = null;
+        TextAsset fileCount;
 
-		TextAsset fileCount = Resources.Load<TextAsset>("Level_1");
+        if (customLevel) { fileCount = Resources.Load<TextAsset>("Level_2"); }
+		else { fileCount = Resources.Load<TextAsset>("Level_1"); }
 		reader = new StringReader(fileCount.text);
         //System.IO.StreamReader fileCount = new System.IO.StreamReader("Assets/level_1.txt");
         int lineCount = 0;  // track number of lines in the file
@@ -45,8 +49,9 @@ public class Scheduler : MonoBehaviour {
 
         // pull data for level
         // System.IO.StreamReader file = new System.IO.StreamReader("Assets/level_1.txt");
-		TextAsset file = Resources.Load<TextAsset>("Level_1");
-		reader = new StringReader(file.text);
+        if (customLevel) { fileCount = Resources.Load<TextAsset>("Level_2"); }
+        else { fileCount = Resources.Load<TextAsset>("Level_1"); }
+        reader = new StringReader(fileCount.text);
         string line;
         string[] splitLines;
 
