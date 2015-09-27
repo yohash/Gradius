@@ -9,6 +9,9 @@ public class PowerUpMovement : MonoBehaviour
     float camH, camW;
     float speed = 3f;    // speed of the map moving  
                          // Use this for initialization
+
+    public bool bigPowerUp = false;        // this is an option for the custom level
+
     void Start ()
     {
         //Camera Initialization
