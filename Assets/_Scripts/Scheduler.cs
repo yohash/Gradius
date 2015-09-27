@@ -2,7 +2,7 @@
 using System.Collections;
 using System.IO;
 
-enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP, Blaz_m, Rlaz_m};
+enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP, Blaz_m, Rlaz_m, Blaz_l, Rlaz_l};
 
 public class Scheduler : MonoBehaviour {
 
@@ -119,9 +119,10 @@ public class Scheduler : MonoBehaviour {
 		Vector3 new_Pos = Vector3.zero;
 
 		new_Pos.x = enemyLoc[index].x;
-		new_Pos.y = enemyLoc[index].y;
+        new_Pos.y = enemyLoc[index].y;
+        new_Pos.z = enemyLoc[index].z;
 
-		enemy.transform.position = new_Pos;
+        enemy.transform.position = new_Pos;
 
 		if (index < relTime.Length-1) {
 			index++;
