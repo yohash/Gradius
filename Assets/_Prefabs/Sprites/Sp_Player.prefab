@@ -15,11 +15,41 @@ GameObject:
   - 95: {fileID: 9559528}
   m_Layer: 11
   m_Name: Sp_Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &154576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 424090}
+  - 61: {fileID: 6124114}
+  - 114: {fileID: 11499086}
+  - 50: {fileID: 5045080}
+  m_Layer: 11
+  m_Name: Collider2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &424090
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 486400}
+  m_RootOrder: 0
 --- !u!4 &486400
 Transform:
   m_ObjectHideFlags: 1
@@ -27,11 +57,28 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 142294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 424090}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5045080
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154576}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!54 &5429634
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -47,6 +94,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!61 &6124114
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154576}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: .0199999996, y: 0}
+  serializedVersion: 2
+  m_Size: {x: .319999993, y: .150000006}
 --- !u!65 &6594638
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -88,15 +148,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invincible: 0
+  custom_shield: 0
   health: 3
   maxSpeed: {x: 8, y: 8}
   shotPrefab: {fileID: 124086, guid: 7aa1ab926fc708946b32d3dd8f75b2ba, type: 2}
   shotspawn: {x: 1.5, y: 0, z: 0}
   reload: .300000012
-  missilePrefab: {fileID: 102730, guid: 2bf4344ec0e17af4392b923832a30c7e, type: 2}
+  missilePrefab: {fileID: 109670, guid: cf53696dc38d2254dae81e7d0656c0bc, type: 2}
   missilespawn: {x: .5, y: .5, z: 0}
   missile_reload: 1
-  optionPrefab: {fileID: 0}
+  optionPrefab: {fileID: 143390, guid: 83222f7a7b5d35d449fee9f3438bff05, type: 2}
   doubleshotPrefab: {fileID: 148222, guid: 650a935fbed693940b67c120711a5c2e, type: 2}
   laserPrefab: {fileID: 194854, guid: a2f4e987e5f5f3b49a923535b2610e3f, type: 2}
   pow_Img:
@@ -113,6 +174,17 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &11499086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0469412e3ce2df347aff8dd374a3101c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21251942
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -154,6 +226,10 @@ Prefab:
       propertyPath: shotPrefab
       value: 
       objectReference: {fileID: 124086, guid: 7aa1ab926fc708946b32d3dd8f75b2ba, type: 2}
+    - target: {fileID: 0}
+      propertyPath: missilePrefab
+      value: 
+      objectReference: {fileID: 109670, guid: cf53696dc38d2254dae81e7d0656c0bc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 142294}

@@ -11,6 +11,7 @@ TagManager:
   - Silo
   - Volcano
   - Option
+  - FlrCeil
   layers:
   - Default
   - TransparentFX

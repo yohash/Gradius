@@ -33,6 +33,7 @@ public class MissileBehaviour : MonoBehaviour {
 			Destroy(this.gameObject);
 		}
 		if(coll.gameObject.tag == "Ground"){
+			print("G");
 			this.bulletRigid.velocity = new Vector3(speed,0f,0f);
 		}
 	}

@@ -57,6 +57,7 @@ public class VolcanoScript : BasicEnemyBehaviour
         }
         else if (volcStatus == volc.leaving)
         {
+			GameObject.FindGameObjectWithTag("FlrCeil").transform.position += Time.deltaTime * new Vector3(-speed, 0f, 0f);
             this.transform.position += Time.deltaTime * new Vector3(-speed, 0f, 0f);
         }
     }

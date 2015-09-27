@@ -252,29 +252,34 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
+	public void Crash(){
+		if (!invincible)
+		{
+				if (powers[5] == 0)
+			{
+				health--;
+				healthText.text = health.ToString();
+				
+				//Reset powerups
+				resetPowers();
+				pow = powerLevel.none;
+			}
+			else
+			{
+				powers[5] = 0;
+				pow_Img[5].color = Color.blue;
+				pow_Lbl[5].enabled = true;
+			}
+		}
+	}
+	
 	//Collision detection
 	void  OnTriggerEnter(Collider coll){
-        //Enemy Collision
-        if (!invincible)
-        {
-            if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "EnemyShot" || coll.gameObject.tag == "Ground" || coll.gameObject.tag == "Volcano")
-            {
-                if (powers[5] == 0)
-                {
-                    health--;
-                    healthText.text = health.ToString();
+		//Enemy Collision
 
-                    //Reset powerups
-                    resetPowers();
-                    pow = powerLevel.none;
-                }
-                else
-                {
-                    powers[5] = 0;
-                    pow_Img[5].color = Color.blue;
-                    pow_Lbl[5].enabled = true;
-                }
-            }
+		if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "EnemyShot")
+        {
+			Crash();
         }
 
         //PowerUp Collision
