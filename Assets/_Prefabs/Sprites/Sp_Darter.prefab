@@ -94,8 +94,8 @@ MonoBehaviour:
   value: 100
   score: {fileID: 0}
   powerUp: {fileID: 143132, guid: 817b81cbf55b3854695ee1dac36e394f, type: 2}
-  chance: 1
-  shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
+  chance: 0
+  shot: {fileID: 140304, guid: 6f51c7293540b2640acf9e5c311fb4e5, type: 2}
   silo: {fileID: 194798, guid: 5ede9350ca972714782c5d39f3bb1c77, type: 2}
 --- !u!212 &21210410
 SpriteRenderer:
@@ -137,6 +137,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shot
+      value: 
+      objectReference: {fileID: 140304, guid: 6f51c7293540b2640acf9e5c311fb4e5, type: 2}
+    - target: {fileID: 0}
+      propertyPath: chance
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
