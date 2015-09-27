@@ -122,7 +122,7 @@ public class BossBehaviour : BasicEnemyBehaviour
         // calculate boss's lower scan limit
         bossBotLim = Mathf.Clamp(playerRigid.transform.position.y - 8f, botLim, topLim);
 
-        print("TOP LIM = " + bossTopLim + "("+topLim+"), BOT LIM = " + bossBotLim + "(" + botLim + ")");
+        //print("TOP LIM = " + bossTopLim + "("+topLim+"), BOT LIM = " + bossBotLim + "(" + botLim + ")");
     }
 
     // Update is called once per frame

@@ -16,10 +16,12 @@ public class ShieldToggling : MonoBehaviour {
 
     void Awake ()
     {
-        Transform customShieldTrans = transform.FindChild("Custom_Shield_Blue");
         print("AWAKE");
+
+        Transform customShieldTrans = transform.FindChild("Custom_Shield_Blue");
         customShieldBlue = customShieldTrans.gameObject;
         customShieldBlue.SetActive(false);
+
         customShieldTrans = transform.FindChild("Custom_Shield_Red");
         customShieldRed = customShieldTrans.gameObject;
         customShieldRed.SetActive(false);

@@ -68,10 +68,10 @@ public class PlayerController : MonoBehaviour {
 
         // the custom shield is present but dismissed to remove halo
 		//THIS NEEDS TO BE CHANGED...
-		if(Application.loadedLevelName != "Scene_0"){
-	        Transform customShieldTrans = transform.FindChild("Shields");
-	        customShield = customShieldTrans.gameObject;
-		}
+		//if(Application.loadedLevelName != "Scene_0"){
+	    Transform customShieldTrans = transform.FindChild("Shields");
+	    customShield = customShieldTrans.gameObject;
+		//}
 
         //Set the text for player health
         healthText = GameObject.Find("Health").GetComponent<Text>();
