@@ -87,16 +87,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04924e4fe71ec9c4d8d652ddf88441bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invincible: 0
   health: 3
   maxSpeed: {x: 8, y: 8}
-  shotPrefab: {fileID: 148222, guid: 8978cdf4d15fabc4cba4a972b10784dc, type: 2}
+  shotPrefab: {fileID: 124086, guid: 7aa1ab926fc708946b32d3dd8f75b2ba, type: 2}
   shotspawn: {x: 1.5, y: 0, z: 0}
   reload: .300000012
   missilePrefab: {fileID: 102730, guid: 2bf4344ec0e17af4392b923832a30c7e, type: 2}
   missilespawn: {x: .5, y: .5, z: 0}
   missile_reload: 1
+  optionPrefab: {fileID: 0}
   doubleshotPrefab: {fileID: 148222, guid: 650a935fbed693940b67c120711a5c2e, type: 2}
-  laserPrefab: {fileID: 148222, guid: 9f6c8fedede41154eb625c33220aa89b, type: 2}
+  laserPrefab: {fileID: 194854, guid: a2f4e987e5f5f3b49a923535b2610e3f, type: 2}
   pow_Img:
   - {fileID: 0}
   - {fileID: 0}
@@ -143,7 +145,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: laserPrefab
+      value: 
+      objectReference: {fileID: 194854, guid: a2f4e987e5f5f3b49a923535b2610e3f, type: 2}
+    - target: {fileID: 0}
+      propertyPath: shotPrefab
+      value: 
+      objectReference: {fileID: 124086, guid: 7aa1ab926fc708946b32d3dd8f75b2ba, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 142294}

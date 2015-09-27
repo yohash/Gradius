@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 //Enumerator for our two-tier PowerUp System
-enum powerLevel{none, first, second, third, fourth, fithh, sixth};
+enum powerLevel{none, first, second, third, fourth, fifth, sixth};
 
 public class PlayerController : MonoBehaviour {
 
@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour {
 	public Vector3 missilespawn = new Vector3(0.5f, 0.5f, 0f);
 	public float missile_reload;
 	float missile_currReload; 
+
+	//Option Mechanics
+	public GameObject optionPrefab;
 
 	//Shield Mechanics
 
@@ -179,6 +182,8 @@ public class PlayerController : MonoBehaviour {
         // Shooting on button hold
         if (Input.GetKey (KeyCode.A) && currReload <= 0) {
 			//Check for reload and Power Level
+			GameObject bullet = null;
+
 			if(powers[1] == 1 && missile_currReload <= 0){
 				missile_currReload = missile_reload;
 				GameObject missile = Instantiate(missilePrefab) as GameObject;
@@ -194,10 +199,16 @@ public class PlayerController : MonoBehaviour {
 				//Create bullet and move it to the player position
 				GameObject shot = Instantiate(shotPrefab) as GameObject;
 				shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+				bullet = shotPrefab;
 			}
 			if(powers[3] == 1){
 				GameObject shot = Instantiate(laserPrefab) as GameObject;
 				shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+				bullet = laserPrefab;
+			}
+			GameObject[] options = GameObject.FindGameObjectsWithTag("Option");
+			for(int i = 0; i < options.Length; i++){
+				options[i].GetComponent<OptionBehaviour>().Fire(bullet,shotspawn);
 			}
 		}
 
@@ -209,12 +220,22 @@ public class PlayerController : MonoBehaviour {
 				pow_Img[(int)pow-1].color = Color.blue;
 				//pow_Lbl[(int)pow-1].enabled = false;
 				pow = powerLevel.none;
-			}	else if(powers[(int)pow-1] == 0){
+			}	else if(pow == powerLevel.fifth && powers[4] < 2){
+				GameObject option = Instantiate(optionPrefab) as GameObject;
+				option.GetComponent<Rigidbody>().position = this.transform.position;
+				powers[(int)pow-1]++;
+				pow_Img[(int)pow-1].color = Color.blue;
+				if(powers[4] == 2){
+					pow_Lbl[4].enabled = false;
+				}
+				pow = powerLevel.none;
+			}	
+				else if(powers[(int)pow-1] == 0){
 				powers[(int)pow-1]++;
 				pow_Img[(int)pow-1].color = Color.blue;
 				pow_Lbl[(int)pow-1].enabled = false;
 				pow = powerLevel.none;
-			}
+			} 
 		}
 	}
 

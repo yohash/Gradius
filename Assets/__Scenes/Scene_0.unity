@@ -1342,7 +1342,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 486400, guid: d21734d43d610fb418881a14eba24630, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11427766, guid: d21734d43d610fb418881a14eba24630, type: 2}
       propertyPath: pow_Img.Array.data[0]
@@ -1396,6 +1396,14 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 142294, guid: d21734d43d610fb418881a14eba24630, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427766, guid: d21734d43d610fb418881a14eba24630, type: 2}
+      propertyPath: optionPrefab
+      value: 
+      objectReference: {fileID: 143390, guid: 83222f7a7b5d35d449fee9f3438bff05, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d21734d43d610fb418881a14eba24630, type: 2}
   m_IsPrefabParent: 0
