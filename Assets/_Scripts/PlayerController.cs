@@ -144,9 +144,40 @@ public class PlayerController : MonoBehaviour {
             shipRigid.velocity = speed;
 			anim.SetFloat("speed", shipRigid.velocity.y);
         }
+        //
+        //  TWO TYPES of shooting protocol follow
+        // 
+        // Shooting on rapid-button press
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            //Check for reload and Power Level
+            if (powers[1] == 1 && missile_currReload <= 0)
+            {
+                missile_currReload = missile_reload;
+                GameObject missile = Instantiate(missilePrefab) as GameObject;
+                missile.GetComponent<Rigidbody>().MovePosition(this.transform.position + missilespawn);
+            }
 
-		//Shooting
-		if (Input.GetKey (KeyCode.A) && currReload <= 0) {
+            if (powers[3] == 0)
+            {
+                if (powers[2] == 1)
+                {
+                    GameObject doubleshot = Instantiate(doubleshotPrefab) as GameObject;
+                    doubleshot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+                }
+                //Create bullet and move it to the player position
+                GameObject shot = Instantiate(shotPrefab) as GameObject;
+                shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+            }
+            if (powers[3] == 1)
+            {
+                GameObject shot = Instantiate(laserPrefab) as GameObject;
+                shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+            }
+        }
+
+        // Shooting on button hold
+        if (Input.GetKey (KeyCode.A) && currReload <= 0) {
 			//Check for reload and Power Level
 			if(powers[1] == 1 && missile_currReload <= 0){
 				missile_currReload = missile_reload;
