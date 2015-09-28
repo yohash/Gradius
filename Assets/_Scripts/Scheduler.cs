@@ -17,7 +17,7 @@ public class Scheduler : MonoBehaviour {
 	float camH, camW;		// camera data
 
 	float startTime; 		// time game started for event referencing
-	int index;			// schedule index
+	public int index;			// schedule index
     
 	void Start ()
     {   // ***************************************************************

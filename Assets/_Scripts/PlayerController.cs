@@ -249,20 +249,32 @@ public class PlayerController : MonoBehaviour {
 				pow = powerLevel.none;
 			} 
 		}
+	}
 
-
+	public void Checkpoint(){
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		for(int i = 0; i < enemies.Length; i++){
+			Destroy(enemies[i].gameObject);
+		}
+		if(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index > 4){
+			GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index - 4;
+		} else {
+			GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index = 0;
+		}
+		this.resetPowers();
+		this.transform.position = new Vector3(-6f, 0f, 0f);
 	}
 
 	public void Crash(){
 		if (!invincible)
 		{
-				if (powers[5] == 0)
+			if (powers[5] == 0)
 			{
 				health--;
 				healthText.text = health.ToString();
 				
 				//Reset powerups
-				resetPowers();
+				Checkpoint();
 				pow = powerLevel.none;
 			}
 			else
