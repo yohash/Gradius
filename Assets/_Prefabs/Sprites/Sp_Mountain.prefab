@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11453320}
   m_Layer: 31
   m_Name: Sp_Mountain
-  m_TagString: Ground
+  m_TagString: Mountain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_TagString
-      value: Ground
+      value: Mountain
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
