@@ -1138,6 +1138,7 @@ MonoBehaviour:
   - {fileID: 139808, guid: 1433bcd86a7add44680a235708f36b16, type: 2}
   - {fileID: 141774, guid: 757f70dd602bd1a41baecc2e80ff574c, type: 2}
   customLevel: 0
+  index: 0
 --- !u!1 &1663239120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,7 +1529,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 486400, guid: d21734d43d610fb418881a14eba24630, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 486400, guid: d21734d43d610fb418881a14eba24630, type: 2}
       propertyPath: m_LocalPosition.y
