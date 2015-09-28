@@ -53,8 +53,8 @@ public class BossBehaviour : BasicEnemyBehaviour
         }
         else if (bs == bossState.entering && this.transform.position.x <= 7f)
         {   // initiate boss fight
-            bs = bossState.fightingUP;
-        }
+            bs = bossState.fightingUP;    
+		}
         else if (bs == bossState.fightingUP && this.transform.position.y < bossTopLim)
         {   // move boss upwards if he hasnt reached his limit
             this.transform.position += Time.deltaTime * new Vector3(0f, fightSpeed, 0f);

@@ -1165,6 +1165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7515e22edaff1374da348054a6fdaf52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camH: 0
+  camW: 0
+  isBlue: 0
 --- !u!4 &1663239122
 Transform:
   m_ObjectHideFlags: 0
@@ -1358,6 +1361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7515e22edaff1374da348054a6fdaf52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camH: 0
+  camW: 0
+  isBlue: 0
 --- !u!122 &1739583616
 Halo:
   m_ObjectHideFlags: 0

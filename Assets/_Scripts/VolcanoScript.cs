@@ -35,8 +35,9 @@ public class VolcanoScript : BasicEnemyBehaviour
         }
         else if (volcStatus == volc.moving && selfGO.transform.position.y <= 0)
         {
-            volcStatus = volc.shooting;
-            startTime = Time.time;
+			GameObject.FindGameObjectWithTag("FlrCeil").GetComponent<FloorScroller>().animated = 2;
+			volcStatus = volc.shooting;
+			startTime = Time.time;
             delayTime = Time.time;
         }
         else if (volcStatus == volc.shooting && (Time.time - startTime) < dwellTime)
@@ -54,7 +55,7 @@ public class VolcanoScript : BasicEnemyBehaviour
         else if (volcStatus == volc.shooting && (Time.time - startTime) > dwellTime)
         {
             volcStatus = volc.leaving;
-        }
+		}
         else if (volcStatus == volc.leaving)
         {
 			GameObject.FindGameObjectWithTag("FlrCeil").transform.position += Time.deltaTime * new Vector3(-speed, 0f, 0f);
