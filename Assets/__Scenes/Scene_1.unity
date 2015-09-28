@@ -409,9 +409,10 @@ MonoBehaviour:
   - {fileID: 187122, guid: 2480ed8d16610194fb7cd6eb2066d491, type: 2}
   - {fileID: 127552, guid: 009f15b975cdfa94b903bc04e6837c7b, type: 2}
   - {fileID: 147316, guid: 0eb6647dd2e3ee149b2a4dacd5ca6b8c, type: 2}
-  - {fileID: 120852, guid: 9b671c7f354daad44b47e661833caa35, type: 2}
-  - {fileID: 167770, guid: 262ef9c75dc77814599fd1c456e09716, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   customLevel: 1
+  index: 0
 --- !u!114 &453731790
 MonoBehaviour:
   m_ObjectHideFlags: 0
