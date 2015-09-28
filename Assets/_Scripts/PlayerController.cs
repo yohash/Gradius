@@ -249,8 +249,6 @@ public class PlayerController : MonoBehaviour {
 				pow = powerLevel.none;
 			} 
 		}
-
-
 	}
 
 	public void Crash(){
