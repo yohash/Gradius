@@ -29,9 +29,10 @@ public class FloorScroller : MonoBehaviour
 		} else if(animated == 1 && map.transform.position.x <= (-camW/2f)-3.3f) {
 			map.transform.position = new Vector3(-camW/2, map.transform.position.y, 0);
 		} else if (animated == 1) {
-			Vector3 point = new Vector3((-camW/2f)-3.3f, map.transform.position.y, 0);
+			Vector3 point = new Vector3((-camW/2f)-6.6f, map.transform.position.y, 0);
 			float step = speed*Time.deltaTime;
 			map.transform.position = Vector3.MoveTowards(map.transform.position, point, step);
+			print ("floor animating: "+map.transform.position.x+", move spd: "+step+", move to: "+point);
 		}
 	}
 }
