@@ -253,8 +253,16 @@ public class PlayerController : MonoBehaviour {
 
 	public void Checkpoint(){
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		GameObject[] mountains = GameObject.FindGameObjectsWithTag("Mountain");
+		GameObject[] eshots = GameObject.FindGameObjectsWithTag("EnemyShot");
 		for(int i = 0; i < enemies.Length; i++){
 			Destroy(enemies[i].gameObject);
+		}
+		for(int i = 0; i < mountains.Length; i++){
+			Destroy(mountains[i].gameObject);
+		}
+		for(int i = 0; i < eshots.Length; i++){
+			Destroy(eshots[i].gameObject);
 		}
 		if(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index > 4){
 			GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index - 4;

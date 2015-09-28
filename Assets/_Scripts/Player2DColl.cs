@@ -11,7 +11,7 @@ public class Player2DColl : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D coll){
-		if(coll.gameObject.tag == "Ground" || coll.gameObject.tag == "Volcano"){
+		if(coll.gameObject.tag == "Ground" || coll.gameObject.tag == "Volcano" || coll.gameObject.tag == "Mountain"){
 			player.GetComponent<PlayerController>().Crash();
 		}
 	}
