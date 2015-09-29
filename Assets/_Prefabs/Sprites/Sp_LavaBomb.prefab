@@ -57,6 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 026ea35ffa127244a81ce2b575ac66cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 157916, guid: bdec488e5db722547b548ffbdf9084d0, type: 2}
 --- !u!135 &13546114
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -127,6 +128,10 @@ Prefab:
       propertyPath: m_Radius
       value: .0500000007
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 157916, guid: bdec488e5db722547b548ffbdf9084d0, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 170278}

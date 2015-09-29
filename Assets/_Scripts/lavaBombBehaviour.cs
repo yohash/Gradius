@@ -4,6 +4,8 @@ using System.Collections;
 public class lavaBombBehaviour : MonoBehaviour
 {
     Vector3 shotDir = Vector3.zero;
+    //explosion
+    public GameObject explosion;
 
     // camera info
     float camH, camW;
@@ -48,16 +50,17 @@ public class lavaBombBehaviour : MonoBehaviour
 
 
     void OnTriggerEnter(Collider coll) {
-        print("coll");
-        print(coll.gameObject.tag);
-        print(this.gameObject.tag);
-        if (coll.gameObject.tag == "Player") {
-            Destroy(this.gameObject);
-        }
         if (coll.gameObject.tag == "PlayerShot")
         {
-            Destroy(this.gameObject);
+            GameObject ex = Instantiate(explosion) as GameObject;
+            Vector3 exLoc = Vector3.zero;
 
+            exLoc.x = this.transform.position.x;
+            exLoc.y = this.transform.position.y;
+            exLoc.z = 5f;
+
+            ex.transform.position = exLoc;
+            Destroy(this.gameObject);
         }
     }
 }
