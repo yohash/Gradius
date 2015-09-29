@@ -17,8 +17,12 @@ public class Missile2DColl : MonoBehaviour {
 			missile.transform.Rotate(new Vector3(0,0,45));
 			missile.GetComponent<Rigidbody>().velocity = new Vector3(missile.GetComponent<MissileBehaviour>().speed,0f,0f);
 			has_coll = true;
-		}
-	}
+        }
+        if (coll.gameObject.tag == "Mountain")
+        {
+            missile.GetComponent<MissileBehaviour>().hitMountain();
+        }
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {

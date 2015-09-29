@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 
 	//Missile Mechanics
 	public GameObject missilePrefab;
-	public Vector3 missilespawn = new Vector3(0.5f, 0.5f, 0f);
+	public Vector3 missilespawn = new Vector3(0f, 0f, 0f);
 	public float missile_reload;
 	float missile_currReload; 
 
@@ -170,7 +170,7 @@ public class PlayerController : MonoBehaviour {
             {
                 missile_currReload = missile_reload;
                 GameObject missile = Instantiate(missilePrefab) as GameObject;
-                missile.GetComponent<Rigidbody>().MovePosition(this.transform.position + missilespawn);
+                missile.GetComponent<Rigidbody>().transform.position = this.transform.position;
             }
 
             if (powers[3] == 0)
@@ -199,8 +199,8 @@ public class PlayerController : MonoBehaviour {
 			if(powers[1] == 1 && missile_currReload <= 0){
 				missile_currReload = missile_reload;
 				GameObject missile = Instantiate(missilePrefab) as GameObject;
-				missile.GetComponent<Rigidbody>().MovePosition(this.transform.position + missilespawn);
-			}
+                missile.GetComponent<Rigidbody>().transform.position = this.transform.position;
+            }
 			currReload = reload;
 
 			if(powers[3] == 0){
@@ -232,7 +232,7 @@ public class PlayerController : MonoBehaviour {
 				pow_Img[(int)pow-1].color = Color.blue;
 				//pow_Lbl[(int)pow-1].enabled = false;
 				pow = powerLevel.none;
-			}	else if(pow == powerLevel.fifth && powers[4] < 2){
+			}	else if(pow == powerLevel.fifth && powers[4] < 2) {
 				GameObject option = Instantiate(optionPrefab) as GameObject;
 				option.GetComponent<Rigidbody>().position = this.transform.position;
 				powers[(int)pow-1]++;

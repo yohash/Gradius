@@ -42,6 +42,10 @@ public class DoubleShotBehaviour : MonoBehaviour {
 		{
 			Destroy(this.gameObject);
 		}
-	}
-	
+    }
+    public void hitMountain()
+    {
+        Destroy(this.gameObject);
+    }
+
 }

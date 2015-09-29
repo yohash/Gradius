@@ -31,13 +31,13 @@ public class MissileBehaviour : MonoBehaviour {
 		if (coll.gameObject.tag == "Enemy") {
 			coll.gameObject.GetComponent<BasicEnemyBehaviour>().Hit(); //Add Score
 			Destroy(this.gameObject);
-		}
-		if(coll.gameObject.tag == "Ground"){
-			print("G");
-			this.bulletRigid.velocity = new Vector3(speed,0f,0f);
-		}
-	}
-	
+        }
+        if (coll.gameObject.tag == "Ground")
+        {
+            //print("G");
+            this.bulletRigid.velocity = new Vector3(speed, 0f, 0f);
+        }
+    }
 	// function to test if to the left or right, OR ABOVE AND BELOW 
 	// the camera bounds (enemy and playerShot tests dont check above/below)
 	public void OffCamera()
@@ -47,4 +47,10 @@ public class MissileBehaviour : MonoBehaviour {
 			Destroy(this.gameObject);
 		}
 	}
+
+    // if the mt gets hit the missile is gone
+    public void hitMountain()
+    {
+        Destroy(this.gameObject);
+    }
 }

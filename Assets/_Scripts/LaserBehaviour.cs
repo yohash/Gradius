@@ -39,5 +39,8 @@ public class LaserBehaviour: MonoBehaviour {
 			Destroy(this.gameObject);
 		}
 	}
+    public void hitMountain() {
+        Destroy(this.gameObject);
+    }
 	
 }

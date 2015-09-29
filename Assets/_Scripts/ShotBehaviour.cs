@@ -26,12 +26,14 @@ public class ShotBehaviour : MonoBehaviour {
 	}
 
 	//Collision Detection
-	void OnTriggerEnter(Collider coll){
-		if (coll.gameObject.tag == "Enemy") {
-			coll.gameObject.GetComponent<BasicEnemyBehaviour>().Hit(); //Add Score
-			Destroy(this.gameObject);
-		}
-	}
+	void OnTriggerEnter(Collider coll)
+    {
+        if (coll.gameObject.tag == "Enemy")
+        {
+            coll.gameObject.GetComponent<BasicEnemyBehaviour>().Hit(); //Add Score
+            Destroy(this.gameObject);
+        }
+    }
     
     public void OffCamera()
     {
@@ -39,6 +41,10 @@ public class ShotBehaviour : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+    }
+
+    public void hitMountain() {
+        Destroy(this.gameObject);
     }
 
 }
