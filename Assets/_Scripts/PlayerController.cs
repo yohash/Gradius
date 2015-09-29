@@ -123,10 +123,6 @@ public class PlayerController : MonoBehaviour {
 			missile_currReload -= Time.deltaTime;
 		}
 		
-		//Reset the game if player health drops to 0
-		if (health <= 0) {
-			Application.LoadLevel("Scene_0");
-		}
 
 		//Player movement, includes screen edge bounding
 		if(Input.GetKey(KeyCode.UpArrow) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/8 < (camH/2 + camY))){
@@ -284,7 +280,6 @@ public class PlayerController : MonoBehaviour {
                 // instantiate explosion
                 GameObject ex = Instantiate(playerExplosion) as GameObject;
                 Vector3 exLoc = Vector3.zero;
-
                 exLoc.x = this.transform.position.x;
                 exLoc.y = this.transform.position.y;
                 exLoc.z = 5f;
@@ -295,6 +290,7 @@ public class PlayerController : MonoBehaviour {
                 this.GetComponent<BoxCollider>().enabled = false;
                 this.GetComponent<BoxCollider>().enabled = false;
                 GetComponentInChildren<Player2DColl>().disableCollider();
+                if (custom_shield) { GetComponentInChildren<ShieldToggling>().clearShieldsOnDeath(); }
 
                 // stop music
 
@@ -373,6 +369,11 @@ public class PlayerController : MonoBehaviour {
 
     void ResetShip()
     {
+        //Reset the game if player health drops to 0
+        if (health <= 0)    {Application.LoadLevel("Scene_0");}
+
+        //reset the shield if custom level
+        if (custom_shield) { GetComponentInChildren<ShieldToggling>().StartToggle(); }
         // reset the board - functionality is in scheduler
         // this replaces Checkpoint();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().ResetBoard();
