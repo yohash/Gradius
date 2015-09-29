@@ -7,6 +7,9 @@ enum powerLevel{none, first, second, third, fourth, fifth, sixth};
 
 public class PlayerController : MonoBehaviour {
 
+    //audioSources
+    public AudioSource shotFX, laserFX;
+
     // invincibility toggle
     public bool invincible = false;
 
@@ -51,7 +54,6 @@ public class PlayerController : MonoBehaviour {
 
 	//Laser Mechanics
 	public GameObject laserPrefab;
-
 
 	//PowerUps
 	powerLevel pow = powerLevel.none;
@@ -166,6 +168,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.A))
         {
             //Check for reload and Power Level
+            GameObject bullet = null;
             if (powers[1] == 1 && missile_currReload <= 0)
             {
                 missile_currReload = missile_reload;
@@ -183,13 +186,21 @@ public class PlayerController : MonoBehaviour {
                 //Create bullet and move it to the player position
                 GameObject shot = Instantiate(shotPrefab) as GameObject;
                 shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
-                AudioSource audio = this.GetComponent<AudioSource>();
-                audio.Play((ulong) 0.0);
+                //AudioSource shot = this.GetComponent<AudioSource>();
+                bullet = shotPrefab;
+                shotFX.Play((ulong) 0.0);
             }
             if (powers[3] == 1)
             {
                 GameObject shot = Instantiate(laserPrefab) as GameObject;
                 shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+                bullet = laserPrefab;
+                laserFX.Play((ulong)0.0);
+            }
+            GameObject[] options = GameObject.FindGameObjectsWithTag("Option");
+            for (int i = 0; i < options.Length; i++)
+            {
+                options[i].GetComponent<OptionBehaviour>().Fire(bullet, shotspawn);
             }
         }
 
@@ -214,12 +225,14 @@ public class PlayerController : MonoBehaviour {
 				GameObject shot = Instantiate(shotPrefab) as GameObject;
 				shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
 				bullet = shotPrefab;
-			}
+                shotFX.Play((ulong)0.0);
+            }
 			if(powers[3] == 1){
 				GameObject shot = Instantiate(laserPrefab) as GameObject;
 				shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
 				bullet = laserPrefab;
-			}
+                laserFX.Play((ulong)0.0);
+            }
 			GameObject[] options = GameObject.FindGameObjectsWithTag("Option");
 			for(int i = 0; i < options.Length; i++){
 				options[i].GetComponent<OptionBehaviour>().Fire(bullet,shotspawn);

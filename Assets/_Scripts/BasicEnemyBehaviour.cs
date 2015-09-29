@@ -74,7 +74,8 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 		OffCamera(); // delete enemies
 	}
 
-	public void Hit(){
+    public void Hit()
+    {
         if (this.tag != "Mountain")
         {
             if (health > 1)
@@ -84,6 +85,12 @@ public class BasicEnemyBehaviour : MonoBehaviour {
             else
             {
                 Scored();
+
+                //// play the death audio
+                //AudioSource deathSFX = this.GetComponent<AudioSource>();
+                //deathSFX.Play((ulong)0.0);
+
+                // create an explosion
                 GameObject ex = Instantiate(explosion) as GameObject;
                 Vector3 exLoc = Vector3.zero;
 
@@ -95,7 +102,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
                 Destroy(this.gameObject);
             }
         }
-	}
+    }
 
 	//Scoring
 	void Scored(){
