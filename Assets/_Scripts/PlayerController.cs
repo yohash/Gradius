@@ -183,6 +183,8 @@ public class PlayerController : MonoBehaviour {
                 //Create bullet and move it to the player position
                 GameObject shot = Instantiate(shotPrefab) as GameObject;
                 shot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+                AudioSource audio = this.GetComponent<AudioSource>();
+                audio.Play((ulong) 0.0);
             }
             if (powers[3] == 1)
             {
