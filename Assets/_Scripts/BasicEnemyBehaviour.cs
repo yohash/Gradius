@@ -74,7 +74,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 		OffCamera(); // delete enemies
 	}
 
-    public void Hit()
+    public virtual void Hit()
     {
         if (this.tag != "Mountain")
         {
@@ -105,7 +105,7 @@ public class BasicEnemyBehaviour : MonoBehaviour {
     }
 
 	//Scoring
-	void Scored(){
+	public void Scored(){
 		//Add enemy value to scoreboard
 		score.text = (int.Parse (score.text) + value).ToString ();
 

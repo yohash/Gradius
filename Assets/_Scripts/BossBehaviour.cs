@@ -6,6 +6,8 @@ enum bossState{ entering, fightingUP, pausing, fightingDOWN};
 
 public class BossBehaviour : BasicEnemyBehaviour
 {
+    AudioSource bossHit;
+
     public float speed = 3f;        // entering speed
     public float fightSpeed = 5f;   // move up-and-down speed
 
@@ -17,7 +19,7 @@ public class BossBehaviour : BasicEnemyBehaviour
     float randoPause = 1f;          // the boss pauses sometimes at the top of his
     float pauseTimer;               // "battle rotation"....
 
-    float fireRate = 1.5f;          // shoot every 1.5 sec
+    float fireRate = 1.2f;          // shoot every 1.2 sec
     float fireTimer;
     bool firing = false;            // suppress fire() while entering
 
@@ -29,9 +31,10 @@ public class BossBehaviour : BasicEnemyBehaviour
     private Vector3 playerLoc = Vector3.zero;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         base.score = GameObject.Find("Score").GetComponent<Text>();
+        bossHit = this.GetComponent<AudioSource>();
     }
 
     public override void Move()
@@ -53,8 +56,8 @@ public class BossBehaviour : BasicEnemyBehaviour
         }
         else if (bs == bossState.entering && this.transform.position.x <= 7f)
         {   // initiate boss fight
-            bs = bossState.fightingUP;    
-		}
+            bs = bossState.fightingUP;
+        }
         else if (bs == bossState.fightingUP && this.transform.position.y < bossTopLim)
         {   // move boss upwards if he hasnt reached his limit
             this.transform.position += Time.deltaTime * new Vector3(0f, fightSpeed, 0f);
@@ -88,7 +91,7 @@ public class BossBehaviour : BasicEnemyBehaviour
                 pauseTimer = Time.time;
                 bs = bossState.pausing;
             }
-            else 
+            else
             {   // player isnt hiding... move on up
                 bs = bossState.fightingUP;
             }
@@ -112,7 +115,8 @@ public class BossBehaviour : BasicEnemyBehaviour
         }
     }
 
-    public void getPlayerLoc() {
+    public void getPlayerLoc()
+    {
         playerRigid = GameObject.Find("Player").GetComponent<Rigidbody>();
         playerPos = playerRigid.transform.position;
 
@@ -126,10 +130,40 @@ public class BossBehaviour : BasicEnemyBehaviour
     }
 
     // Update is called once per frame
-    void Update () {
-	    if (bs != bossState.pausing && (Time.time - fireTimer) > fireRate) {
+    void Update()
+    {
+        if (bs != bossState.pausing && (Time.time - fireTimer) > fireRate)
+        {
             fireTimer = Time.time;
             Fire();
+        }
+    }
+
+    public override void Hit()
+    {
+        if (health > 1)
+        {
+            health--;
+            bossHit.Play((ulong)0.0);
+        }
+        else
+            {
+            base.Scored();
+
+            //// play the death audio
+            //AudioSource deathSFX = this.GetComponent<AudioSource>();
+            //deathSFX.Play((ulong)0.0);
+
+            // create an explosion
+            GameObject ex = Instantiate(explosion) as GameObject;
+            Vector3 exLoc = Vector3.zero;
+
+            exLoc.x = this.transform.position.x;
+            exLoc.y = this.transform.position.y;
+            exLoc.z = 5f;
+
+            ex.transform.position = exLoc;
+            Destroy(this.gameObject);
         }
     }
 }
