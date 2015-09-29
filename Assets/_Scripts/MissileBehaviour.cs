@@ -19,7 +19,7 @@ public class MissileBehaviour : MonoBehaviour {
 		camW = camH * cam.aspect;
 		
 		bulletRigid = this.GetComponent<Rigidbody> ();
-		this.bulletRigid.velocity = new Vector3(speed,-speed,0f);
+		this.bulletRigid.velocity = new Vector3(1,-3f,0f).normalized*speed;
 	}
 	
 	// Update is called once per frame

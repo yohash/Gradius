@@ -254,17 +254,25 @@ public class PlayerController : MonoBehaviour {
 	public void Checkpoint(){
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 		GameObject[] mountains = GameObject.FindGameObjectsWithTag("Mountain");
-		GameObject[] eshots = GameObject.FindGameObjectsWithTag("EnemyShot");
-		for(int i = 0; i < enemies.Length; i++){
+        GameObject[] eshots = GameObject.FindGameObjectsWithTag("EnemyShot");
+        GameObject[] lasers = GameObject.FindGameObjectsWithTag("Laser");
+        for (int i = 0; i < enemies.Length; i++){
 			Destroy(enemies[i].gameObject);
 		}
 		for(int i = 0; i < mountains.Length; i++){
 			Destroy(mountains[i].gameObject);
-		}
-		for(int i = 0; i < eshots.Length; i++){
-			Destroy(eshots[i].gameObject);
-		}
-		if(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index > 4){
+        }
+        for (int i = 0; i < eshots.Length; i++){
+            Destroy(eshots[i].gameObject);
+        }
+        for (int i = 0; i < eshots.Length; i++){
+            Destroy(lasers[i].gameObject);
+        }
+
+        //int currIndex = GameObject.FindGameObjectWithTag("Main Camera").GetComponent<Scheduler>().index;
+        //int indexLength = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().lineCount;
+        
+        if(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index > 4){
 			GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index - 4;
 		} else {
 			GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index = 0;
@@ -324,19 +332,18 @@ public class PlayerController : MonoBehaviour {
                 }
             } else {
                 custom_shield = isBigPowerUp;
-
                 ShieldToggling togg = customShield.GetComponent<ShieldToggling>();
                 togg.StartToggle();
 
                 Destroy(coll.gameObject);
             }
 		}
+
         // collision with shield
         if (coll.gameObject.tag == "Laser")
         {
             bool shipBlue = (customShield.GetComponent<ShieldToggling>().isBlue);
             bool laserBlue = (coll.gameObject.GetComponent<LaserWallBehaviour>().isBlue);
-
             if (shipBlue != laserBlue) {
                 Crash();
             } else if (shipBlue == laserBlue) {

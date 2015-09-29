@@ -18,7 +18,8 @@ public class Scheduler : MonoBehaviour {
 
 	float startTime; 		// time game started for event referencing
 	public int index;			// schedule index
-    
+    public int lineCount;
+
 	void Start ()
     {   // ***************************************************************
         // ******** REPLACE THIS CODE IF BETTER SOLUTION *****************
@@ -33,7 +34,7 @@ public class Scheduler : MonoBehaviour {
 		else { fileCount = Resources.Load<TextAsset>("Level_1"); }
 		reader = new StringReader(fileCount.text);
         //System.IO.StreamReader fileCount = new System.IO.StreamReader("Assets/level_1.txt");
-        int lineCount = 0;  // track number of lines in the file
+        lineCount = 0;  // track number of lines in the file
         while(reader.ReadLine()!=null) {
             lineCount++;
         }
