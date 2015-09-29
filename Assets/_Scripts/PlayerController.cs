@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 
     //audioSources
     public AudioSource shotFX, laserFX, powerUPFX, optionFX;
+    public AudioSource bgMusic;
 
     // invincibility toggle
     public bool invincible = false;
@@ -62,27 +63,30 @@ public class PlayerController : MonoBehaviour {
 	int[] powers = {1,0,0,0,0,0};
 	public Image[] pow_Img = new Image[6];
 	public Text[] pow_Lbl = new Text[6];
-	
-	void Start () {
-		//Initiazlize variables
-		shipRigid = this.gameObject.GetComponent<Rigidbody> ();
-		Camera cam = GameObject.Find ("Main Camera").GetComponent<Camera> ();
-		camH = cam.orthographicSize * 2f;
-		camW = camH * cam.aspect;
-		anim = this.GetComponent<Animator>();
+
+    void Start()
+    {
+        //Initiazlize variables
+        shipRigid = this.gameObject.GetComponent<Rigidbody>();
+        Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+        camH = cam.orthographicSize * 2f;
+        camW = camH * cam.aspect;
+        anim = this.GetComponent<Animator>();
 
         // the custom shield is present but dismissed to remove halo
-		//THIS NEEDS TO BE CHANGED...
-		//if(Application.loadedLevelName != "Scene_0"){
-	    Transform customShieldTrans = transform.FindChild("Shields");
-	    customShield = customShieldTrans.gameObject;
-		//}
+        //THIS NEEDS TO BE CHANGED...
+        //if(Application.loadedLevelName != "Scene_0"){
+        Transform customShieldTrans = transform.FindChild("Shields");
+        customShield = customShieldTrans.gameObject;
+        //}
 
         //Set the text for player health
         healthText = GameObject.Find("Health").GetComponent<Text>();
         healthText.text = health.ToString();
         invincibleToggle = GameObject.Find("Invincible").GetComponent<Text>();
         invincibleToggle.text = "";
+
+        bgMusic.Play((ulong)0.0); ;
 
         //Add the power images/labels to the array
         //		pow_Img[0] = GameObject.Find("Power_Speed").GetComponent<Image> ();
@@ -293,6 +297,7 @@ public class PlayerController : MonoBehaviour {
                 if (custom_shield) { GetComponentInChildren<ShieldToggling>().clearShieldsOnDeath(); }
 
                 // stop music
+                bgMusic.Stop();
 
                 // reset the ship and the scheduler
                 Invoke("ResetShip", 4f);
@@ -381,6 +386,9 @@ public class PlayerController : MonoBehaviour {
         //Reset powerups
         this.resetPowers();
         pow = powerLevel.none;
+
+        //restart music
+        bgMusic.Play((ulong)0.0);
 
         // enable the player ship
         this.transform.position = new Vector3(-6f, 0f, 0f);

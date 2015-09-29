@@ -151,8 +151,8 @@ public class Scheduler : MonoBehaviour {
         // change index of scheduler
         int itmp = index;
         float currTime = 0f, rewTime = 8f;
-        // this will "rewind" the map X seconds, so instead of just 
-        // rewinding 4 "objects", it sometimes would disassemble barricades
+        // this will "rewind" the map X seconds, instead of just 
+        // rewinding 4 "objects", which sometimes would disassemble barricades
         while (itmp >= 0) {
             currTime += relTime[itmp];
             if(currTime>rewTime) { break; }

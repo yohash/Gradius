@@ -13,7 +13,6 @@ GameObject:
   - 23: {fileID: 2365936}
   - 114: {fileID: 11449352}
   - 54: {fileID: 5486582}
-  - 122: {fileID: 12224674}
   m_Layer: 14
   m_Name: enemyShot
   m_TagString: EnemyShot
@@ -90,17 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b62c8ad96f8f6e43ad813b11c0bc5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!122 &12224674
-Halo:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 102588}
-  m_Enabled: 1
-  m_Color:
-    serializedVersion: 2
-    rgba: 4282495214
-  m_Size: .400000006
 --- !u!135 &13506956
 SphereCollider:
   m_ObjectHideFlags: 1
