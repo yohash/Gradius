@@ -131,6 +131,40 @@ public class Scheduler : MonoBehaviour {
 		}
 	}
 	
+    // called to reset level position after a player death
+    public void ResetBoard() {
+
+        CancelInvoke("Spawn");  // cancel any existing invokes
+
+        // eliminate everything on the screen
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] mountains = GameObject.FindGameObjectsWithTag("Mountain");
+        GameObject[] eshots = GameObject.FindGameObjectsWithTag("EnemyShot");
+        GameObject[] lasers = GameObject.FindGameObjectsWithTag("Laser");
+        GameObject[] volcanoes = GameObject.FindGameObjectsWithTag("Volcano");
+        for (int i = 0; i < enemies.Length; i++)    {Destroy(enemies[i].gameObject);}
+        for (int i = 0; i < mountains.Length; i++)  {Destroy(mountains[i].gameObject);}
+        for (int i = 0; i < eshots.Length; i++)     {Destroy(eshots[i].gameObject);}
+        for (int i = 0; i < lasers.Length; i++)     {Destroy(lasers[i].gameObject);}
+        for (int i = 0; i < volcanoes.Length; i++)  {Destroy(volcanoes[i].gameObject);}
+
+        // change index of scheduler
+        int itmp = index;
+        float currTime = 0f, rewTime = 8f;
+        // this will "rewind" the map X seconds, so instead of just 
+        // rewinding 4 "objects", it sometimes would disassemble barricades
+        while (itmp >= 0) {
+            currTime += relTime[itmp];
+            if(currTime>rewTime) { break; }
+            if(itmp==0) { break; }
+            itmp--;
+        }
+        index = itmp;
+        print("final index: " + index);
+        Invoke("Spawn", relTime[index] + 4);    // reset from the last point
+    }
+
+
 	// Update is called once per frame
 	void Update () {
 		

@@ -20,4 +20,13 @@ public class Player2DColl : MonoBehaviour {
 	void FixedUpdate () {
 		this.transform.position = player.transform.position;
 	}
+
+    public void disableCollider()
+    {
+        this.GetComponent<BoxCollider2D>().enabled = false;
+    }
+    public void enableCollider()
+    {
+        this.GetComponent<BoxCollider2D>().enabled = true;
+    }
 }

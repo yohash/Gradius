@@ -2071,6 +2071,14 @@ Prefab:
       propertyPath: maxSpeed.y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11427766, guid: d21734d43d610fb418881a14eba24630, type: 2}
+      propertyPath: playerExplosion
+      value: 
+      objectReference: {fileID: 119516, guid: 22844e23f2aa28445b300b30ffe77ddd, type: 2}
+    - target: {fileID: 21251942, guid: d21734d43d610fb418881a14eba24630, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d21734d43d610fb418881a14eba24630, type: 2}
   m_IsPrefabParent: 0

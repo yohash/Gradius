@@ -7,6 +7,9 @@ enum powerLevel{none, first, second, third, fourth, fifth, sixth};
 
 public class PlayerController : MonoBehaviour {
 
+    // explosion
+    public GameObject playerExplosion;
+
     //audioSources
     public AudioSource shotFX, laserFX, powerUPFX, optionFX;
 
@@ -16,8 +19,7 @@ public class PlayerController : MonoBehaviour {
     // custom level shield toggle
     public bool custom_shield = false;
     GameObject customShield;            // links to the halo that color-codes the ship
-
-
+    
     //Animation
     Animator anim;
 
@@ -130,7 +132,7 @@ public class PlayerController : MonoBehaviour {
 		if(Input.GetKey(KeyCode.UpArrow) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/8 < (camH/2 + camY))){
 			speed.y += maxSpeed.y + 2*powers[0];
 		}
-		if(Input.GetKey(KeyCode.DownArrow) && (this.gameObject.transform.position.y - this.gameObject.transform.lossyScale.y/8 > (-camH/2 + camY))){
+		if(Input.GetKey(KeyCode.DownArrow) && (this.gameObject.transform.position.y - this.gameObject.transform.lossyScale.y/8 > (-camH/2 + camY + 2.5f))){
 			speed.y -= maxSpeed.y + 2*powers[0];
 		}		
 		if(Input.GetKey(KeyCode.LeftArrow) && (this.gameObject.transform.position.x - this.gameObject.transform.lossyScale.x/7 > (-camW/2 + camX))){
@@ -268,49 +270,37 @@ public class PlayerController : MonoBehaviour {
 			} 
 		}
 	}
-
-	public void Checkpoint(){
-		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-		GameObject[] mountains = GameObject.FindGameObjectsWithTag("Mountain");
-        GameObject[] eshots = GameObject.FindGameObjectsWithTag("EnemyShot");
-        GameObject[] lasers = GameObject.FindGameObjectsWithTag("Laser");
-        for (int i = 0; i < enemies.Length; i++){
-			Destroy(enemies[i].gameObject);
-		}
-		for(int i = 0; i < mountains.Length; i++){
-			Destroy(mountains[i].gameObject);
-        }
-        for (int i = 0; i < eshots.Length; i++){
-            Destroy(eshots[i].gameObject);
-        }
-        for (int i = 0; i < eshots.Length; i++){
-            Destroy(lasers[i].gameObject);
-        }
-
-        //int currIndex = GameObject.FindGameObjectWithTag("Main Camera").GetComponent<Scheduler>().index;
-        //int indexLength = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().lineCount;
-        
-        if(GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index > 4){
-			GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index - 4;
-		} else {
-			GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().index = 0;
-		}
-		this.resetPowers();
-		this.transform.position = new Vector3(-6f, 0f, 0f);
-	}
+    
 
 	public void Crash(){
 		if (!invincible)
 		{
 			if (powers[5] == 0)
 			{
+                // "health" in this sense is player lives
 				health--;
 				healthText.text = health.ToString();
 				
-				//Reset powerups
-				Checkpoint();
-				pow = powerLevel.none;
-			}
+                // instantiate explosion
+                GameObject ex = Instantiate(playerExplosion) as GameObject;
+                Vector3 exLoc = Vector3.zero;
+
+                exLoc.x = this.transform.position.x;
+                exLoc.y = this.transform.position.y;
+                exLoc.z = 5f;
+                ex.transform.position = exLoc;
+
+                // disable the player ship
+                this.GetComponent<SpriteRenderer>().enabled = false;
+                this.GetComponent<BoxCollider>().enabled = false;
+                this.GetComponent<BoxCollider>().enabled = false;
+                GetComponentInChildren<Player2DColl>().disableCollider();
+
+                // stop music
+
+                // reset the ship and the scheduler
+                Invoke("ResetShip", 4f);
+            }
 			else
 			{
 				powers[5] = 0;
@@ -380,4 +370,23 @@ public class PlayerController : MonoBehaviour {
 		}
 		powers[0] = 1;
 	}
+
+    void ResetShip()
+    {
+        // reset the board - functionality is in scheduler
+        // this replaces Checkpoint();
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().ResetBoard();
+
+        //Reset powerups
+        this.resetPowers();
+        pow = powerLevel.none;
+
+        // enable the player ship
+        this.transform.position = new Vector3(-6f, 0f, 0f);
+        this.GetComponent<SpriteRenderer>().enabled = true;
+        this.GetComponent<BoxCollider>().enabled = true;
+        this.GetComponent<BoxCollider>().enabled = true;
+        GetComponentInChildren<Player2DColl>().enableCollider();
+    }
 }
+
