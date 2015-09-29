@@ -15,6 +15,7 @@ TagManager:
   - Laser
   - Stars
   - Mountain
+  - PlayerShot
   layers:
   - Default
   - TransparentFX

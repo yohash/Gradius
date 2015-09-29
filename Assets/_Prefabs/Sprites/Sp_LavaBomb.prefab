@@ -9,10 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 430832}
   - 212: {fileID: 21250780}
-  - 54: {fileID: 5455262}
-  - 135: {fileID: 13597838}
   - 114: {fileID: 11458646}
-  m_Layer: 14
+  - 54: {fileID: 5421766}
+  - 135: {fileID: 13546114}
+  m_Layer: 0
   m_Name: Sp_LavaBomb
   m_TagString: EnemyShot
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!54 &5455262
+--- !u!54 &5421766
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 026ea35ffa127244a81ce2b575ac66cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &13597838
+--- !u!135 &13546114
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -67,7 +67,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .100000001
+  m_Radius: .0500000007
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &21250780
 SpriteRenderer:
@@ -107,6 +107,26 @@ Prefab:
       value: 
       objectReference: {fileID: 21300448, guid: d24be3403b8319148b9235b9cacb49c5,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: EnemyShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Radius
+      value: .0500000007
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 170278}

@@ -9,13 +9,15 @@ public class lavaBombBehaviour : MonoBehaviour
     float camH, camW;
 
     // enemy bullet speed
-    float speed = 33f;
+    float speed = 28f;
 
     Rigidbody lavaRigid;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
+        this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y+3.25f, 0f);
+
         //Camera Initialization
         Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
         camH = cam.orthographicSize * 2f;
@@ -41,6 +43,21 @@ public class lavaBombBehaviour : MonoBehaviour
         if (this.transform.position.x >= (camW / 2 + 5) || this.transform.position.x <= (-camW / 2 - 5) || this.transform.position.y >= (camH / 2 + 5) || this.transform.position.y <= (-camH / 2 - 5))
         {
             Destroy(this.gameObject);
+        }
+    }
+
+
+    void OnTriggerEnter(Collider coll) {
+        print("coll");
+        print(coll.gameObject.tag);
+        print(this.gameObject.tag);
+        if (coll.gameObject.tag == "Player") {
+            Destroy(this.gameObject);
+        }
+        if (coll.gameObject.tag == "PlayerShot")
+        {
+            Destroy(this.gameObject);
+
         }
     }
 }

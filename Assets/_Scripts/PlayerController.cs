@@ -8,7 +8,7 @@ enum powerLevel{none, first, second, third, fourth, fifth, sixth};
 public class PlayerController : MonoBehaviour {
 
     //audioSources
-    public AudioSource shotFX, laserFX;
+    public AudioSource shotFX, laserFX, powerUPFX, optionFX;
 
     // invincibility toggle
     public bool invincible = false;
@@ -128,16 +128,16 @@ public class PlayerController : MonoBehaviour {
 
 		//Player movement, includes screen edge bounding
 		if(Input.GetKey(KeyCode.UpArrow) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/8 < (camH/2 + camY))){
-			speed.y += maxSpeed.y*powers[0];
+			speed.y += maxSpeed.y + 2*powers[0];
 		}
 		if(Input.GetKey(KeyCode.DownArrow) && (this.gameObject.transform.position.y - this.gameObject.transform.lossyScale.y/8 > (-camH/2 + camY))){
-			speed.y -= maxSpeed.y*powers[0];
+			speed.y -= maxSpeed.y + 2*powers[0];
 		}		
 		if(Input.GetKey(KeyCode.LeftArrow) && (this.gameObject.transform.position.x - this.gameObject.transform.lossyScale.x/7 > (-camW/2 + camX))){
-			speed.x -= maxSpeed.x*powers[0];
+			speed.x -= maxSpeed.x + 2*powers[0];
 		}		
 		if(Input.GetKey(KeyCode.RightArrow) && (this.gameObject.transform.position.x + this.gameObject.transform.lossyScale.x/7 < (camW/2 + camX))){
-			speed.x += maxSpeed.x*powers[0];
+			speed.x += maxSpeed.x + 2*powers[0];
         }
         // toggle invincibility
         if (Input.GetKeyUp(KeyCode.I))
@@ -241,14 +241,17 @@ public class PlayerController : MonoBehaviour {
 
 		//Using PowerUp
 		if(Input.GetKey(KeyCode.S) && pow != powerLevel.none)
-		{
-			if (pow == powerLevel.first){
+        {
+            // play SFX
+            optionFX.Play((ulong)0.0);
+
+            if (pow == powerLevel.first){
 				powers[(int)pow-1]++;
 				pow_Img[(int)pow-1].color = Color.blue;
 				//pow_Lbl[(int)pow-1].enabled = false;
 				pow = powerLevel.none;
 			}	else if(pow == powerLevel.fifth && powers[4] < 2) {
-				GameObject option = Instantiate(optionPrefab) as GameObject;
+                GameObject option = Instantiate(optionPrefab) as GameObject;
 				option.GetComponent<Rigidbody>().position = this.transform.position;
 				powers[(int)pow-1]++;
 				pow_Img[(int)pow-1].color = Color.blue;
@@ -319,8 +322,7 @@ public class PlayerController : MonoBehaviour {
 	
 	//Collision detection
 	void  OnTriggerEnter(Collider coll){
-		//Enemy Collision
-
+        //Enemy Collision
 		if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "EnemyShot")
         {
 			Crash();
@@ -344,6 +346,7 @@ public class PlayerController : MonoBehaviour {
                     pow++;
                     pow_Img[(int)pow - 1].color = Color.red;
                     Destroy(coll.gameObject);
+                    powerUPFX.Play((ulong)0.0);
                 }
             } else {
                 custom_shield = isBigPowerUp;
