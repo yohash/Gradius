@@ -50,6 +50,7 @@ MonoBehaviour:
   powerUp: {fileID: 143132, guid: 817b81cbf55b3854695ee1dac36e394f, type: 2}
   chance: 0
   shot: {fileID: 147058, guid: 2fa5494618a6eb64e95f7e86738db0d7, type: 2}
+  explosion: {fileID: 154764, guid: 020a7de04b0f6414fa5dfdde9ed6f737, type: 2}
   speed: 3
   fightSpeed: 7
 --- !u!135 &13550588
@@ -101,6 +102,10 @@ Prefab:
       propertyPath: shot
       value: 
       objectReference: {fileID: 147058, guid: 2fa5494618a6eb64e95f7e86738db0d7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 154764, guid: 020a7de04b0f6414fa5dfdde9ed6f737, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 141774}

@@ -32,7 +32,7 @@ public class FloorScroller : MonoBehaviour
 			Vector3 point = new Vector3((-camW/2f)-6.6f, map.transform.position.y, 0);
 			float step = speed*Time.deltaTime;
 			map.transform.position = Vector3.MoveTowards(map.transform.position, point, step);
-			print ("floor animating: "+map.transform.position.x+", move spd: "+step+", move to: "+point);
+			//print ("floor animating: "+map.transform.position.x+", move spd: "+step+", move to: "+point);
 		}
 	}
 }

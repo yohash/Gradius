@@ -30,7 +30,10 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 
 	//enemy bullets
 	public GameObject shot;
-	
+
+    //explosion
+    public GameObject explosion;   // each explosion has its own attached script that
+                                    // terminates the animation after processingS	
 	void Start () {
 		//Variable Initialization
 		Camera cam = GameObject.Find ("Main Camera").GetComponent<Camera> ();
@@ -81,6 +84,14 @@ public class BasicEnemyBehaviour : MonoBehaviour {
             else
             {
                 Scored();
+                GameObject ex = Instantiate(explosion) as GameObject;
+                Vector3 exLoc = Vector3.zero;
+
+                exLoc.x = this.transform.position.x;
+                exLoc.y = this.transform.position.y;
+                exLoc.z = 5f;
+
+                ex.transform.position = exLoc;
                 Destroy(this.gameObject);
             }
         }

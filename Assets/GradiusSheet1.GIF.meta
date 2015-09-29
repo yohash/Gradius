@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d24be3403b8319148b9235b9cacb49c5
-timeCreated: 1442985208
+timeCreated: 1443488892
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -238,6 +238,10 @@ TextureImporter:
     21300462: GradiusSheet1_231
     21300464: GradiusSheet1_232
     21300466: GradiusSheet1_233
+    21300468: GradiusSheet1_234
+    21300470: GradiusSheet1_235
+    21300472: GradiusSheet1_236
+    21300474: GradiusSheet1_237
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -2427,6 +2431,16 @@ TextureImporter:
     - name: GradiusSheet1_214
       rect:
         serializedVersion: 2
+        x: 205
+        y: 167
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_215
+      rect:
+        serializedVersion: 2
         x: 221
         y: 195
         width: 4
@@ -2434,7 +2448,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_215
+    - name: GradiusSheet1_216
       rect:
         serializedVersion: 2
         x: 246
@@ -2444,7 +2458,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_216
+    - name: GradiusSheet1_217
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 167
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_218
       rect:
         serializedVersion: 2
         x: 294
@@ -2454,7 +2478,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_217
+    - name: GradiusSheet1_219
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 179
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_220
       rect:
         serializedVersion: 2
         x: 176
@@ -2464,7 +2498,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_218
+    - name: GradiusSheet1_221
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 179
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GradiusSheet1_222
       rect:
         serializedVersion: 2
         x: 321
@@ -2474,7 +2518,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_219
+    - name: GradiusSheet1_223
       rect:
         serializedVersion: 2
         x: 163
@@ -2484,7 +2528,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_220
+    - name: GradiusSheet1_224
       rect:
         serializedVersion: 2
         x: 177
@@ -2494,7 +2538,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_221
+    - name: GradiusSheet1_225
       rect:
         serializedVersion: 2
         x: 192
@@ -2504,17 +2548,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_222
+    - name: GradiusSheet1_226
       rect:
         serializedVersion: 2
-        x: 209
+        x: 207
         y: 148
-        width: 7
-        height: 8
+        width: 11
+        height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_223
+    - name: GradiusSheet1_227
       rect:
         serializedVersion: 2
         x: 219
@@ -2524,7 +2568,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_224
+    - name: GradiusSheet1_228
       rect:
         serializedVersion: 2
         x: 229
@@ -2534,7 +2578,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_225
+    - name: GradiusSheet1_229
       rect:
         serializedVersion: 2
         x: 238
@@ -2544,7 +2588,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_226
+    - name: GradiusSheet1_230
       rect:
         serializedVersion: 2
         x: 246
@@ -2554,7 +2598,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_227
+    - name: GradiusSheet1_231
       rect:
         serializedVersion: 2
         x: 262
@@ -2564,7 +2608,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_228
+    - name: GradiusSheet1_232
       rect:
         serializedVersion: 2
         x: 278
@@ -2574,7 +2618,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_229
+    - name: GradiusSheet1_233
       rect:
         serializedVersion: 2
         x: 289
@@ -2584,7 +2628,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_230
+    - name: GradiusSheet1_234
       rect:
         serializedVersion: 2
         x: 295
@@ -2594,7 +2638,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_231
+    - name: GradiusSheet1_235
       rect:
         serializedVersion: 2
         x: 315
@@ -2604,7 +2648,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_232
+    - name: GradiusSheet1_236
       rect:
         serializedVersion: 2
         x: 345
@@ -2614,7 +2658,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: GradiusSheet1_233
+    - name: GradiusSheet1_237
       rect:
         serializedVersion: 2
         x: 206

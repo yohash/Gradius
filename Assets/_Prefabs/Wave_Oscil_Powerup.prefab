@@ -201,6 +201,7 @@ MonoBehaviour:
   powerUp: {fileID: 143132, guid: 817b81cbf55b3854695ee1dac36e394f, type: 2}
   chance: 1
   shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
+  explosion: {fileID: 182130, guid: 05d09bd166b270d4c9449d5b8fcb8b36, type: 2}
   wav_Freq: 2
   wav_Len: 3
 --- !u!114 &11442826
@@ -223,6 +224,7 @@ MonoBehaviour:
   powerUp: {fileID: 143132, guid: 817b81cbf55b3854695ee1dac36e394f, type: 2}
   chance: 1
   shot: {fileID: 102588, guid: 98ae16228e0c8894f87f67d47b7d1e64, type: 2}
+  explosion: {fileID: 182130, guid: 05d09bd166b270d4c9449d5b8fcb8b36, type: 2}
   wav_Freq: 2
   wav_Len: 3
 --- !u!212 &21216080
@@ -300,6 +302,10 @@ Prefab:
       propertyPath: powerUp
       value: 
       objectReference: {fileID: 143132, guid: 817b81cbf55b3854695ee1dac36e394f, type: 2}
+    - target: {fileID: 0}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 182130, guid: 05d09bd166b270d4c9449d5b8fcb8b36, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 146346}
