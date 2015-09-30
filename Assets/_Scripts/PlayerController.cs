@@ -381,7 +381,7 @@ public class PlayerController : MonoBehaviour {
     void ResetShip()
     {
         //Reset the game if player health drops to 0
-        if (health <= 0)    {Application.LoadLevel("Scene_0");}
+        if (health <= 0)    {Application.LoadLevel("Scene_Title");}
 
         //reset the shield if custom level
         if (custom_shield) { GetComponentInChildren<ShieldToggling>().StartToggle(); }
