@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour {
 	//Laser Mechanics
 	public GameObject laserPrefab;
 
+	GameObject ShieldViz;
+
 	//PowerUps
 	powerLevel pow = powerLevel.none;
 	int[] powers = {1,0,0,0,0,0};
@@ -69,6 +71,9 @@ public class PlayerController : MonoBehaviour {
 
     void Start()
     {
+
+		ShieldViz = GameObject.Find("ShieldViz");
+		ShieldViz.SetActive(false);
         //Initiazlize variables
         shipRigid = this.gameObject.GetComponent<Rigidbody>();
         Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
@@ -264,13 +269,16 @@ public class PlayerController : MonoBehaviour {
 					pow_Lbl[4].enabled = false;
 				}
 				pow = powerLevel.none;
-			}	
-				else if(powers[(int)pow-1] == 0){
+			}	else if(powers[(int)pow-1] == 0){
 				powers[(int)pow-1]++;
 				pow_Img[(int)pow-1].color = Color.blue;
 				pow_Lbl[(int)pow-1].enabled = false;
 				pow = powerLevel.none;
 			} 
+
+			if(powers[5] == 1){
+				ShieldViz.SetActive(true);
+			}
 		}
 	}
     
@@ -310,6 +318,7 @@ public class PlayerController : MonoBehaviour {
             }
 			else
 			{
+				ShieldViz.SetActive(false);
 				powers[5] = 0;
 				pow_Img[5].color = Color.blue;
 				pow_Lbl[5].enabled = true;
