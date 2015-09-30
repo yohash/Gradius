@@ -3,7 +3,7 @@ using System.Collections;
 using System.IO;
 using UnityEngine.UI;
 
-enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP, Blaz_m, Rlaz_m, trees, BIG_mount};
+enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP, Blaz_m, Rlaz_m, trees, BIG_mount, SPLT_mount};
 
 public class Scheduler : MonoBehaviour {
 
@@ -150,6 +150,7 @@ public class Scheduler : MonoBehaviour {
         GameObject[] volcSpwn = GameObject.FindGameObjectsWithTag("VolcanoSpawner");
         GameObject[] trees = GameObject.FindGameObjectsWithTag("Trees");
 		GameObject[] powerups = GameObject.FindGameObjectsWithTag("PowerUp");
+		GameObject[] buddies = GameObject.FindGameObjectsWithTag("Option");
 
         // determine if player was fighting boss or volcanos
         bool bossFight = false, volcano = false;
@@ -163,6 +164,7 @@ public class Scheduler : MonoBehaviour {
         for (int i = 0; i < volcSpwn.Length; i++)   {Destroy(volcSpwn[i].gameObject); }
         for (int i = 0; i < trees.Length; i++)      {Destroy(trees[i].gameObject); }
         for (int i = 0; i < powerups.Length; i++)   { Destroy(powerups[i].gameObject); }
+		for (int i = 0; i < buddies.Length; i++)   { Destroy(buddies[i].gameObject); }
         
 
         // if volcanoes, start them over
