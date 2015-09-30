@@ -35,8 +35,9 @@ public class ShieldToggling : MonoBehaviour {
         customShieldBlue.SetActive(true);
         isBlue = true;
         helperText.color = Color.white;
-        helperText.text = "HOLD (SPACE)\nTO CHANGE SHIELD\nCOLORS";
+        helperText.text = "You are now\nimmune to blue\ndamage sources!";
         Invoke("clearHelperText", 4f);
+        Invoke("changeHelperText", 10f);
     }
 
 
@@ -87,6 +88,14 @@ public class ShieldToggling : MonoBehaviour {
         customShieldRed.SetActive(false);
     }
 
+    void changeHelperText()
+    {
+        customShieldBlue.SetActive(true);
+        isBlue = true;
+        helperText.color = Color.white;
+        helperText.text = "Hold (SPACE)\nto change shield\ncolors, swapping\n immunity";
+        Invoke("clearHelperText", 4f);
+    }
     void clearHelperText()
     {
         helperText.text = "";

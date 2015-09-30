@@ -55,7 +55,6 @@ public class ATST2DColl : MonoBehaviour {
             {
                 float distance = Mathf.Abs(hit.point.y - this.transform.position.y);
                 atst.GetComponent<ATSTBehaviour>().adjustY(atst.transform.position.y + (distance - 0.65f) * isTop);
-                print(distance);
             }
             //enum ATSTstatus { seeking, firing, chill, leaving };
         }

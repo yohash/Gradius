@@ -23,7 +23,7 @@
 6 17 9.5 -1 mount
 0 17 -7 -1 mount
 1 14 1.25 0 Blaz_m
-6 14 0 0 div
+2 14 0 0 div
 1 14 0 0 div
 1 14 0 0 divS
 1.5 14 -2 0 osc
@@ -84,4 +84,4 @@
 4 17 9.5 -1 mount
 0 17 -7 -1 mount
 1 14 1.25 0 Rlaz_m
-30 17 0 0 boss
+15 17 0 0 boss
