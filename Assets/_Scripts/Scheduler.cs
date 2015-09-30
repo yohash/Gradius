@@ -19,6 +19,7 @@ public class Scheduler : MonoBehaviour {
 	float startTime; 		// time game started for event referencing
 	public int index;			// schedule index
     public int lineCount;
+    public int isGround;        // thsi track the location of the ground in the scheduler
 
 	void Start ()
     {   // ***************************************************************
@@ -76,6 +77,8 @@ public class Scheduler : MonoBehaviour {
             enemyLoc[lineCount] = new Vector3(temp1, temp2, temp3);
             // convert and record the enum
             ID[lineCount] = (int) System.Enum.Parse(typeof(enemyID), splitLines[4]);
+
+            if (ID[lineCount] == 5) { isGround = lineCount; }            
             lineCount++;
         }
 
@@ -162,6 +165,12 @@ public class Scheduler : MonoBehaviour {
             itmp--;
         }
         index = itmp;
+
+        // if the new index is < the floor-ceiling sprite, then we delete this object
+        if (index < isGround) {
+            GameObject terrain = GameObject.FindGameObjectWithTag("FlrCeil");
+            Destroy(terrain.gameObject);
+        }
         print("final index: " + index);
         Invoke("Spawn", relTime[index] + 4);    // reset from the last point
     }
