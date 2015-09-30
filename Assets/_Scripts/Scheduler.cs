@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using UnityEngine.UI;
 
 enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP, Blaz_m, Rlaz_m, trees, BIG_mount};
 
@@ -211,4 +212,20 @@ public class Scheduler : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    // only the boss calls this, and only on death
+    public void youWin()
+        {
+        Text helperText;
+        helperText = GameObject.Find("Helper_Text").GetComponent<Text>();
+        helperText.color = Color.white;
+        helperText.text = "Great Job!\nYou've defeated\nthe Boss!";
+        
+        Invoke("loadTitle", 4f);
+    }
+
+    void loadTitle() {
+        Application.LoadLevel("Scene_Title");
+    }
+    
 }

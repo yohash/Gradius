@@ -163,6 +163,9 @@ public class BossBehaviour : BasicEnemyBehaviour
             exLoc.z = 5f;
 
             ex.transform.position = exLoc;
+
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Scheduler>().youWin();
+
             Destroy(this.gameObject);
         }
     }
