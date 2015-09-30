@@ -137,7 +137,12 @@ public class Scheduler : MonoBehaviour {
     // called to reset level position after a player death
     public void ResetBoard() {
 
+        bool bossFight = false, volcano = false;
+
         CancelInvoke("Spawn");  // cancel any existing invokes
+
+        if (index == relTime.Length - 1) { volcano = true; print("VOLCANO FIGHT"); }
+        if (index == relTime.Length - 0) { bossFight = true; print("BOSS"); }
 
         // eliminate everything on the screen
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
@@ -145,36 +150,48 @@ public class Scheduler : MonoBehaviour {
         GameObject[] eshots = GameObject.FindGameObjectsWithTag("EnemyShot");
         GameObject[] lasers = GameObject.FindGameObjectsWithTag("Laser");
         GameObject[] volcanoes = GameObject.FindGameObjectsWithTag("Volcano");
+        GameObject[] volcSpwn = GameObject.FindGameObjectsWithTag("VolcanoSpawner");
         GameObject[] trees = GameObject.FindGameObjectsWithTag("Trees");
         for (int i = 0; i < enemies.Length; i++)    {Destroy(enemies[i].gameObject);}
         for (int i = 0; i < mountains.Length; i++)  {Destroy(mountains[i].gameObject);}
         for (int i = 0; i < eshots.Length; i++)     {Destroy(eshots[i].gameObject);}
         for (int i = 0; i < lasers.Length; i++)     {Destroy(lasers[i].gameObject); }
-        for (int i = 0; i < volcanoes.Length; i++)  {Destroy(volcanoes[i].gameObject); }
+        for (int i = 0; i < volcSpwn.Length; i++)  {Destroy(volcSpwn[i].gameObject); }
         for (int i = 0; i < trees.Length; i++)      {Destroy(trees[i].gameObject); }
 
-        // change index of scheduler
-        int itmp = index;
-        float currTime = 0f, rewTime = 8f;
-        // this will "rewind" the map X seconds, instead of just 
-        // rewinding 4 "objects", which sometimes would disassemble barricades
-        while (itmp >= 0) {
-            currTime += relTime[itmp];
-            if(currTime>rewTime) { break; }
-            if(itmp==0) { break; }
-            itmp--;
+
+        print(index);
+
+        if (volcano) { index--; }
+        else if (bossFight) { index--; }
+        else
+        {
+            // change index of scheduler
+            int itmp = index;
+            float currTime = 0f, rewTime = 8f;
+            // this will "rewind" the map X seconds, instead of just 
+            // rewinding 4 "objects", which sometimes would disassemble barricades
+            while (itmp >= 0)
+            {
+                currTime += relTime[itmp];
+                if (currTime > rewTime) { break; }
+                if (itmp == 0) { break; }
+                itmp--;
+            }
+            index = itmp;
         }
-        index = itmp;
+
+        print(index);
+
 
         // if the new index is < the floor-ceiling sprite, then we delete this object
         if (index < isGround) {
             GameObject terrain = GameObject.FindGameObjectWithTag("FlrCeil");
             Destroy(terrain.gameObject);
         }
-        print("final index: " + index);
+        // reset from the checkpoint by initiating spawn
         Invoke("Spawn", relTime[index] + 4);    // reset from the last point
     }
-
 
 	// Update is called once per frame
 	void Update () {
