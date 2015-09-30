@@ -1388,6 +1388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 194978}
+  animated: 0
 --- !u!212 &21201090
 SpriteRenderer:
   m_ObjectHideFlags: 1
