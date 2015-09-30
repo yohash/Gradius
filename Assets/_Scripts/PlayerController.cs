@@ -64,6 +64,9 @@ public class PlayerController : MonoBehaviour {
 	public Image[] pow_Img = new Image[6];
 	public Text[] pow_Lbl = new Text[6];
 
+    //dead toggle to stop shooting
+    public bool dead = false;
+
     void Start()
     {
         //Initiazlize variables
@@ -167,7 +170,7 @@ public class PlayerController : MonoBehaviour {
         //  TWO TYPES of shooting protocol follow
         // 
         // Shooting on rapid-button press
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) && !dead)
         {
             //Check for reload and Power Level
             GameObject bullet = null;
@@ -207,7 +210,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         // Shooting on button hold
-        if (Input.GetKey (KeyCode.A) && currReload <= 0) {
+        if (Input.GetKey (KeyCode.A) && currReload <= 0 && !dead) {
 			//Check for reload and Power Level
 			GameObject bullet = null;
 
@@ -298,6 +301,9 @@ public class PlayerController : MonoBehaviour {
 
                 // stop music
                 bgMusic.Stop();
+
+                // trigger dead to stop shooting
+                dead = true;
 
                 // reset the ship and the scheduler
                 Invoke("ResetShip", 4f);
@@ -396,6 +402,8 @@ public class PlayerController : MonoBehaviour {
         this.GetComponent<BoxCollider>().enabled = true;
         this.GetComponent<BoxCollider>().enabled = true;
         GetComponentInChildren<Player2DColl>().enableCollider();
+
+        dead = false;
     }
 }
 

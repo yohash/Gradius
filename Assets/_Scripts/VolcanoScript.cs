@@ -9,7 +9,7 @@ public class VolcanoScript : BasicEnemyBehaviour
     public float speed = 3f;
 
     // how long are volcanos scheduled to be here?
-    public float dwellTime = 10f;
+    public float dwellTime = 18f;
     public float startTime;
 
     // how quickly does volcano shoot
@@ -46,8 +46,10 @@ public class VolcanoScript : BasicEnemyBehaviour
             {
                 foreach (GameObject v in volcs)
                 {
-                    MountainBehavior vFire = v.GetComponent<MountainBehavior>();
-                    vFire.callFire();
+                    if (v.tag == "Volcano") {
+                        MountainBehavior vFire = v.GetComponent<MountainBehavior>();
+                        vFire.callFire();
+                    }                    
                 }
                 delayTime = Time.time;
             }

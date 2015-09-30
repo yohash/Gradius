@@ -2,7 +2,7 @@
 using System.Collections;
 using System.IO;
 
-enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP, Blaz_m, Rlaz_m, Blaz_l, Rlaz_l};
+enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP, Blaz_m, Rlaz_m, trees, BIG_mount};
 
 public class Scheduler : MonoBehaviour {
 
@@ -142,11 +142,13 @@ public class Scheduler : MonoBehaviour {
         GameObject[] eshots = GameObject.FindGameObjectsWithTag("EnemyShot");
         GameObject[] lasers = GameObject.FindGameObjectsWithTag("Laser");
         GameObject[] volcanoes = GameObject.FindGameObjectsWithTag("Volcano");
+        GameObject[] trees = GameObject.FindGameObjectsWithTag("Trees");
         for (int i = 0; i < enemies.Length; i++)    {Destroy(enemies[i].gameObject);}
         for (int i = 0; i < mountains.Length; i++)  {Destroy(mountains[i].gameObject);}
         for (int i = 0; i < eshots.Length; i++)     {Destroy(eshots[i].gameObject);}
-        for (int i = 0; i < lasers.Length; i++)     {Destroy(lasers[i].gameObject);}
-        for (int i = 0; i < volcanoes.Length; i++)  {Destroy(volcanoes[i].gameObject);}
+        for (int i = 0; i < lasers.Length; i++)     {Destroy(lasers[i].gameObject); }
+        for (int i = 0; i < volcanoes.Length; i++)  {Destroy(volcanoes[i].gameObject); }
+        for (int i = 0; i < trees.Length; i++)      {Destroy(trees[i].gameObject); }
 
         // change index of scheduler
         int itmp = index;

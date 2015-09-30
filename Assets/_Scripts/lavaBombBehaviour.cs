@@ -11,7 +11,7 @@ public class lavaBombBehaviour : MonoBehaviour
     float camH, camW;
 
     // enemy bullet speed
-    float speed = 28f;
+    float speed = 27f;
 
     Rigidbody lavaRigid;
 
