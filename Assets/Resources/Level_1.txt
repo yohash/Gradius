@@ -50,7 +50,7 @@
 1.1 17 -6.1 -1 trees
 0 14 -4 0 osc
 1.1 14 -2 0 osc
-1.1 17 -7 2 BIG_mount
+1.1 17 -6.1 2 SPLT_mount
 0 14 -4 0 osc
 0 -14 9 0 ATST
 0 -14 -6 0 ATST

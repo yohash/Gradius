@@ -184,6 +184,11 @@ public class PlayerController : MonoBehaviour {
                 missile_currReload = missile_reload;
                 GameObject missile = Instantiate(missilePrefab) as GameObject;
                 missile.GetComponent<Rigidbody>().transform.position = this.transform.position;
+
+				GameObject[] buds = GameObject.FindGameObjectsWithTag("Option");
+				for(int i = 0; i < buds.Length; i++){
+					buds[i].GetComponent<OptionBehaviour>().Fire(missilePrefab,Vector3.zero);
+				}
             }
 
             if (powers[3] == 0)
@@ -192,6 +197,11 @@ public class PlayerController : MonoBehaviour {
                 {
                     GameObject doubleshot = Instantiate(doubleshotPrefab) as GameObject;
                     doubleshot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+					GameObject[] buds2 = GameObject.FindGameObjectsWithTag("Option");
+					for(int i = 0; i < buds2.Length; i++){
+						buds2[i].GetComponent<OptionBehaviour>().Fire(doubleshotPrefab,shotspawn);
+					}
+
                 }
                 //Create bullet and move it to the player position
                 GameObject shot = Instantiate(shotPrefab) as GameObject;
@@ -223,6 +233,10 @@ public class PlayerController : MonoBehaviour {
 				missile_currReload = missile_reload;
 				GameObject missile = Instantiate(missilePrefab) as GameObject;
                 missile.GetComponent<Rigidbody>().transform.position = this.transform.position;
+				GameObject[] buds = GameObject.FindGameObjectsWithTag("Option");
+				for(int i = 0; i < buds.Length; i++){
+					buds[i].GetComponent<OptionBehaviour>().Fire(missilePrefab,Vector3.zero);
+				}
             }
 			currReload = reload;
 
@@ -230,6 +244,10 @@ public class PlayerController : MonoBehaviour {
 				if(powers[2] == 1){
 					GameObject doubleshot = Instantiate(doubleshotPrefab) as GameObject;
 					doubleshot.GetComponent<Rigidbody>().MovePosition(this.transform.position + shotspawn);
+					GameObject[] buds2 = GameObject.FindGameObjectsWithTag("Option");
+					for(int i = 0; i < buds2.Length; i++){
+						buds2[i].GetComponent<OptionBehaviour>().Fire(doubleshotPrefab,shotspawn);
+					}
 				}
 				//Create bullet and move it to the player position
 				GameObject shot = Instantiate(shotPrefab) as GameObject;
@@ -415,4 +433,3 @@ public class PlayerController : MonoBehaviour {
         dead = false;
     }
 }
-
