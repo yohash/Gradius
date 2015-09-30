@@ -137,13 +137,9 @@ public class Scheduler : MonoBehaviour {
     // called to reset level position after a player death
     public void ResetBoard() {
 
-        bool bossFight = false, volcano = false;
 
         CancelInvoke("Spawn");  // cancel any existing invokes
-
-        if (index == relTime.Length - 1) { volcano = true; print("VOLCANO FIGHT"); }
-        if (index == relTime.Length - 0) { bossFight = true; print("BOSS"); }
-
+        
         // eliminate everything on the screen
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] mountains = GameObject.FindGameObjectsWithTag("Mountain");
@@ -154,6 +150,11 @@ public class Scheduler : MonoBehaviour {
         GameObject[] trees = GameObject.FindGameObjectsWithTag("Trees");
 		GameObject[] powerups = GameObject.FindGameObjectsWithTag("PowerUp");
 
+        // determine if player was fighting boss or volcanos
+        bool bossFight = false, volcano = false;
+        if (volcSpwn.Length == 0 && index == relTime.Length-1) { bossFight = true;}
+        else if (index == relTime.Length - 1) { volcano = true;}
+
         for (int i = 0; i < enemies.Length; i++)    {Destroy(enemies[i].gameObject);}
         for (int i = 0; i < mountains.Length; i++)  {Destroy(mountains[i].gameObject);}
         for (int i = 0; i < eshots.Length; i++)     {Destroy(eshots[i].gameObject);}
@@ -161,13 +162,24 @@ public class Scheduler : MonoBehaviour {
         for (int i = 0; i < volcSpwn.Length; i++)   {Destroy(volcSpwn[i].gameObject); }
         for (int i = 0; i < trees.Length; i++)      {Destroy(trees[i].gameObject); }
         for (int i = 0; i < powerups.Length; i++)   { Destroy(powerups[i].gameObject); }
+        
 
-
-        print(index);
-
-
+        // if volcanoes, start them over
         if (volcano) { index--; }
-        else if (bossFight) { index--; }
+        // if not volcano, re-instantiate the boss fight
+        else if (bossFight) {
+
+            GameObject enemy = Instantiate(Catalog[ID[index]]) as GameObject;
+
+            Vector3 new_Pos = Vector3.zero;
+
+            new_Pos.x = enemyLoc[index].x;
+            new_Pos.y = enemyLoc[index].y;
+            new_Pos.z = enemyLoc[index].z;
+
+            enemy.transform.position = new_Pos;
+        }
+        //otherwise, push schedule back 8 sec.
         else
         {
             // change index of scheduler
@@ -184,9 +196,6 @@ public class Scheduler : MonoBehaviour {
             }
             index = itmp;
         }
-        
-
-        print(index);
 
 
         // if the new index is < the floor-ceiling sprite, then we delete this object
