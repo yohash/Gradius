@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 415756}
   - 212: {fileID: 21205832}
   - 65: {fileID: 6563138}
-  - 54: {fileID: 5406380}
   - 95: {fileID: 9569092}
   - 114: {fileID: 11475908}
+  - 54: {fileID: 5441216}
   m_Layer: 20
   m_Name: Sp_PowerUp
   m_TagString: PowerUp
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!54 &5406380
+--- !u!54 &5441216
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -142,6 +142,18 @@ Prefab:
       value: 
       objectReference: {fileID: 24300001, guid: 7087d53ebbc0bc04faec32da58cad1f8,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 143132}
