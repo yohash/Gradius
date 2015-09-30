@@ -146,7 +146,6 @@ public class Scheduler : MonoBehaviour {
         GameObject[] mountains = GameObject.FindGameObjectsWithTag("Mountain");
         GameObject[] eshots = GameObject.FindGameObjectsWithTag("EnemyShot");
         GameObject[] lasers = GameObject.FindGameObjectsWithTag("Laser");
-        GameObject[] volcanoes = GameObject.FindGameObjectsWithTag("Volcano");
         GameObject[] volcSpwn = GameObject.FindGameObjectsWithTag("VolcanoSpawner");
         GameObject[] trees = GameObject.FindGameObjectsWithTag("Trees");
 		GameObject[] powerups = GameObject.FindGameObjectsWithTag("PowerUp");
@@ -154,7 +153,7 @@ public class Scheduler : MonoBehaviour {
         // determine if player was fighting boss or volcanos
         bool bossFight = false, volcano = false;
         if (volcSpwn.Length == 0 && index == relTime.Length-1) { bossFight = true;}
-        else if (index == relTime.Length - 1) { volcano = true;}
+        else if (volcSpwn.Length == 1) { volcano = true; print("volc"); }
 
         for (int i = 0; i < enemies.Length; i++)    {Destroy(enemies[i].gameObject);}
         for (int i = 0; i < mountains.Length; i++)  {Destroy(mountains[i].gameObject);}
@@ -166,7 +165,10 @@ public class Scheduler : MonoBehaviour {
         
 
         // if volcanoes, start them over
-        if (volcano) { index--; }
+        if (volcano) { 
+            index--;
+            GameObject.FindGameObjectWithTag("FlrCeil").GetComponent<FloorScroller>().animated = 1;
+        }
         // if not volcano, re-instantiate the boss fight
         else if (bossFight) {
 
