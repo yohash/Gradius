@@ -15,6 +15,8 @@ public class Scheduler : MonoBehaviour {
 
     public bool customLevel = false;           // if this is true, load level_2.txt
 
+	bool paused = false;
+
 	float camH, camW;		// camera data
 
 	float startTime; 		// time game started for event referencing
@@ -212,7 +214,15 @@ public class Scheduler : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+		if(Input.GetKeyDown(KeyCode.RightShift)){
+			if(!paused){
+				paused = true;
+				Time.timeScale = 0;
+			} else {
+				paused = false;
+				Time.timeScale = 1;
+			}
+		}
 	}
 
     // only the boss calls this, and only on death
