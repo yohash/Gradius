@@ -10,6 +10,9 @@ using UnityEngine.UI;
 enum movementState{forward, backward};
 
 public class BasicEnemyBehaviour : MonoBehaviour {
+
+	bool dead = false;
+
 	//Movement
 	//public float speed = 0.5f;
 	//Rigidbody enemyRigid;
@@ -107,12 +110,15 @@ public class BasicEnemyBehaviour : MonoBehaviour {
 	//Scoring
 	public void Scored(){
 		//Add enemy value to scoreboard
-		score.text = (int.Parse (score.text) + value).ToString ();
+		if(!dead){
+			score.text = (int.Parse (score.text) + value).ToString ();
 
-		//PowerUp dropping
-		if (Random.value < chance) {
-			GameObject pow = Instantiate(powerUp) as GameObject;
-			pow.transform.position = this.transform.position;
+			//PowerUp dropping
+			if (chance == 1) {
+				GameObject pow = Instantiate(powerUp) as GameObject;
+				pow.transform.position = this.transform.position;
+			}
+			dead = true;
 		}
 	}
 

@@ -152,15 +152,19 @@ public class Scheduler : MonoBehaviour {
         GameObject[] volcanoes = GameObject.FindGameObjectsWithTag("Volcano");
         GameObject[] volcSpwn = GameObject.FindGameObjectsWithTag("VolcanoSpawner");
         GameObject[] trees = GameObject.FindGameObjectsWithTag("Trees");
+		GameObject[] powerups = GameObject.FindGameObjectsWithTag("PowerUp");
+
         for (int i = 0; i < enemies.Length; i++)    {Destroy(enemies[i].gameObject);}
         for (int i = 0; i < mountains.Length; i++)  {Destroy(mountains[i].gameObject);}
         for (int i = 0; i < eshots.Length; i++)     {Destroy(eshots[i].gameObject);}
         for (int i = 0; i < lasers.Length; i++)     {Destroy(lasers[i].gameObject); }
-        for (int i = 0; i < volcSpwn.Length; i++)  {Destroy(volcSpwn[i].gameObject); }
+        for (int i = 0; i < volcSpwn.Length; i++)   {Destroy(volcSpwn[i].gameObject); }
         for (int i = 0; i < trees.Length; i++)      {Destroy(trees[i].gameObject); }
+        for (int i = 0; i < powerups.Length; i++)   { Destroy(powerups[i].gameObject); }
 
 
         print(index);
+
 
         if (volcano) { index--; }
         else if (bossFight) { index--; }
@@ -180,6 +184,7 @@ public class Scheduler : MonoBehaviour {
             }
             index = itmp;
         }
+        
 
         print(index);
 
