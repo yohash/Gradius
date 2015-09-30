@@ -146,13 +146,15 @@ public class Scheduler : MonoBehaviour {
         GameObject[] lasers = GameObject.FindGameObjectsWithTag("Laser");
         GameObject[] volcanoes = GameObject.FindGameObjectsWithTag("Volcano");
         GameObject[] trees = GameObject.FindGameObjectsWithTag("Trees");
+		GameObject[] powerups = GameObject.FindGameObjectsWithTag("PowerUp");
+
         for (int i = 0; i < enemies.Length; i++)    {Destroy(enemies[i].gameObject);}
         for (int i = 0; i < mountains.Length; i++)  {Destroy(mountains[i].gameObject);}
         for (int i = 0; i < eshots.Length; i++)     {Destroy(eshots[i].gameObject);}
         for (int i = 0; i < lasers.Length; i++)     {Destroy(lasers[i].gameObject); }
         for (int i = 0; i < volcanoes.Length; i++)  {Destroy(volcanoes[i].gameObject); }
         for (int i = 0; i < trees.Length; i++)      {Destroy(trees[i].gameObject); }
-
+		for (int i = 0; i < powerups.Length; i++)      {Destroy(powerups[i].gameObject); }
         // change index of scheduler
         int itmp = index;
         float currTime = 0f, rewTime = 8f;
