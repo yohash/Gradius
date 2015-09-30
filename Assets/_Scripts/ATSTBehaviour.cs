@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-enum ATSTstatus{ seeking, firing, chill, leaving};
+public enum ATSTstatus{ seeking, firing, chill, leaving};
 
 public class ATSTBehaviour : BasicEnemyBehaviour
 {
@@ -19,8 +19,9 @@ public class ATSTBehaviour : BasicEnemyBehaviour
     Rigidbody enemyRigid;
     Vector3 playerPos;
 
-    private Vector3 targetX = Vector3.zero;
-    private ATSTstatus thisStatus = ATSTstatus.seeking;
+
+    public Vector3 targetX = Vector3.zero;
+    public ATSTstatus thisStatus = ATSTstatus.seeking;
     
     // Use this for initialization
     void Start ()
@@ -102,6 +103,12 @@ public class ATSTBehaviour : BasicEnemyBehaviour
             enemyRigid.velocity = new Vector3(seekSpeed, 0, 0);
         }
 		thisStatus = ATSTstatus.seeking;
-
 	}
+
+    public void adjustY(float newY)
+    {
+        this.transform.position = new Vector3(this.transform.position.x, newY, this.transform.position.z);
+    }
+
+
 }
