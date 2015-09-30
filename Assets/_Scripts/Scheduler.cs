@@ -201,7 +201,7 @@ public class Scheduler : MonoBehaviour {
         // if the new index is < the floor-ceiling sprite, then we delete this object
         if (index < isGround) {
             GameObject terrain = GameObject.FindGameObjectWithTag("FlrCeil");
-            Destroy(terrain.gameObject);
+            if (terrain != null) { Destroy(terrain.gameObject); }
         }
         // reset from the checkpoint by initiating spawn
         Invoke("Spawn", relTime[index] + 4);    // reset from the last point
