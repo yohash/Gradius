@@ -487,7 +487,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!114 &453731789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,9 +520,13 @@ MonoBehaviour:
   - {fileID: 147316, guid: 0eb6647dd2e3ee149b2a4dacd5ca6b8c, type: 2}
   - {fileID: 113184, guid: 43f4677e1d63b40488c998b14f5e9f7d, type: 2}
   - {fileID: 105032, guid: f95892adc948eea4f8f3ac1767316f0e, type: 2}
+  - {fileID: 190562, guid: f2c6aec28e4e8064e80a073b64477ddd, type: 2}
+  - {fileID: 125946, guid: f4c0cc770713a6142a37579a5579a501, type: 2}
+  - {fileID: 104828, guid: 8f5855d25e1c0c647b8ba0920596adb8, type: 2}
   customLevel: 1
   index: 0
   lineCount: 0
+  isGround: 0
 --- !u!114 &453731790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2100,6 +2104,7 @@ MonoBehaviour:
   camH: 0
   camW: 0
   isBlue: 0
+  isPlayerDead: 0
 --- !u!1 &2109767796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,7 +2263,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &2146714310
 GameObject:
   m_ObjectHideFlags: 0

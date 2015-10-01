@@ -18,6 +18,7 @@ TagManager:
   - PlayerShot
   - Trees
   - VolcanoSpawner
+  - EnemyShotColored
   layers:
   - Default
   - TransparentFX

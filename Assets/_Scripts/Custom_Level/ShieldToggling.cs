@@ -16,6 +16,9 @@ public class ShieldToggling : MonoBehaviour {
     public bool isBlue;                                     // Use this for initialization
     bool spaceDown;
 
+    // need to know this
+    public bool isPlayerDead = false;
+
     void Awake ()
     {
         Transform customShieldTrans = transform.FindChild("Custom_Shield_Blue");
@@ -44,12 +47,14 @@ public class ShieldToggling : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        isPlayerDead = GetComponentInParent<PlayerController>().dead;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             startTime = Time.time;
             spaceDown = true;
         }
-        if (Input.GetKey(KeyCode.Space) && (Time.time - startTime) > toggleTime && spaceDown)
+        if (Input.GetKey(KeyCode.Space) && (Time.time - startTime) > toggleTime && spaceDown && !isPlayerDead)
         {
             if (isBlue)
             {
@@ -75,7 +80,6 @@ public class ShieldToggling : MonoBehaviour {
                 spaceDown = false;
             }
         }
-
     }
 
     public void clearShieldsOnDeath()

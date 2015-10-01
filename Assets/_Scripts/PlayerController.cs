@@ -113,8 +113,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 speed = Vector3.zero, camPos = Vector3.zero;
-        
+		Vector3 speed = Vector3.zero, camPos = Vector3.zero;        
         
         // get current camera data to keep ship on screen
         Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();     // get camera position to keep player on camera
@@ -133,8 +132,7 @@ public class PlayerController : MonoBehaviour {
 			missile_currReload = 0f;
 		} else {
 			missile_currReload -= Time.deltaTime;
-		}
-		
+		}		
 
 		//Player movement, includes screen edge bounding
 		if(Input.GetKey(KeyCode.UpArrow) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/8 < (camH/2 + camY))){
@@ -369,6 +367,7 @@ public class PlayerController : MonoBehaviour {
                     //Increase Pow, and set to red
                     pow++;
                     pow_Img[(int)pow - 1].color = Color.red;
+
                     Destroy(coll.gameObject);
                     powerUPFX.Play((ulong)0.0);
                 }
@@ -378,6 +377,7 @@ public class PlayerController : MonoBehaviour {
                 togg.StartToggle();
 
                 Destroy(coll.gameObject);
+                powerUPFX.Play((ulong)0.0);
             }
 		}
 
@@ -386,13 +386,22 @@ public class PlayerController : MonoBehaviour {
         {
             bool shipBlue = (customShield.GetComponent<ShieldToggling>().isBlue);
             bool laserBlue = (coll.gameObject.GetComponent<LaserWallBehaviour>().isBlue);
-            if (shipBlue != laserBlue) {
-                Crash();
-            } else if (shipBlue == laserBlue) {
-                
+            if (shipBlue != laserBlue)
+            {
+                Crash(); // else does nothing... no interaction
             }
         }
-	}
+        // collision with colored bullet
+        if (coll.gameObject.tag == "EnemyShotColored")
+        {
+            bool shipBlue = (customShield.GetComponent<ShieldToggling>().isBlue);
+            bool laserBlue = (coll.gameObject.GetComponent<buzzShotBehaviour>().isBlue);
+            if (shipBlue != laserBlue)
+            {
+                Crash(); // else does nothing... no interaction
+            }
+        }
+    }
 
 	void resetPowers(){
     // I modified this for() loop to change automatically to pow_Img.Length,
