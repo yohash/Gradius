@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LaserWallBehaviour : MonoBehaviour {
+public class LaserSpinBehaviour : MonoBehaviour {
 
     Rigidbody laser;
 
@@ -23,6 +23,7 @@ public class LaserWallBehaviour : MonoBehaviour {
     void Move()
     {
         this.transform.position += Time.deltaTime * new Vector3(-speed, 0f, 0f);
+		this.transform.Rotate(Time.deltaTime * new Vector3(0f, 0f, -20*speed));
     }
 
 
