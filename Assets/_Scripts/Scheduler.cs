@@ -3,7 +3,7 @@ using System.Collections;
 using System.IO;
 using UnityEngine.UI;
 
-enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP, Blaz_m, Rlaz_m, trees, BIG_mount, SPLT_mount, buzzB, buzzR};
+enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP, Blaz_m, Rlaz_m, trees, BIG_mount, SPLT_mount, buzzB, buzzR, lazspn};
 
 public class Scheduler : MonoBehaviour {
 
@@ -224,6 +224,22 @@ public class Scheduler : MonoBehaviour {
 				paused = false;
 				Time.timeScale = 1;
 			}
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha1)){
+			Time.timeScale = 1;
+		}
+
+		if(Input.GetKeyDown(KeyCode.Alpha2)){
+			Time.timeScale = 2;
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha3)){
+			Time.timeScale = 4;
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha4)){
+			Time.timeScale = 8;
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha5)){
+			Time.timeScale = 16;
 		}
 	}
 
