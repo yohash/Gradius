@@ -11,10 +11,10 @@ GameObject:
   - 33: {fileID: 3310692}
   - 136: {fileID: 13698558}
   - 23: {fileID: 2385636}
-  - 114: {fileID: 11416540}
+  - 114: {fileID: 11457890}
   m_Layer: 0
   m_Name: Spinning_Laser_R
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,10 +30,10 @@ GameObject:
   - 33: {fileID: 3361428}
   - 136: {fileID: 13602608}
   - 23: {fileID: 2343222}
-  - 114: {fileID: 11456788}
+  - 114: {fileID: 11432684}
   m_Layer: 0
   m_Name: Spinning_Laser_B
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +78,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 434504}
-  - 114: {fileID: 11404652}
+  - 114: {fileID: 11406874}
   m_Layer: 0
   m_Name: QuadSpinner_T2
   m_TagString: Untagged
@@ -106,7 +106,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 0, z: 0}
+  m_LocalPosition: {x: 18.3999996, y: 55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 460998}
@@ -276,7 +276,7 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11404652
+--- !u!114 &11406874
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -284,25 +284,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 178512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b05e5a2b1a486f54ba9a022af8e7a448, type: 3}
+  m_Script: {fileID: 11500000, guid: ea70ba3c0c7eacd4fbb39bdd931240bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
   isBlue: 0
---- !u!114 &11416540
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 114326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b05e5a2b1a486f54ba9a022af8e7a448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  isBlue: 0
---- !u!114 &11456788
+  isSpinner: 1
+--- !u!114 &11432684
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -310,11 +298,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 123060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b05e5a2b1a486f54ba9a022af8e7a448, type: 3}
+  m_Script: {fileID: 11500000, guid: ea70ba3c0c7eacd4fbb39bdd931240bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
   isBlue: 1
+  isSpinner: 1
+--- !u!114 &11457890
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea70ba3c0c7eacd4fbb39bdd931240bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  isBlue: 0
+  isSpinner: 1
 --- !u!136 &13602608
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -347,7 +350,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Laser
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 178512}
