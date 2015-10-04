@@ -3,6 +3,14 @@ using System.Collections;
 
 public class LaserSpinBehaviour : MonoBehaviour {
 
+    // *************************************************
+    //
+    //  this code obsolete due to changes in 
+    //     laserwallbehaviour that include spinner code
+    //      (the algo initiated here)
+    //      wrapped in an isSpinner bool
+    //
+    //***************************************************
     Rigidbody laser;
 
     public float speed = 3f;

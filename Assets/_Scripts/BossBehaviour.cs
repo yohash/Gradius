@@ -8,6 +8,8 @@ public class BossBehaviour : BasicEnemyBehaviour
 {
     AudioSource bossHit;
 
+    public bool customLevel = false;        // if custom level boss, activate lasers
+
     public float speed = 3f;        // entering speed
     public float fightSpeed = 5f;   // move up-and-down speed
 
@@ -19,7 +21,7 @@ public class BossBehaviour : BasicEnemyBehaviour
     float randoPause = 1f;          // the boss pauses sometimes at the top of his
     float pauseTimer;               // "battle rotation"....
 
-    float fireRate = 1.2f;          // shoot every 1.2 sec
+    float fireRate = 1.3f;          // shoot every 1.2 sec
     float fireTimer;
     bool firing = false;            // suppress fire() while entering
 
@@ -54,8 +56,10 @@ public class BossBehaviour : BasicEnemyBehaviour
             firing = true;
             this.transform.position += Time.deltaTime * new Vector3(-speed, 0f, 0f);
         }
-        else if (bs == bossState.entering && this.transform.position.x <= 7f)
-        {   // initiate boss fight
+        else if (bs == bossState.entering && this.transform.position.x <= 7f) { 
+            // initiate lasers if custom level
+            if (customLevel) { GetComponentInChildren<laserPointerFire>().initiateFire(); }
+           // initiate boss fight
             bs = bossState.fightingUP;
         }
         else if (bs == bossState.fightingUP && this.transform.position.y < bossTopLim)
@@ -112,6 +116,7 @@ public class BossBehaviour : BasicEnemyBehaviour
             {   // if at the bottom, fight on up
                 bs = bossState.fightingUP;
             }
+
         }
     }
 
