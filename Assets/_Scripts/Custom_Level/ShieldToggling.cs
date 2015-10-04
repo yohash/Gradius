@@ -7,14 +7,18 @@ public class ShieldToggling : MonoBehaviour {
     float toggleTime = 1f;      // 1sec hold-down to toggle
     float startTime;
 
+
     public float camH, camW;
 
     Text helperText;
     Color hcolor;
 
+    public GameObject redHalo, blueHalo;           // halo animations
     GameObject customShieldBlue, customShieldRed;     // links to the halo that color-codes the ship
     public bool isBlue;                                     // Use this for initialization
     bool spaceDown;
+
+    bool customShieldActivated = false;
 
     // need to know this
     public bool isPlayerDead = false;
@@ -42,7 +46,7 @@ public class ShieldToggling : MonoBehaviour {
         helperText.text = "You are now\nimmune to blue\ndamage sources!";
         Invoke("clearHelperText", 4f);
         Invoke("changeHelperText", 10f);
-
+        customShieldActivated = true;
     }
 
 
@@ -51,12 +55,17 @@ public class ShieldToggling : MonoBehaviour {
     {
         isPlayerDead = GetComponentInParent<PlayerController>().dead;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && customShieldActivated)
         {
             startTime = Time.time;
             spaceDown = true;
+            if (isBlue) {
+                activateRedHalo();
+            } else {
+                activateBlueHalo();
+            }
         }
-        if (Input.GetKey(KeyCode.Space) && (Time.time - startTime) > toggleTime && spaceDown && !isPlayerDead)
+        if (Input.GetKey(KeyCode.Space) && (Time.time - startTime) > toggleTime && spaceDown && !isPlayerDead && customShieldActivated)
         {
             if (isBlue)
             {
@@ -67,7 +76,8 @@ public class ShieldToggling : MonoBehaviour {
                 customShieldRed = customShieldTrans.gameObject;
                 customShieldRed.SetActive(true);
                 isBlue = false;
-
+                deActivateRedHalo();
+                
                 spaceDown = false;
             } else
             {
@@ -78,9 +88,15 @@ public class ShieldToggling : MonoBehaviour {
                 customShieldBlue = customShieldTrans.gameObject;
                 customShieldBlue.SetActive(true);
                 isBlue = true;
+                deActivateBlueHalo();
 
                 spaceDown = false;
             }
+        }
+        if (Input.GetKeyUp(KeyCode.Space) && (Time.time - startTime) < toggleTime && customShieldActivated)
+        {
+            deActivateBlueHalo();
+            deActivateRedHalo();
         }
     }
 
@@ -92,6 +108,10 @@ public class ShieldToggling : MonoBehaviour {
         customShieldTrans = transform.FindChild("Custom_Shield_Red");
         customShieldRed = customShieldTrans.gameObject;
         customShieldRed.SetActive(false);
+        deActivateBlueHalo();
+        deActivateRedHalo();
+        CancelInvoke("changeHelperText");
+        clearHelperText();
     }
 
     void changeHelperText()
@@ -104,5 +124,22 @@ public class ShieldToggling : MonoBehaviour {
     {
         helperText.text = "";
         helperText.color = Color.clear;
+    }
+
+    void activateRedHalo()
+    {
+        redHalo.SetActive(true);
+    }
+    void activateBlueHalo()
+    {
+        blueHalo.SetActive(true);
+    }
+    void deActivateRedHalo()
+    {
+        redHalo.SetActive(false);
+    }
+    void deActivateBlueHalo()
+    {
+        blueHalo.SetActive(false);
     }
 }
