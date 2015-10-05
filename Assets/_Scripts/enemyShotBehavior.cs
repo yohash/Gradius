@@ -45,6 +45,10 @@ public class enemyShotBehavior : MonoBehaviour {
     }
 
     void onTriggerEnter(Collider coll) {
-        if (coll.gameObject.tag == "Ground") { Destroy(this.gameObject); }
+        if (coll.gameObject.tag == "Ground" || coll.gameObject.tag == "Mountain") { Destroy(this.gameObject); }
+    }
+
+    public void destroyThisBullet() {
+        Destroy(this.gameObject);
     }
 }

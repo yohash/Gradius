@@ -19,6 +19,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &142110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 492822}
+  - 58: {fileID: 5859384}
+  - 114: {fileID: 11432902}
+  m_Layer: 14
+  m_Name: coll2D
+  m_TagString: EnemyShot
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &468242
 Transform:
   m_ObjectHideFlags: 1
@@ -26,10 +43,23 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 12.0600004, y: 0, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 492822}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &492822
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142110}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 468242}
   m_RootOrder: 0
 --- !u!54 &5401754
 Rigidbody:
@@ -46,6 +76,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!58 &5859384
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142110}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: .0199999996
 --- !u!65 &6555124
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -67,6 +110,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b62c8ad96f8f6e43ad813b11c0bc5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11432902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20812b97a30a88841a11cfcfe83d45bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21269640
