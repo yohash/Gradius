@@ -30,7 +30,7 @@ public class LaserWallBehaviour : MonoBehaviour {
 
     void OffCamera()
     {
-        if (this.transform.position.x >= (camW / 2 + 25) || this.transform.position.x <= (-camW / 2 - 25))
+        if (this.transform.position.x >= (camW / 2 + 45) || this.transform.position.x <= (-camW / 2 - 45))
         {
             Destroy(this.gameObject);
         }

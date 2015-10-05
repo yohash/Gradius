@@ -3,7 +3,7 @@ using System.Collections;
 using System.IO;
 using UnityEngine.UI;
 
-enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP, Blaz_m, Rlaz_m, trees, BIG_mount, SPLT_mount, buzzB, buzzR, boss2};
+enum enemyID{fan, div, divS, osc, oscP, gnd, tur, turP, silo, hop, hopP, ATST, mount, volc, boss, bigPUP, Blaz_m, Rlaz_m, trees, BIG_mount, SPLT_mount, buzzB, buzzR, boss2,SALR, LALR, SARR, LARR, SALB, LALB, SARB, LARB, DSpin, QSpinS, QSpinA};
 
 public class Scheduler : MonoBehaviour {
 
