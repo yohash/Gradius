@@ -32,16 +32,16 @@ public class buzzShotBehaviour : MonoBehaviour {
         OffCamera();
     }
 
-	void OnTriggerEnter(Collider coll){
-		if (coll.gameObject.tag == "Laser")
-		{
-			bool laserBlue = (coll.gameObject.GetComponent<LaserWallBehaviour>().isBlue);
-			if (isBlue != laserBlue)
-			{
-				Destroy(this.gameObject);
-			}
-		}
-	}
+//	void OnTriggerEnter(Collider coll){
+//		if (coll.gameObject.tag == "Laser")
+//		{
+//			bool laserBlue = (coll.gameObject.GetComponent<LaserWallBehaviour>().isBlue);
+//			if (isBlue != laserBlue)
+//			{
+//				Destroy(this.gameObject);
+//			}
+//		}
+//	}
 
     // function to test if to the left or right, OR ABOVE AND BELOW 
     // the camera bounds (enemy and playerShot tests dont check above/below)
