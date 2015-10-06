@@ -30,7 +30,7 @@ public class PowerUpMovement : MonoBehaviour
 
     public void OffCamera()
     {
-        if (this.transform.position.x >= (camW / 2 + 2) || this.transform.position.x <= (-camW / 2 - 2))
+        if (this.transform.position.x >= (camW / 2 + 8) || this.transform.position.x <= (-camW / 2 - 2))
         {
             Destroy(this.gameObject);
         }
