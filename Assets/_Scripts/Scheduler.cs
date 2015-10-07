@@ -106,7 +106,7 @@ public class Scheduler : MonoBehaviour {
         new_Pos.z = enemyLoc[index].z;
 
         enemy.transform.position = new_Pos;
-        print("spawn called with index: " + index);
+
 		if (index < relTime.Length-1) {
 			index++;
 			Invoke ("Spawn", relTime [index]);
