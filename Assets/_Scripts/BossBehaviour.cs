@@ -146,12 +146,12 @@ public class BossBehaviour : BasicEnemyBehaviour
 
     public override void Hit()
     {
-        if (health > 1)
+        if (health > 1 && bs != bossState.entering)
         {
             health--;
             bossHit.Play((ulong)0.0);
         }
-        else
+        else if (health <= 1 && bs != bossState.entering)
             {
             base.Scored();
 
