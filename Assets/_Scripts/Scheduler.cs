@@ -81,7 +81,7 @@ public class Scheduler : MonoBehaviour {
             // convert and record the enum
             ID[lineCount] = (int) System.Enum.Parse(typeof(enemyID), splitLines[4]);
 
-            if (ID[lineCount] == 5) { isGround = lineCount; }            
+            if (ID[lineCount] == 5 || ID[lineCount] == 37) { isGround = lineCount; }            
             lineCount++;
         }
         
@@ -179,12 +179,22 @@ public class Scheduler : MonoBehaviour {
             index = itmp;
         }
 
-
         // if the new index is < the floor-ceiling sprite, then we delete this object
         if (index < isGround) {
             GameObject terrain = GameObject.FindGameObjectWithTag("FlrCeil");
             if (terrain != null) { Destroy(terrain.gameObject); }
         }
+
+        //if this is the custom level and the player hasnt gotten the powerup
+        //just start the whole level over
+        if (customLevel && !GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().custom_shield)
+        {
+            index = 1;
+            GameObject terrain = GameObject.FindGameObjectWithTag("FlrCeil");
+            if (terrain != null) { Destroy(terrain.gameObject); }
+        }
+
+
         // reset from the checkpoint by initiating spawn
         if (!bossFight) { Invoke("Spawn", relTime[index] + 4); }   // reset from the last point
     }
