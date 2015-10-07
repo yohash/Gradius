@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour {
 		}		
 
 		//Player movement, includes screen edge bounding
-		if(Input.GetKey(KeyCode.UpArrow) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/8 < (camH/2 + camY))){
+		if(Input.GetKey(KeyCode.UpArrow) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/8 < (camH/2 + camY + 0.5f))){
 			speed.y += maxSpeed.y + 2*powers[0];
 		}
 		if(Input.GetKey(KeyCode.DownArrow) && (this.gameObject.transform.position.y - this.gameObject.transform.lossyScale.y/8 > (-camH/2 + camY + 2.5f))){
