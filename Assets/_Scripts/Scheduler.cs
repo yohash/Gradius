@@ -127,6 +127,7 @@ public class Scheduler : MonoBehaviour {
         GameObject[] trees = GameObject.FindGameObjectsWithTag("Trees");
 		GameObject[] powerups = GameObject.FindGameObjectsWithTag("PowerUp");
 		GameObject[] buddies = GameObject.FindGameObjectsWithTag("Option");
+		GameObject[] eshotsC = GameObject.FindGameObjectsWithTag("EnemyShotColored");
 
         // determine if player was fighting boss or volcanos
         bool bossFight = false, volcano = false;
@@ -141,6 +142,7 @@ public class Scheduler : MonoBehaviour {
         for (int i = 0; i < trees.Length; i++)      {Destroy(trees[i].gameObject); }
         for (int i = 0; i < powerups.Length; i++)   { Destroy(powerups[i].gameObject); }
 		for (int i = 0; i < buddies.Length; i++)   { Destroy(buddies[i].gameObject); }
+		for (int i = 0; i < eshotsC.Length; i++)   { Destroy(eshotsC[i].gameObject); }
         
 
         // if volcanoes, start them over
