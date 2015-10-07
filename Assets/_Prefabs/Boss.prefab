@@ -88,12 +88,14 @@ MonoBehaviour:
   pos1: {x: 0, y: 0}
   camH: 0
   camW: 0
-  health: 30
+  health: 50
   value: 1000
   score: {fileID: 0}
   powerUp: {fileID: 128354, guid: 6365fbe992376664ab976dc84c3617c7, type: 2}
   chance: 0
   shot: {fileID: 179512, guid: bf0643725614b724092d130531d5ac4b, type: 2}
+  explosion: {fileID: 0}
+  customLevel: 0
   speed: 3
   fightSpeed: 7
 --- !u!1001 &100100000
@@ -102,7 +104,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 189252}
