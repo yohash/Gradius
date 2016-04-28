@@ -37,7 +37,6 @@ public class Scheduler : MonoBehaviour {
         if (customLevel) { fileCount = Resources.Load<TextAsset>("Level_2"); }
 		else { fileCount = Resources.Load<TextAsset>("Level_1"); }
 		reader = new StringReader(fileCount.text);
-        //System.IO.StreamReader fileCount = new System.IO.StreamReader("Assets/level_1.txt");
         lineCount = 0;  // track number of lines in the file
         while(reader.ReadLine()!=null) {
             lineCount++;

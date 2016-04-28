@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
     public AudioSource shotFX, laserFX, powerUPFX, optionFX;
     public AudioSource bgMusic;
 
-    // invincibility toggle
+    // invincibility toggleF
     public bool invincible = false;
 
     // custom level shield toggle
@@ -135,16 +135,16 @@ public class PlayerController : MonoBehaviour {
 		}		
 
 		//Player movement, includes screen edge bounding
-		if(Input.GetKey(KeyCode.UpArrow) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/8 < (camH/2 + camY + 0.5f))){
+		if(Input.GetKey(KeyCode.W) && (this.gameObject.transform.position.y + this.gameObject.transform.lossyScale.y/8 < (camH/2 + camY + 0.5f))){
 			speed.y += maxSpeed.y + 2*powers[0];
 		}
-		if(Input.GetKey(KeyCode.DownArrow) && (this.gameObject.transform.position.y - this.gameObject.transform.lossyScale.y/8 > (-camH/2 + camY + 2.5f))){
+		if(Input.GetKey(KeyCode.S) && (this.gameObject.transform.position.y - this.gameObject.transform.lossyScale.y/8 > (-camH/2 + camY + 2.5f))){
 			speed.y -= maxSpeed.y + 2*powers[0];
 		}		
-		if(Input.GetKey(KeyCode.LeftArrow) && (this.gameObject.transform.position.x - this.gameObject.transform.lossyScale.x/7 > (-camW/2 + camX))){
+		if(Input.GetKey(KeyCode.A) && (this.gameObject.transform.position.x - this.gameObject.transform.lossyScale.x/7 > (-camW/2 + camX))){
 			speed.x -= maxSpeed.x + 2*powers[0];
 		}		
-		if(Input.GetKey(KeyCode.RightArrow) && (this.gameObject.transform.position.x + this.gameObject.transform.lossyScale.x/7 < (camW/2 + camX))){
+		if(Input.GetKey(KeyCode.D) && (this.gameObject.transform.position.x + this.gameObject.transform.lossyScale.x/7 < (camW/2 + camX))){
 			speed.x += maxSpeed.x + 2*powers[0];
         }
         // toggle invincibility
@@ -173,7 +173,7 @@ public class PlayerController : MonoBehaviour {
         //  TWO TYPES of shooting protocol follow
         // 
         // Shooting on rapid-button press
-        if (Input.GetKeyDown(KeyCode.A) && !dead)
+        if (Input.GetKeyDown(KeyCode.N) && !dead)
         {
             //Check for reload and Power Level
             GameObject bullet = null;
@@ -223,7 +223,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         // Shooting on button hold
-        if (Input.GetKey (KeyCode.A) && currReload <= 0 && !dead) {
+        if (Input.GetKey (KeyCode.N) && currReload <= 0 && !dead) {
 			//Check for reload and Power Level
 			GameObject bullet = null;
 
@@ -266,7 +266,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		//Using PowerUp
-		if(Input.GetKey(KeyCode.S) && pow != powerLevel.none)
+		if(Input.GetKey(KeyCode.M) && pow != powerLevel.none)
         {
             // play SFX
             optionFX.Play((ulong)0.0);
